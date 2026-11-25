@@ -340,7 +340,7 @@ export const KnowledgeRepositoryPage: React.FC<Props> = ({
                     <button
                       type="button"
                       title="View PDF"
-                      onClick={() => viewPDF(doc.pdfBase64)}
+                      onClick={() => viewPDF(doc.pdfUrl || doc.pdfBase64)}
                       className="rounded-lg border border-cyan-800 p-2 text-cyan-200 transition hover:bg-cyan-900/40"
                     >
                       <Eye className="h-4 w-4" />
@@ -348,7 +348,7 @@ export const KnowledgeRepositoryPage: React.FC<Props> = ({
                     <button
                       type="button"
                       title="Download PDF"
-                      onClick={() => openPDF(doc.pdfBase64, doc.title)}
+                      onClick={() => openPDF(doc.pdfUrl || doc.pdfBase64, doc.title)}
                       className="rounded-lg border border-cyan-800 p-2 text-cyan-200 transition hover:bg-cyan-900/40"
                     >
                       <Download className="h-4 w-4" />

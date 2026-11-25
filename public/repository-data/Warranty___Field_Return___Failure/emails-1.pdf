@@ -1,0 +1,119 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2400 >>
+stream
+BT
+/F1 10 Tf
+48 794 Td
+14 TL
+(RB   Compression Set Issue - Engineering Report) Tj
+T*
+() Tj
+T*
+(ENGINEERING COMMUNICATION REPORT) Tj
+T*
+(Component: Rebound Bumper \(RB-001\)) Tj
+T*
+(Source: Email thread) Tj
+T*
+(Subject: RB   Compression Set Issue) Tj
+T*
+(Source date: 14 Oct 2026) Tj
+T*
+() Tj
+T*
+(PROBLEM / OBSERVATION) Tj
+T*
+(Compression set measured at approximately 18%, above the stated acceptance limit of 15%,) Tj
+T*
+(with a potential effect on long-term energy absorption.) Tj
+T*
+() Tj
+T*
+(INVESTIGATION / ROOT CAUSE) Tj
+T*
+(The investigation identified inadequate material drying before moulding as the probable) Tj
+T*
+(cause.) Tj
+T*
+() Tj
+T*
+(CORRECTIVE / PREVENTIVE ACTION) Tj
+T*
+(Introduce controlled material drying at 100  C for 4 hours and update the process document.) Tj
+T*
+(Repeat the compression-set test on the corrected batch.) Tj
+T*
+() Tj
+T*
+(OUTCOME / CLOSURE) Tj
+T*
+(Retest result was 12%, within the stated  15% limit. The thread records the issue as) Tj
+T*
+(resolved.) Tj
+T*
+() Tj
+T*
+(COMMUNICATION HISTORY) Tj
+T*
+(14 Oct 2026   10:24 AM | Kumar R. \(LTTS\)   Suspension Engineering Team) Tj
+T*
+(The latest Rebound Bumper Batch B is showing a compression set of approximately 18% against) Tj
+T*
+(the specification limit of  15%. This may affect long-term energy absorption and durability.) Tj
+T*
+(Please investigate the root cause, check the moulding process and recommend containment and) Tj
+T*
+(corrective action. Please confirm whether the remaining batch should be held pending review.) Tj
+T*
+() Tj
+T*
+(15 Oct 2026   02:17 PM | Meera S. \(Tenneco\)   Kumar R. \(LTTS\)) Tj
+T*
+(We reviewed the material certificate, incoming inspection and moulding history. The) Tj
+T*
+(available evidence points to inadequate material drying before moulding. Please trial) Tj
+T*
+(controlled drying at 100  C for 4 hours, record the actual drying cycle and mould the) Tj
+T*
+(validation samples. Update the process document if the trial confirms the improvement.) Tj
+T*
+() Tj
+T*
+(16 Oct 2026   11:03 AM | Kumar R. \(LTTS\)   Meera S. \(Tenneco\)) Tj
+T*
+(The controlled-drying trial and repeat test are complete. The measured compression set is) Tj
+T*
+(now 12%, within the  15% limit. The process record has been updated for the trial. The) Tj
+T*
+(affected batch can be dispositioned after the normal quality approval. From the engineering) Tj
+T*
+(side, the reported issue is resolved.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2763
+%%EOF

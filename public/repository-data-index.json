@@ -1,0 +1,422 @@
+[
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:38.5148141+05:30",
+    "title": "Rebound Bumper - Engineering Design Guideline",
+    "id": "RB-KH-001",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-001.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:38.6652245+05:30",
+    "title": "Rebound Bumper - Design Types and Configurations",
+    "id": "RB-KH-002",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-002.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:38.7110395+05:30",
+    "title": "Rebound Bumper - Geometry Dimensions and Deformation",
+    "id": "RB-KH-003",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-003.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:38.7904966+05:30",
+    "title": "Rebound Bumper - Material Selection and Properties",
+    "id": "RB-KH-004",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-004.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:38.8551967+05:30",
+    "title": "Rebound Bumper - Force Displacement Characteristics",
+    "id": "RB-KH-005",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-005.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:38.9165331+05:30",
+    "title": "Rebound Bumper - Compression Set and Recovery",
+    "id": "RB-KH-006",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-006.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:38.9658405+05:30",
+    "title": "Rebound Bumper - Dynamic Fatigue and Durability",
+    "id": "RB-KH-007",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-007.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.0198202+05:30",
+    "title": "Rebound Bumper - Rubber Moulding and Curing",
+    "id": "RB-KH-008",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-008.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.1637643+05:30",
+    "title": "Rebound Bumper - TPEE Material and Injection Moulding",
+    "id": "RB-KH-009",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-009.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.2392907+05:30",
+    "title": "Rebound Bumper - Assembly Interfaces and Tolerance Stack up",
+    "id": "RB-KH-010",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-010.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.4209003+05:30",
+    "title": "Rebound Bumper - Inspection and Quality Control",
+    "id": "RB-KH-011",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-011.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.4962095+05:30",
+    "title": "Rebound Bumper - Testing and Validation Plan",
+    "id": "RB-KH-012",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-012.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.5664043+05:30",
+    "title": "Rebound Bumper - Failure Modes and Root Cause Analysis",
+    "id": "RB-KH-013",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-013.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.6265325+05:30",
+    "title": "Rebound Bumper - DFMEA and Engineering Design Rules",
+    "id": "RB-KH-014",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-014.pdf"
+  },
+  {
+    "component": "Rebound Bumper (RB-001)",
+    "sourceType": "Manual Entry",
+    "savedAt": "2026-11-11T18:54:39.7404783+05:30",
+    "title": "Rebound Bumper - Engineering Problem Solving Case Studies",
+    "id": "RB-KH-015",
+    "repository": "Know-How",
+    "sourceDate": "2026-11-11",
+    "pdfUrl": "/repository-data/Know-How/RB-KH-015.pdf"
+  },
+  {
+    "title": "Automotive Project Management Framework",
+    "id": "PM-001",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-001.pdf"
+  },
+  {
+    "title": "Project Scope and Requirements Management",
+    "id": "PM-002",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-002.pdf"
+  },
+  {
+    "title": "Integrated Project Planning and Scheduling",
+    "id": "PM-003",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-003.pdf"
+  },
+  {
+    "title": "Automotive APQP and Quality Planning Integration",
+    "id": "PM-004",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-004.pdf"
+  },
+  {
+    "title": "Cost Estimation Budgeting and Financial Control",
+    "id": "PM-005",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-005.pdf"
+  },
+  {
+    "title": "Risk Issue and Opportunity Management",
+    "id": "PM-006",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-006.pdf"
+  },
+  {
+    "title": "Resource and Capacity Planning",
+    "id": "PM-007",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-007.pdf"
+  },
+  {
+    "title": "Supplier Project Management and Readiness",
+    "id": "PM-008",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-008.pdf"
+  },
+  {
+    "title": "Design Reviews and Gate Readiness",
+    "id": "PM-009",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-009.pdf"
+  },
+  {
+    "title": "Prototype Build and Validation Coordination",
+    "id": "PM-010",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-010.pdf"
+  },
+  {
+    "title": "Project Communication and Reporting",
+    "id": "PM-011",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-011.pdf"
+  },
+  {
+    "title": "Change Configuration and Baseline Control",
+    "id": "PM-012",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-012.pdf"
+  },
+  {
+    "title": "Launch Readiness and Production Handover",
+    "id": "PM-013",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-013.pdf"
+  },
+  {
+    "title": "Project Performance Measurement and Recovery",
+    "id": "PM-014",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-014.pdf"
+  },
+  {
+    "title": "Project Closure and Lessons Learned",
+    "id": "PM-015",
+    "repository": "Project Management",
+    "pdfUrl": "/repository-data/Project_Management/PM-015.pdf"
+  },
+  {
+    "title": "Engineering Change Management Framework",
+    "id": "CM-001",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-001.pdf"
+  },
+  {
+    "title": "Engineering Change Request and Proposal",
+    "id": "CM-002",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-002.pdf"
+  },
+  {
+    "title": "Technical Impact Assessment",
+    "id": "CM-003",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-003.pdf"
+  },
+  {
+    "title": "Cost Timing and Investment Impact Assessment",
+    "id": "CM-004",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-004.pdf"
+  },
+  {
+    "title": "Cross Functional Change Review and Approval",
+    "id": "CM-005",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-005.pdf"
+  },
+  {
+    "title": "Product Structure and BOM Revision Control",
+    "id": "CM-006",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-006.pdf"
+  },
+  {
+    "title": "Drawing CAD and Specification Change Control",
+    "id": "CM-007",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-007.pdf"
+  },
+  {
+    "title": "Manufacturing Process Change Control",
+    "id": "CM-008",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-008.pdf"
+  },
+  {
+    "title": "Supplier Initiated Change Management",
+    "id": "CM-009",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-009.pdf"
+  },
+  {
+    "title": "Deviation Concession and Temporary Waiver Control",
+    "id": "CM-010",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-010.pdf"
+  },
+  {
+    "title": "Change Validation and Verification Planning",
+    "id": "CM-011",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-011.pdf"
+  },
+  {
+    "title": "Inventory WIP and Service Part Effectivity",
+    "id": "CM-012",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-012.pdf"
+  },
+  {
+    "title": "Change Implementation and Production Cut In",
+    "id": "CM-013",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-013.pdf"
+  },
+  {
+    "title": "Change Audit KPI and Compliance Monitoring",
+    "id": "CM-014",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-014.pdf"
+  },
+  {
+    "title": "Engineering Change Case Studies and Lessons Learned",
+    "id": "CM-015",
+    "repository": "Change Management",
+    "pdfUrl": "/repository-data/Change_Management/CM-015.pdf"
+  },
+  {
+    "title": "Warranty and Field Failure Management Framework",
+    "id": "WF-001",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-001.pdf"
+  },
+  {
+    "title": "Field Return Intake Traceability and Screening",
+    "id": "WF-002",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-002.pdf"
+  },
+  {
+    "title": "Failure Mode Classification and Symptom Analysis",
+    "id": "WF-003",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-003.pdf"
+  },
+  {
+    "title": "Root Cause Analysis Methods for Automotive Components",
+    "id": "WF-004",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-004.pdf"
+  },
+  {
+    "title": "Failure Analysis and Laboratory Investigation",
+    "id": "WF-005",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-005.pdf"
+  },
+  {
+    "title": "Polymer and Elastomer Failure Mechanisms",
+    "id": "WF-006",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-006.pdf"
+  },
+  {
+    "title": "Metallic Component Failure Mechanisms",
+    "id": "WF-007",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-007.pdf"
+  },
+  {
+    "title": "Warranty Data Analytics and Trend Detection",
+    "id": "WF-008",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-008.pdf"
+  },
+  {
+    "title": "Containment Sorting and Field Action Assessment",
+    "id": "WF-009",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-009.pdf"
+  },
+  {
+    "title": "Corrective and Preventive Action CAPA",
+    "id": "WF-010",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-010.pdf"
+  },
+  {
+    "title": "Supplier Warranty Recovery and 8D Management",
+    "id": "WF-011",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-011.pdf"
+  },
+  {
+    "title": "Reliability Growth and Durability Improvement",
+    "id": "WF-012",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-012.pdf"
+  },
+  {
+    "title": "Warranty Cost Risk and Business Impact",
+    "id": "WF-013",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-013.pdf"
+  },
+  {
+    "title": "Field to Design Feedback and Knowledge Capture",
+    "id": "WF-014",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-014.pdf"
+  },
+  {
+    "title": "Automotive Warranty and Failure Case Studies",
+    "id": "WF-015",
+    "repository": "Warranty / Field Return / Failure",
+    "pdfUrl": "/repository-data/Warranty___Field_Return___Failure/WF-015.pdf"
+  }
+]

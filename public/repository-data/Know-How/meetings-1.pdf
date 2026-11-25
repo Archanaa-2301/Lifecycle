@@ -1,0 +1,121 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2173 >>
+stream
+BT
+/F1 10 Tf
+48 794 Td
+14 TL
+(Rebound Bumper Design Review - Engineering Report) Tj
+T*
+() Tj
+T*
+(ENGINEERING MEETING REPORT) Tj
+T*
+(Component: Rebound Bumper \(RB-001\)) Tj
+T*
+(Source: Meeting transcript) Tj
+T*
+(Meeting: Rebound Bumper Design Review) Tj
+T*
+(Date: 12 Oct 2026   10:00 10:45 AM) Tj
+T*
+(Participants: Kumar R., Meera S., Arun P., Suresh V.) Tj
+T*
+() Tj
+T*
+(DISCUSSION TRANSCRIPT) Tj
+T*
+(10:02 AM | Kumar R.) Tj
+T*
+(The review started with the latest Rebound Bumper compression-set observations. The team) Tj
+T*
+(noted that the reported Batch B value was approximately 18%, compared with the stated) Tj
+T*
+(acceptance limit of 15%.) Tj
+T*
+() Tj
+T*
+(10:09 AM | Meera S.) Tj
+T*
+(The material certificate and process history were reviewed. The discussion focused on) Tj
+T*
+(whether material storage, pre-mould drying or moulding conditions could explain the observed) Tj
+T*
+(variation.) Tj
+T*
+() Tj
+T*
+(10:18 AM | Suresh V.) Tj
+T*
+(The available process record did not clearly demonstrate that the required drying cycle had) Tj
+T*
+(been completed for the affected batch. The team requested a controlled trial with the drying) Tj
+T*
+(cycle recorded.) Tj
+T*
+() Tj
+T*
+(10:27 AM | Arun P.) Tj
+T*
+(Validation requested repeat compression-set testing on samples produced using the controlled) Tj
+T*
+(process. The test result should be compared against the same acceptance criterion and the) Tj
+T*
+(evidence attached to the batch record.) Tj
+T*
+() Tj
+T*
+(10:39 AM | Kumar R.) Tj
+T*
+(The team agreed to trial material drying at 100  C for 4 hours, update the process) Tj
+T*
+(documentation if successful and review the retest before batch disposition.) Tj
+T*
+() Tj
+T*
+(DECISIONS) Tj
+T*
+(1. Run a controlled material-drying trial at 100  C for 4 hours.) Tj
+T*
+(2. Repeat compression-set testing and compare with the  15% acceptance limit.) Tj
+T*
+(3. Update the process record after the trial is reviewed.) Tj
+T*
+() Tj
+T*
+(ACTION ITEMS) Tj
+T*
+(1. Suresh V.: record the drying cycle and provide trial samples.) Tj
+T*
+(2. Validation: complete repeat compression-set testing and share results.) Tj
+T*
+(3. Design: review the evidence and update the process documentation.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2536
+%%EOF

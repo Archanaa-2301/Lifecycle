@@ -26,25 +26,25 @@ const VEHICLES = [
   {
     name: 'Innova', type: 'MPV', category: 'SUV' as const, year: 2026,
     trim: 'Crysta', powertrain: '2.4L Diesel',
-    image: 'https://www.ecorentacar.com/wp-content/uploads/2024/12/innova-crysta-02.jpg',
+    image: 'https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&w=1100&q=90',
     tag: 'Family & utility', code: 'INN'
   },
   {
     name: 'Fortuner', type: 'SUV', category: 'SUV' as const, year: 2026,
     trim: 'Legender', powertrain: '2.8L Turbo Diesel',
-    image: 'https://ts4.mm.bing.net/th?id=OIP.t4cLYRgS6EgXeiB2AT_g4AHaEK&pid=15.1',
+    image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1100&q=90',
     tag: 'Performance SUV', code: 'FOR'
   },
   {
     name: 'Camry', type: 'Sedan', category: 'Sedan' as const, year: 2026,
     trim: 'Hybrid', powertrain: '2.5L Petrol Hybrid',
-    image: 'https://www.motortrend.com/files/661fed9cfceecf0008b212e4/001-2025-toyota-camry-se-awd-lead.jpg',
+    image: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=1100&q=90',
     tag: 'Executive sedan', code: 'CAM'
   },
   {
     name: 'Glanza', type: 'Hatchback', category: 'Sedan' as const, year: 2026,
     trim: 'V', powertrain: '1.2L Petrol',
-    image: 'https://cdni.autocarindia.com/ExtraImages/20241021111328_Glanza%20Web.jpg',
+    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1100&q=90',
     tag: 'Urban hatchback', code: 'GLA'
   }
 ];

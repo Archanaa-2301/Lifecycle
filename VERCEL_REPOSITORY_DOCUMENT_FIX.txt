@@ -1,0 +1,19 @@
+LIFEX Vercel repository document fix
+
+The 60 original repository PDFs and JSON metadata files are copied to:
+  public/repository-data/
+A static index is generated at:
+  public/repository-data-index.json
+
+The frontend loads this static index, so the original documents work on Vercel
+without requiring the local Express API. The Express API remains available for
+local development and server-based deployments.
+
+After replacing your project with this version:
+1. Run npm install
+2. Run npm run build
+3. Commit and push all changes to GitHub
+4. Wait for the Vercel production deployment to become Ready
+5. Hard-refresh the deployed site (Ctrl+Shift+R)
+
+Do not remove public/repository-data or public/repository-data-index.json.

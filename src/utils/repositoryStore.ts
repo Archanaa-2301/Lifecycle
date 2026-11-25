@@ -1,7 +1,7 @@
 export type RepositoryName = 'Know-How' | 'Project Management' | 'Change Management' | 'Warranty / Field Return / Failure';
 export type RepositoryPDF = {
   id: string; title: string; sourceType: 'Email' | 'Meeting' | 'Manual Entry'; component: string;
-  repository: RepositoryName; savedAt: string; sourceDate: string; pdfBase64: string;
+  repository: RepositoryName; savedAt: string; sourceDate: string; pdfBase64?: string; pdfUrl?: string;
 };
 export const LIFEX_REPOSITORY_KEY = 'lifex_repository_pdfs_v1';
 
@@ -10,16 +10,33 @@ export function readRepositoryPDFs(): RepositoryPDF[] {
   catch { return []; }
 }
 export async function syncRepositoryPDFs(): Promise<RepositoryPDF[]> {
+  // Static repository index is shipped with the Vite build, so the original
+  // repository documents work on static hosts such as Vercel without Express.
+  let staticRecords: RepositoryPDF[] = [];
+  try {
+    const response = await fetch('/repository-data-index.json', { cache: 'no-cache' });
+    if (response.ok) staticRecords = await response.json() as RepositoryPDF[];
+  } catch {
+    // Continue with API/local records for localhost or older deployments.
+  }
+
+  let apiRecords: RepositoryPDF[] = [];
   try {
     const response = await fetch('/api/reports');
-    if (!response.ok) throw new Error('Repository API unavailable');
-    const records = await response.json() as RepositoryPDF[];
-    localStorage.setItem(LIFEX_REPOSITORY_KEY, JSON.stringify(records));
-    window.dispatchEvent(new CustomEvent('lifex-repository-updated'));
-    return records;
+    if (response.ok) apiRecords = await response.json() as RepositoryPDF[];
   } catch {
-    return readRepositoryPDFs();
+    // Vercel static deployments do not run the local Express API.
   }
+
+  const localRecords = readRepositoryPDFs();
+  const merged = new Map<string, RepositoryPDF>();
+  for (const record of [...localRecords, ...staticRecords, ...apiRecords]) {
+    if (record?.id) merged.set(record.id, record);
+  }
+  const records = Array.from(merged.values());
+  localStorage.setItem(LIFEX_REPOSITORY_KEY, JSON.stringify(records));
+  window.dispatchEvent(new CustomEvent('lifex-repository-updated'));
+  return records;
 }
 export async function writeRepositoryPDF(record: RepositoryPDF): Promise<RepositoryPDF[]> {
   const response = await fetch('/api/reports', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(record) });
@@ -70,15 +87,30 @@ export function createPDFBase64(title: string, lines: string[]): string {
   pdf += `trailer\n<< /Size ${objects.length} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`;
   return btoa(pdf);
 }
-export function openPDF(base64: string, filename: string) {
-  const binary = atob(base64); const bytes = new Uint8Array(binary.length);
+export function openPDF(source: string | undefined, filename: string) {
+  if (!source) return;
+  if (source.startsWith('/') || /^https?:\/\//i.test(source)) {
+    const link = document.createElement('a');
+    link.href = source;
+    link.download = filename.endsWith('.pdf') ? filename : `${filename}.pdf`;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link); link.click(); link.remove();
+    return;
+  }
+  const binary = atob(source); const bytes = new Uint8Array(binary.length);
   for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
   const url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
   const link = document.createElement('a'); link.href = url; link.download = filename.endsWith('.pdf') ? filename : `${filename}.pdf`;
   document.body.appendChild(link); link.click(); link.remove(); window.setTimeout(() => URL.revokeObjectURL(url), 30000);
 }
-export function viewPDF(base64: string) {
-  const binary = atob(base64); const bytes = new Uint8Array(binary.length);
+export function viewPDF(source: string | undefined) {
+  if (!source) return;
+  if (source.startsWith('/') || /^https?:\/\//i.test(source)) {
+    window.open(source, '_blank', 'noopener,noreferrer');
+    return;
+  }
+  const binary = atob(source); const bytes = new Uint8Array(binary.length);
   for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
   const url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
   window.open(url, '_blank', 'noopener,noreferrer');

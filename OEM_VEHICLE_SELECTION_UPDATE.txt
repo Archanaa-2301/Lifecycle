@@ -1,0 +1,7 @@
+OEM + VEHICLE SELECTION UPDATE
+
+- Both OEM and vehicle cards use the same blue circular checkmark selection indicator.
+- Selected vehicle card has the same blue border, pale blue tint, and selection glow as the selected OEM card.
+- Replaced the five OEM artwork assets with cropped high-quality marks from the user-provided reference screenshot (Toyota, Ford, BMW, Honda, Tesla).
+- OEM card click-to-select/navigation behaviour and vehicle selection/continue behaviour are preserved.
+- Other pages and repository PDF content are preserved.

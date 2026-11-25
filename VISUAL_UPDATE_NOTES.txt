@@ -1,0 +1,10 @@
+LIFEX Global Repository visual update
+
+- Component cards now display bundled component photographs rather than generic vehicle icons.
+- Powertrain component images use the corresponding image assets already present in the project.
+- Rear-suspension component images use the existing component image assets (rebound bumper, rod guide, rod, spring seat, top mount, bumper cap).
+- Selecting a repository, vehicle system, or component triggers a short fade/slide transition.
+- Component cards animate into view with a stagger, and component images subtly zoom/glow on hover.
+- The selected component image and description are shown above its repository document list.
+
+Note: the current source data only includes detailed component records for Powertrain and Rear Suspension. Other vehicle systems remain visible, but component-level records and photos need to be supplied for those systems.

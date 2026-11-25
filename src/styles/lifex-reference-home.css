@@ -1,0 +1,162 @@
+/* =========================================================
+   LIFEX REFERENCE HOMEPAGE — white automotive studio layout
+   ========================================================= */
+.lifex-reference-home{--ref-navy:#102b53;--ref-blue:#0867df;--ref-muted:#526b8e;min-height:100vh;background:#f8fbff;color:var(--ref-navy);font-family:'Outfit',Arial,sans-serif;overflow:clip}
+.lifex-reference-home .lifex-scroll-progress{display:none}
+.lifex-ref-nav{height:96px;padding:0 4.7%;display:flex;align-items:center;justify-content:space-between;gap:24px;background:rgba(255,255,255,.96);border-bottom:1px solid #e6edf7;position:relative;z-index:20}
+.lifex-ref-brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:265px}
+.lifex-ref-brand img{width:255px;height:72px;object-fit:contain;object-position:left center}
+.lifex-ref-brand span{font-size:12px;color:#607493;white-space:nowrap}
+.lifex-ref-nav nav{display:flex;align-items:center;gap:clamp(18px,3.2vw,54px)}
+.lifex-ref-nav nav button{height:96px;padding:0 0;border:0;background:none;color:#13294c;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;position:relative}
+.lifex-ref-nav nav button.active,.lifex-ref-nav nav button:hover{color:var(--ref-blue)}
+.lifex-ref-nav nav button.active:after{content:'';position:absolute;bottom:18px;left:0;right:0;height:3px;border-radius:4px;background:var(--ref-blue)}
+.lifex-ref-actions{display:flex;align-items:center;gap:12px}
+.lifex-ref-login,.lifex-ref-cta,.lifex-ref-learn{min-height:50px;padding:0 23px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap}
+.lifex-ref-login,.lifex-ref-learn{background:#fff;border:1px solid #b8c9e1;color:#19345b}
+.lifex-ref-cta{border:1px solid #0867df;background:linear-gradient(110deg,#0754c8,#0879ef);color:white;box-shadow:0 9px 22px #0865df26}
+.lifex-ref-hero{position:relative;min-height:610px;padding:74px 4.7% 24px;background:radial-gradient(ellipse at 76% 45%,#e6f1ff 0%,#f5f9ff 39%,#fff 76%);display:grid;grid-template-columns:46% 54%;align-items:center;isolation:isolate;overflow:hidden}
+.lifex-ref-hero:before{content:'';position:absolute;width:980px;height:620px;right:-230px;top:-310px;border-radius:50%;border:1px solid #e3edf9;box-shadow:0 0 0 38px #f5f8fd,0 0 0 39px #e8eff9;transform:rotate(-18deg);z-index:-1}
+.lifex-ref-copy{position:relative;z-index:3;align-self:start;padding-top:0;max-width:700px}
+.lifex-ref-eyebrow{display:flex;align-items:center;gap:14px;color:#20395e;font-size:13px;letter-spacing:1.65px;font-weight:800;white-space:nowrap}
+.lifex-ref-eyebrow i{height:3px;width:42px;background:#086de8;display:block}
+.lifex-ref-wordmark{font-size:clamp(52px,5.2vw,76px);line-height:.98;font-weight:950;font-style:italic;letter-spacing:-5px;color:#0c2d60;margin:25px 0 12px}
+.lifex-ref-copy h1{font-size:clamp(30px,2.7vw,45px);line-height:1.17;letter-spacing:-1.7px;color:#12294e;font-weight:820;margin:0 0 20px}
+.lifex-ref-copy>p{font-size:18px;line-height:1.65;color:#536b8d;max-width:640px;margin:0}
+.lifex-ref-buttons{display:flex;gap:16px;margin-top:27px;flex-wrap:wrap}
+.lifex-ref-buttons .lifex-ref-cta,.lifex-ref-buttons .lifex-ref-learn{min-height:62px;padding:0 28px;font-size:16px}
+.lifex-ref-points{display:grid;grid-template-columns:repeat(4,1fr);margin-top:43px;max-width:650px}
+.lifex-ref-points>div{min-height:85px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;text-align:center;border-right:1px solid #d8e3f2;color:#142e56}
+.lifex-ref-points>div:last-child{border-right:0}
+.lifex-ref-points svg{width:28px;height:28px;color:#0870ed;stroke-width:1.8}
+.lifex-ref-points b{font-size:12px;line-height:1.35;font-weight:750}
+.lifex-ref-vehicle{position:relative;min-width:0;height:520px;align-self:center;margin-left:-5%;z-index:2}
+.lifex-ref-vehicle>img{position:absolute;z-index:1;width:112%;height:100%;left:-4%;top:0;object-fit:contain;filter:drop-shadow(0 22px 22px #58799a26);animation:lifexRefCarFloat 6s ease-in-out infinite}
+@keyframes lifexRefCarFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.lifex-ref-orbit{position:absolute;z-index:0;width:104%;height:180px;left:-1%;bottom:8px;border:2px solid #b6d8ff;border-radius:50%;transform:rotate(-5deg);box-shadow:0 12px 34px #8abdf133,inset 0 0 30px #d8edff}
+.lifex-ref-orbit:after{content:'';position:absolute;inset:17px 42px;border:1px solid #d4e7ff;border-radius:50%}
+.lifex-ref-callout{position:absolute;z-index:4;display:flex;align-items:center;gap:12px;padding:13px 17px;border:1px solid #d4e3f6;border-radius:16px;background:#ffffffed;box-shadow:0 10px 26px #1d4c8112;color:#19345b;text-align:left;backdrop-filter:blur(12px);cursor:pointer;white-space:nowrap}
+.lifex-ref-callout b{display:block;font-size:13px;font-weight:800;margin-bottom:4px}.lifex-ref-callout small{display:block;font-size:11px;color:#7185a2}
+.lifex-ref-callout svg{width:25px;height:25px;color:#086de8;flex:none}.callout-icon{font-size:24px;color:#0870ed}
+.lifex-callout-lifecycle{right:0;bottom:10%}
+.lifex-ref-hotspot{position:absolute;z-index:5;width:17px;height:17px;border:3px solid #fff;border-radius:50%;background:#0878ef;box-shadow:0 0 0 5px #1684ef40;cursor:pointer}
+.hotspot-c{left:69%;top:68%}
+.lifex-ref-vehicle-caption{position:absolute;z-index:2;bottom:-2px;left:20%;right:20%;text-align:center;color:#7a96bb;font-size:10px;letter-spacing:2px;font-weight:850;white-space:nowrap}
+.lifex-ref-lifecycle{position:relative;z-index:6;margin:0 2.6% 26px;padding:18px 12px;min-height:165px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:linear-gradient(110deg,#fff,#f6f9ff);border:1px solid #e5edf8;border-radius:18px;box-shadow:0 12px 32px #234b7910}
+.lifex-ref-life-card{display:flex;align-items:center;gap:14px;padding:10px 18px;min-width:0;text-align:left;background:transparent;border:0;border-right:1px solid #dbe5f2;color:#152f56;cursor:pointer;position:relative}
+.lifex-ref-life-card:last-child{border-right:0}
+.lifex-ref-life-card:hover{background:#edf5ff;border-radius:12px}
+.lifex-ref-life-icon{width:75px;min-width:75px;height:92px;display:flex;align-items:center;justify-content:center;color:#6d8fb9}
+.lifex-ref-life-icon svg{width:56px;height:56px;stroke-width:1.45}
+.lifex-ref-life-copy b{display:block;font-size:15px;margin-bottom:8px;white-space:nowrap}.lifex-ref-life-copy small{display:block;font-size:12px;line-height:1.55;color:#607694;max-width:210px}
+.lifex-ref-life-arrow{position:absolute;right:12px;bottom:4px;width:31px;height:31px;border:1px solid #cbd9eb;border-radius:50%;display:grid;place-items:center;background:#fff;color:#19345b}
+.lifex-ref-about{padding:80px 8%;background:#fff;border-top:1px solid #e8eef7}.lifex-ref-about>span{font-size:12px;letter-spacing:2px;color:#0870ed;font-weight:800}.lifex-ref-about h2{font-size:36px;color:#12294e;margin:15px 0}.lifex-ref-about p{font-size:17px;color:#607694;max-width:720px;line-height:1.7}
+.lifex-ref-modal{position:fixed;inset:0;z-index:100;background:#0c244b66;display:grid;place-items:center;padding:20px}.lifex-ref-modal>div{position:relative;background:#fff;border:1px solid #d9e6f6;border-radius:20px;padding:30px;max-width:440px;width:100%;box-shadow:0 24px 70px #001b3c45}.lifex-ref-modal>div>span{font-size:10px;letter-spacing:1.5px;color:#0870ed;font-weight:800}.lifex-ref-modal h2{font-size:25px;color:#132d54;margin:14px 0 8px}.lifex-ref-modal p{font-size:14px;line-height:1.65;color:#607694;margin-bottom:22px}.lifex-ref-modal-close{position:absolute;right:16px;top:14px;width:32px;height:32px;border:0;border-radius:50%;background:#eef4fc;color:#19345b;font-size:22px;cursor:pointer}
+@media(max-width:1100px){.lifex-ref-brand{min-width:190px}.lifex-ref-brand img{width:150px}.lifex-ref-brand span{display:none}.lifex-ref-nav nav{gap:18px}.lifex-ref-hero{grid-template-columns:48% 52%;padding-left:4%;padding-right:4%}.lifex-ref-vehicle{height:440px}.lifex-ref-life-card{padding:8px}.lifex-ref-life-icon{width:48px;min-width:48px}.lifex-ref-life-icon svg{width:40px}.lifex-ref-life-copy b{font-size:12px;white-space:normal}}
+@media(max-width:760px){.lifex-ref-nav{height:auto;min-height:76px;padding:10px 4%;flex-wrap:wrap}.lifex-ref-brand img{width:180px;height:52px}.lifex-ref-nav nav{order:3;width:100%;justify-content:space-between;gap:5px}.lifex-ref-nav nav button{height:36px;font-size:11px}.lifex-ref-nav nav button.active:after{bottom:0}.lifex-ref-actions{margin-left:auto}.lifex-ref-login{display:none}.lifex-ref-actions .lifex-ref-cta{min-height:40px;padding:0 12px;font-size:12px}.lifex-ref-hero{display:flex;flex-direction:column;align-items:stretch;padding:38px 5% 10px;min-height:0}.lifex-ref-copy{width:100%}.lifex-ref-eyebrow{font-size:9px;letter-spacing:1px;white-space:normal}.lifex-ref-wordmark{font-size:52px;margin:20px 0 8px;letter-spacing:-3px}.lifex-ref-copy h1{font-size:29px;letter-spacing:-.8px}.lifex-ref-copy>p{font-size:14px}.lifex-ref-buttons .lifex-ref-cta,.lifex-ref-buttons .lifex-ref-learn{min-height:49px;padding:0 16px;font-size:13px}.lifex-ref-points{margin-top:26px}.lifex-ref-points>div{min-height:75px;padding:0 4px}.lifex-ref-points svg{width:22px;height:22px}.lifex-ref-points b{font-size:9px}.lifex-ref-vehicle{width:100%;height:310px;margin:8px 0 8px}.lifex-ref-vehicle>img{width:112%;left:-6%;height:100%}.lifex-ref-callout{padding:8px 10px;gap:7px;border-radius:11px}.lifex-ref-callout b{font-size:9px}.lifex-ref-callout small{font-size:8px}.lifex-ref-callout svg{width:18px;height:18px}.callout-icon{font-size:18px}.lifex-callout-lifecycle{right:0;bottom:2%}.lifex-ref-vehicle-caption{font-size:7px;bottom:-7px}.lifex-ref-lifecycle{grid-template-columns:repeat(2,minmax(0,1fr));margin:0 3% 20px;padding:8px}.lifex-ref-life-card{min-height:112px;border-right:1px solid #dbe5f2;border-bottom:1px solid #dbe5f2;padding:8px 5px}.lifex-ref-life-card:nth-child(2){border-right:0}.lifex-ref-life-card:nth-child(3),.lifex-ref-life-card:nth-child(4){border-bottom:0}.lifex-ref-life-icon{width:34px;min-width:34px;height:55px}.lifex-ref-life-icon svg{width:30px;height:30px}.lifex-ref-life-copy b{font-size:10px;margin-bottom:4px}.lifex-ref-life-copy small{font-size:9px}.lifex-ref-life-arrow{right:4px;bottom:3px;width:22px;height:22px}.lifex-ref-about{padding:48px 6%}.lifex-ref-about h2{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.lifex-ref-vehicle>img{animation:none}}
+
+/* Real automotive lifecycle imagery, replacing the previous outline icons */
+.lifex-ref-life-icon{width:145px;min-width:145px;height:118px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.lifex-ref-life-icon img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+@media(max-width:1100px){.lifex-ref-life-icon{width:105px;min-width:105px;height:100px}.lifex-ref-life-icon img{width:100%;height:100%}}
+@media(max-width:760px){.lifex-ref-life-icon{width:74px;min-width:74px;height:76px}.lifex-ref-life-icon img{width:100%;height:100%}}
+
+/* Visual correction: keep the entire reference homepage on a continuous light canvas */
+.lifex-landing.lifex-reference-home{
+  background:#f8fbff !important;
+  color:#102b53 !important;
+  min-height:100vh;
+}
+.lifex-landing.lifex-reference-home main{
+  display:block;
+  background:#f8fbff !important;
+}
+.lifex-landing.lifex-reference-home .lifex-ref-hero,
+.lifex-landing.lifex-reference-home .lifex-ref-lifecycle,
+.lifex-landing.lifex-reference-home .lifex-ref-about{
+  background-color:#f8fbff;
+}
+.lifex-landing.lifex-reference-home .lifex-ref-lifecycle{
+  background:linear-gradient(110deg,#fff 0%,#f7faff 100%) !important;
+}
+
+/* Larger brand mark in the header */
+.lifex-landing.lifex-reference-home .lifex-ref-nav{
+  min-height:108px;
+  height:108px;
+  padding-left:4.2%;
+  padding-right:4.2%;
+  background:rgba(255,255,255,.98);
+}
+.lifex-landing.lifex-reference-home .lifex-ref-brand{
+  min-width:350px;
+  gap:14px;
+}
+.lifex-landing.lifex-reference-home .lifex-ref-brand img{
+  width:320px;
+  height:92px;
+  max-width:none;
+  object-fit:contain;
+  object-position:left center;
+}
+.lifex-landing.lifex-reference-home .lifex-ref-nav nav button{
+  height:108px;
+}
+
+/* Smooth scroll-triggered entrance effects */
+.lifex-landing.lifex-reference-home .lifex-scroll-reveal{
+  opacity:0;
+  transform:translateY(34px);
+  filter:blur(3px);
+  transition:opacity .75s ease,transform .85s cubic-bezier(.2,.75,.25,1),filter .75s ease;
+  transition-delay:var(--lifex-reveal-delay,0ms);
+}
+.lifex-landing.lifex-reference-home .lifex-scroll-reveal.lifex-in-view{
+  opacity:1;
+  transform:translateY(0);
+  filter:blur(0);
+}
+.lifex-landing.lifex-reference-home .lifex-ref-life-card{
+  transition:transform .35s ease,background-color .35s ease,box-shadow .35s ease;
+}
+.lifex-landing.lifex-reference-home .lifex-ref-life-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 14px 30px rgba(25,70,125,.10);
+}
+.lifex-landing.lifex-reference-home .lifex-ref-life-icon img{
+  transition:transform .5s cubic-bezier(.2,.75,.25,1);
+}
+.lifex-landing.lifex-reference-home .lifex-ref-life-card:hover .lifex-ref-life-icon img{
+  transform:scale(1.07);
+}
+.lifex-ref-scroll-progress{
+  position:fixed;
+  z-index:120;
+  top:0;left:0;
+  width:100%;
+  height:3px;
+  pointer-events:none;
+  background:linear-gradient(90deg,#0875f5,#61c8ff);
+  transform:scaleX(var(--lifex-page-scroll,0));
+  transform-origin:left center;
+}
+@media(max-width:1100px){
+  .lifex-landing.lifex-reference-home .lifex-ref-nav{height:auto;min-height:88px}
+  .lifex-landing.lifex-reference-home .lifex-ref-brand{min-width:240px}
+  .lifex-landing.lifex-reference-home .lifex-ref-brand img{width:220px;height:72px}
+  .lifex-landing.lifex-reference-home .lifex-ref-nav nav button{height:88px}
+}
+@media(max-width:760px){
+  .lifex-landing.lifex-reference-home .lifex-ref-nav{min-height:76px;height:auto}
+  .lifex-landing.lifex-reference-home .lifex-ref-brand{min-width:0}
+  .lifex-landing.lifex-reference-home .lifex-ref-brand img{width:205px;height:58px}
+  .lifex-landing.lifex-reference-home .lifex-ref-nav nav button{height:36px}
+}
+@media(prefers-reduced-motion:reduce){
+  .lifex-landing.lifex-reference-home .lifex-scroll-reveal{
+    opacity:1;transform:none;filter:none;transition:none;
+  }
+  .lifex-landing.lifex-reference-home .lifex-ref-life-card,
+  .lifex-landing.lifex-reference-home .lifex-ref-life-icon img{transition:none}
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 250">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M45 111 C92 40 201 27 325 50 C399 62 454 42 500 20 C468 67 423 89 354 89 L122 89 C90 89 63 97 45 111Z" stroke="#0877D8" stroke-width="13"/>
+ <path d="M88 184 C165 224 320 226 444 177" stroke="#0877D8" stroke-width="13"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-style="italic" font-weight="900" font-size="138" letter-spacing="-8">
+ <text x="48" y="178" fill="#FFFFFF" stroke="#123C79" stroke-width="5" paint-order="stroke fill">LIFE</text>
+ <text x="343" y="178" fill="#0877D8" stroke="#0877D8" stroke-width="2">X</text>
+</g>
+</svg>

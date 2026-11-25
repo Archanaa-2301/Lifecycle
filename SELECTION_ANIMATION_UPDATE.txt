@@ -1,0 +1,27 @@
+LIFEX SELECTION ANIMATION UPDATE
+
+This update strengthens selection feedback throughout the existing LIFEX workflow.
+
+Shared interaction:
+- A selected card receives a strong blue commit highlight.
+- A branded selection token travels from the clicked card along a bright curved path.
+- The destination hierarchy / selected panel receives a landing pulse.
+- Selection is committed only after the animation finishes.
+- Reduced-motion preferences are respected.
+
+Updated selection points:
+1. OEM cards: click Toyota, Ford, BMW, Honda or Tesla directly. The selected OEM travels toward a hierarchy destination before the vehicle page opens.
+2. Project vehicle cards: no model is preselected. Selecting a vehicle animates it into the OEM-to-vehicle hierarchy. Continue to overview is enabled after the landing.
+3. Vehicle Overview: hotspot markers and system-list cards animate the selected system toward the active-system panel; Rear Suspension proceeds to component hierarchy after the transition.
+4. Rear Suspension Component Hierarchy: component cards animate into the selected-component footer before becoming active.
+5. Component Workspace: repository rows and Engineering Intelligence actions animate toward the selection hierarchy before opening.
+6. Global Repository: Design Rules / Templates / Process, vehicle-system cards and component cards use the same selection flight.
+7. Knowledge Repository, Manual Entry workflows, Internal Parts and legacy vehicle / subsystem selection pages also use the shared animation.
+
+The existing LIFEX page layouts, repository documents and public assets are retained. The Rebound Bumper Design Rule PDF remains at:
+public/design-principles/rebound-bumper-design-principle.pdf
+
+Validation performed:
+- ZIP archive CRC/integrity check.
+- All 64 TypeScript/TSX source files passed TypeScript transpile parsing with zero syntax diagnostics.
+- A full Vite build was not completed because npm dependency installation timed out in this environment. Run `npm ci` followed by `npm run build` after extracting the project.

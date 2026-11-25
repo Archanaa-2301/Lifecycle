@@ -1,0 +1,30 @@
+LIFEX – Component Hierarchy and Vehicle Viewer Update
+
+Page 03 – Vehicle Overview
+- Toyota Innova Crysta now loads an interactive Sketchfab 3D viewer automatically on page entry.
+- Users can orbit the complete vehicle, scroll to zoom, and use the viewer's fullscreen control.
+- The embedded model is credited to Mind Illusion under CC BY. It is a community model marked as AI-generated, not an OEM-verified Toyota CAD model.
+- Other vehicle selections retain the local Three.js model, with full OrbitControls rotation, zoom, and reset behavior.
+- Added the vehicle architecture selection panel so users can choose a system. Rear Suspension is selected by default; continuing from it opens the component hierarchy.
+
+Page 04 – Component Hierarchy
+- Preserved the Toyota → Innova → Rear Suspension lineage and the Option B branching layout.
+- The six component nodes remain individually selectable: Rebound Bumper, Rod, Rodline, Spring Seat, Top Mount, and Bumper Cap.
+- Blue branch paths draw sequentially and component nodes appear one by one.
+- Selecting any node updates the selected-component summary and the Knowledge Access page context.
+- Replaced the generic full-wheel suspension picture with a high-resolution axle-beam assembly visual styled to match the supplied reference. The generated visual is illustrative, not an OEM-issued Toyota part photograph or drawing.
+
+Page 05 – Knowledge Access
+- Updated the Rear Suspension thumbnail in the lineage to use the same new assembly visual.
+- Existing repository and knowledge extraction workflow is retained.
+
+Run
+1. Extract the ZIP.
+2. Open the LIFEX folder in VS Code.
+3. Run `npm install`.
+4. Run `npm run dev`.
+
+Important
+- The Toyota Innova 3D viewer and vehicle photos require an internet connection.
+- The Sketchfab model is a community AI-generated model by Mind Illusion under CC BY attribution; verify all geometry and engineering specifications against official Toyota service documentation before engineering use.
+- Changed TSX files passed TypeScript/JSX syntax transpilation checks. A full Vite build was not run because npm dependency installation timed out in this environment.

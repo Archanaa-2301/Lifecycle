@@ -1,0 +1,57 @@
+
+/* LIFEX dashboard integrated white-mode styling */
+.lifex-dashboard-light{background:radial-gradient(ellipse at 83% 18%,#e4f0ff 0,transparent 32%),linear-gradient(140deg,#fbfdff,#f4f8ff 75%,#edf5ff)!important;color:#102858!important;padding-left:clamp(14px,3vw,42px)!important;padding-right:clamp(14px,3vw,42px)!important}
+.lifex-dashboard-brandbar{height:88px;margin:0 calc(clamp(14px,3vw,42px)*-1);padding:0 clamp(18px,3vw,48px);display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.92);border-bottom:1px solid #dce8f8;box-shadow:0 5px 20px rgba(28,76,135,.04);backdrop-filter:blur(16px)}
+.lifex-dashboard-brand{display:flex;align-items:center;gap:18px;text-decoration:none;color:#102858;font-size:15px;font-weight:600;letter-spacing:-.02em}
+.lifex-dashboard-brand img{width:178px;height:72px;object-fit:contain;object-position:left center}
+.lifex-dashboard-brand-divider{width:1px;height:40px;background:#b8c9e3}
+.lifex-dashboard-user{display:flex;align-items:center;gap:9px;color:#56719b;font-size:12px;font-weight:700}
+.lifex-dashboard-user-dot{width:8px;height:8px;border-radius:50%;background:#0875f5;box-shadow:0 0 0 5px #0875f51a}
+.lifex-dashboard-light .lifex-panel{background:rgba(255,255,255,.76)!important;border:1px solid #d7e5f8!important;box-shadow:0 22px 65px rgba(36,88,151,.10)!important}
+.lifex-dashboard-light .lifex-sidebar{background:rgba(255,255,255,.82)!important;border-color:#dce8f8!important}
+.lifex-dashboard-light .lifex-content-transition{color:#102858}
+.lifex-dashboard-light .lifex-hero-copy h1{color:#102858!important}
+.lifex-dashboard-light .lifex-hero-copy h1 span{color:#075cf5!important}
+.lifex-dashboard-light .lifex-hero-copy p{color:#5d749d!important}
+.lifex-dashboard-light .lifex-car-frame>div.relative{background:rgba(255,255,255,.82)!important;border-color:#d5e5fa!important;box-shadow:0 14px 35px rgba(25,92,165,.09)}
+.lifex-dashboard-light .lifex-car-frame .text-slate-600{color:#7890b4!important}
+.lifex-dashboard-light .lifex-car-image{filter:drop-shadow(0 12px 22px rgba(25,87,153,.16));border-radius:12px;animation:lifexCarFloat 6s ease-in-out infinite}
+.lifex-dashboard-light .lifex-nav-link{color:#29456f!important;border-color:transparent!important}
+.lifex-dashboard-light .lifex-nav-link svg{color:#6683ad!important}
+.lifex-dashboard-light .lifex-nav-link:hover{background:#edf5ff!important;border-color:#d7e7fc!important;color:#075cf5!important}
+.lifex-dashboard-light .lifex-nav-link.is-active{background:linear-gradient(90deg,#e7f1ff,#dceaff)!important;border-color:#c4dcff!important;color:#075cf5!important;box-shadow:inset 3px 0 #0865ff,0 6px 16px #1268df0d!important}
+.lifex-dashboard-light .lifex-nav-link.is-active svg{color:#075cf5!important}
+.lifex-dashboard-light .lifex-explore-sidebar-link{background:linear-gradient(100deg,#075cf5,#1685ff)!important;border-color:#075cf5!important;color:white!important;box-shadow:0 9px 22px #075cf52b}
+.lifex-dashboard-light .lifex-explore-sidebar-link:hover{transform:translateY(-2px);box-shadow:0 14px 26px #075cf53a}
+.lifex-dashboard-light .lifex-content-transition .border-cyan-950\/80{border-color:#dce8f8!important}
+.lifex-dashboard-light .lifex-content-transition .text-white{color:#102858!important}
+.lifex-dashboard-light .lifex-content-transition .text-slate-100,
+.lifex-dashboard-light .lifex-content-transition .text-slate-300{color:#526d98!important}
+.lifex-dashboard-light .lifex-content-transition .text-slate-400,
+.lifex-dashboard-light .lifex-content-transition .text-slate-500,
+.lifex-dashboard-light .lifex-content-transition .text-slate-600{color:#7187aa!important}
+.lifex-dashboard-light .lifex-content-transition .text-teal-400,
+.lifex-dashboard-light .lifex-content-transition .text-cyan-300{color:#075cf5!important}
+.lifex-dashboard-light .lifex-content-transition .bg-cyan-950\/60{background:#e9f2ff!important}
+.lifex-dashboard-light .lifex-content-transition .border-cyan-900\/70{border-color:#d6e6fb!important}
+.lifex-dashboard-light .lifex-content-transition .lifex-repository-card{background:rgba(255,255,255,.92)!important;border-color:#d7e5f8!important;box-shadow:0 9px 24px rgba(35,85,155,.06)}
+.lifex-dashboard-light .lifex-content-transition .lifex-repository-card:hover{background:#fff!important;border-color:#8dbbff!important;box-shadow:0 18px 32px rgba(35,85,155,.13)}
+.lifex-dashboard-light .lifex-content-transition .lifex-repository-card h3{color:#102858!important}
+.lifex-dashboard-light .lifex-content-transition .lifex-repository-card p{color:#5e759a!important}
+.lifex-dashboard-light .lifex-content-transition .lifex-repository-card .text-cyan-300,
+.lifex-dashboard-light .lifex-content-transition .lifex-repository-card .text-cyan-700{color:#075cf5!important}
+.lifex-dashboard-light .lifex-cta{background:linear-gradient(105deg,#0758ed,#087dff)!important;color:#fff!important;border-color:#0875f5!important;box-shadow:0 10px 24px #0966e72e}
+.lifex-dashboard-light .lifex-cta:hover{box-shadow:0 15px 30px #0966e746}
+.lifex-dashboard-light .lifex-content-transition h1,
+.lifex-dashboard-light .lifex-content-transition h2,
+.lifex-dashboard-light .lifex-content-transition h3{color:#102858}
+.lifex-dashboard-light .lifex-content-transition .bg-\[\#091c29\]{background:#fff!important}
+.lifex-dashboard-light .lifex-content-transition .bg-\[\#06131e\]{background:#f7faff!important}
+@keyframes lifexCarFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(max-width:760px){.lifex-dashboard-brandbar{height:72px}.lifex-dashboard-brand{gap:9px;font-size:10px}.lifex-dashboard-brand img{width:112px;height:58px}.lifex-dashboard-brand-divider{height:28px}.lifex-dashboard-user{font-size:0}.lifex-dashboard-user-dot{width:9px;height:9px}}
+
+.lifex-dashboard-top-action{border:1px solid #d3e2f6;border-radius:999px;background:#fff;color:#174078;padding:8px 14px;font-size:11px;font-weight:800;transition:all .2s}
+.lifex-dashboard-top-action:hover{background:#edf5ff;border-color:#8cbaff;color:#075cf5;transform:translateY(-1px)}
+.lifex-dashboard-signout{background:#075cf5;border-color:#075cf5;color:#fff}
+.lifex-dashboard-signout:hover{background:#034bc8;color:#fff}
+@media(max-width:760px){.lifex-dashboard-user{gap:6px}.lifex-dashboard-top-action{padding:7px 9px;font-size:10px}.lifex-dashboard-brand>span:last-child{display:none}}

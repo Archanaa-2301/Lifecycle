@@ -1,0 +1,6 @@
+Vehicle image source
+====================
+The OE & Vehicle Type page now uses Tata Motors' official Nexon product image asset:
+https://s7ap1.scene7.com/is/image/tatamotors/GrasslandBeige-0-2?$PO-750-500-S$=&fit=crop&fmt=jpg
+
+The image is served from Tata Motors' Scene7 media CDN. An internet connection is required for this remote image to load.

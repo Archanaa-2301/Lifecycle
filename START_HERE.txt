@@ -1,0 +1,25 @@
+LIFEX — SINGLE INTEGRATED APPLICATION
+
+Everything is inside this one LIFEX folder:
+- Approved white landing page with transparent SUV and lifecycle image cards
+- Login page with high-resolution vehicle visual
+- White engineering dashboard and Explore Repositories
+- Existing engineering repositories and workflows
+
+RUN:
+1. Extract this ZIP.
+2. Open the LIFEX folder in VS Code.
+3. Open Terminal > New Terminal.
+4. Run: npm install
+5. Run: npm run dev
+6. Open the localhost URL printed by Vite.
+
+NAVIGATION:
+- Landing page Get Started / Log In -> Login
+- Login Back to Home -> Landing page
+- Login Sign in -> Dashboard (front-end demo)
+- Dashboard logo / Home -> Landing page
+- Dashboard Sign out -> Login
+- Dashboard Explore Repositories -> existing repository landing page
+
+The sign-in form is a front-end demo and is not connected to a production authentication service.

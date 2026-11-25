@@ -1,0 +1,17 @@
+OE & Vehicle Type page update
+==============================
+
+- Increased typography on the Project Details page.
+- The next workflow page (Page 5) now displays exactly one OE and one vehicle type assigned to the selected project.
+- The selected project name/code are shown as context.
+- The page has Back to Project Details and Next: Vehicle Configuration navigation.
+- The existing downstream vehicle configuration, architecture, subsystem and component pages remain in place.
+
+Current front-end sample project mappings:
+- Rear Suspension Redesign -> Tata Motors / SUV (Nexon)
+- Brake System Optimization -> Hyundai / SUV (Creta)
+- Thermal Management Upgrade -> Tata Motors / SUV (Nexon)
+- E-Drive Integration -> MG / EV (ZS EV)
+- Lightweight Body Architecture -> Renault / Hatchback (Kwid)
+
+These are sample mappings for the prototype and should be replaced with the user's confirmed OE/vehicle assignments if different.

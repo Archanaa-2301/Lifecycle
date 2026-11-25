@@ -1,0 +1,1 @@
+OEM selection updated to match the supplied reference: top workflow stepper, white rounded content panel, search at upper right, five official vector OEM logo cards in a 3+2 layout, selected Toyota card state, and whole-card click-through to vehicle selection. Removed separate per-card CTA row. Responsive breakpoints: 3 columns desktop, 2 tablet, 1 mobile.

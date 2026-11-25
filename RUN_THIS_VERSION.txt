@@ -1,0 +1,28 @@
+LIFEX - Reference Vehicle Overview build
+
+IMPORTANT:
+1. Extract this ZIP into a NEW folder (do not merge with an older LIFEX folder).
+2. Open this extracted LIFEX folder in VS Code.
+3. Confirm public/images/innova-cutaway-highres.png exists.
+4. Run: npm install
+5. Run: npm run dev
+
+Toyota Innova Vehicle Overview:
+- Uses the local high-resolution cutaway artwork in public/images.
+- Does not load Sketchfab or an iframe.
+- Component hotspots and the left/right side panels are rendered by the app.
+- Drag provides limited perspective adjustment of the cutaway image; it is not
+  a true rotatable 3D mesh. The generic Three.js model remains for other vehicles.
+
+LATEST UI CHANGE (22 Nov 2026):
+- Removed the right-side Vehicle Architecture / component list panel.
+- Removed the X-Ray and Exploded controls from the viewer header.
+- Kept the left OEM-to-vehicle selection path.
+- Increased drag-to-rotate perspective movement for the Innova cutaway image.
+- Auto Rotate now sweeps a wider left/right perspective arc.
+- Clickable component labels/pins remain on the car itself; selecting a pin still updates the active component and navigation state.
+
+Rotation limitation:
+The Innova cutaway supplied in this project is a 2D image, not a GLB/GLTF model.
+The interaction is a perspective tilt of the image. True 360-degree orbit from every
+side requires a real 3D vehicle asset (GLB/GLTF), which is not included in this ZIP.

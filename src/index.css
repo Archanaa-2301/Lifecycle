@@ -1,0 +1,1858 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 25, 35, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.6);
+}
+
+/* Subtle glow for automotive teardown UI */
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.15);
+}
+
+.glow-cyan-lg {
+  box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.25);
+}
+
+/* Chrome metallic embossed Ford watermark effect */
+.ford-watermark {
+  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.08) 0%, rgba(6, 182, 212, 0.03) 40%, transparent 70%);
+}
+
+/* =========================================
+   LIFEX CINEMATIC LANDING PAGE
+========================================= */
+
+:root {
+  --lifex-bg: #030b13;
+  --lifex-cyan: #06d9f2;
+  --lifex-teal: #14b8a6;
+  --lifex-white: #eaf4fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.lifex-landing {
+  min-height: 100vh;
+  color: var(--lifex-white);
+  background: var(--lifex-bg);
+  overflow: hidden;
+  font-family: 'Outfit', sans-serif;
+}
+
+.lifex-scroll-progress {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--lifex-cyan);
+  transform-origin: left;
+  box-shadow: 0 0 12px var(--lifex-cyan);
+}
+
+/* NAVIGATION */
+
+.lifex-nav {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 78px;
+  padding: 16px 5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  background: linear-gradient(
+    180deg,
+    rgba(2,9,16,.78),
+    rgba(2,9,16,.08)
+  );
+  backdrop-filter: blur(8px);
+}
+
+.lifex-brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: white;
+  text-decoration: none;
+}
+
+.lifex-brand-name {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -1.8px;
+  font-style: italic;
+}
+
+.lifex-brand-name span,
+.lifex-footer-brand span {
+  color: var(--lifex-cyan);
+}
+
+.lifex-brand-divider {
+  height: 34px;
+  width: 1px;
+  background: rgba(255,255,255,.35);
+}
+
+.lifex-brand-description {
+  font-size: 11px;
+  color: #d0dce5;
+  letter-spacing: .15px;
+}
+
+.lifex-nav-links {
+  display: flex;
+  gap: 38px;
+  align-items: center;
+}
+
+.lifex-nav-links button {
+  border: 0;
+  background: transparent;
+  color: #e3edf4;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.lifex-nav-links button:hover {
+  color: var(--lifex-cyan);
+}
+
+.lifex-login-button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--lifex-cyan);
+  border-radius: 30px;
+  padding: 10px 24px;
+  color: var(--lifex-cyan);
+  background: rgba(0,15,25,.45);
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.lifex-login-button:hover {
+  color: #001019;
+  background: var(--lifex-cyan);
+  box-shadow: 0 0 25px rgba(6,217,242,.3);
+}
+
+/* HERO */
+
+.lifex-hero {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+  height: 850px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #06111d;
+}
+
+.lifex-hero-media {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+}
+
+.lifex-hero-video,
+.lifex-hero-fallback {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  will-change: transform;
+  animation: lifexSceneDrift 22s ease-in-out infinite alternate;
+}
+
+.lifex-hero-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg,
+      rgba(2,9,16,.94) 0%,
+      rgba(2,9,16,.78) 35%,
+      rgba(2,9,16,.20) 70%,
+      rgba(2,9,16,.05) 100%),
+    linear-gradient(0deg,
+      #030b13 0%,
+      transparent 42%,
+      rgba(2,9,16,.08) 100%);
+}
+
+.lifex-hero-glow {
+  position: absolute;
+  z-index: 2;
+  width: 520px;
+  height: 520px;
+  left: 15%;
+  top: 20%;
+  border-radius: 50%;
+  background: rgba(0,191,220,.08);
+  filter: blur(100px);
+  pointer-events: none;
+  animation: lifexGlow 8s ease-in-out infinite alternate;
+}
+
+.lifex-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(680px, 55%);
+  padding-top: clamp(150px, 18vh, 205px);
+  margin-left: 7%;
+  animation: lifexContentIn 1.1s ease both;
+}
+
+.lifex-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d5e5ed;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  margin-bottom: 24px;
+}
+
+.lifex-eyebrow span,
+.lifex-eyebrow i {
+  display: inline-block;
+  height: 2px;
+  width: 24px;
+  background: var(--lifex-cyan);
+}
+
+.lifex-eyebrow i {
+  width: 42px;
+  opacity: .55;
+}
+
+.lifex-hero-content h1 {
+  margin: 0;
+  font-size: clamp(43px, 5vw, 69px);
+  line-height: 1.04;
+  letter-spacing: -2.6px;
+  font-weight: 750;
+  color: #f5f8fb;
+}
+
+.lifex-hero-content h1 span {
+  color: var(--lifex-cyan);
+  text-shadow: 0 0 35px rgba(6,217,242,.17);
+}
+
+.lifex-hero-description {
+  max-width: 570px;
+  color: #d0dce5;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 24px;
+}
+
+.lifex-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 30px;
+}
+
+.lifex-primary-button,
+.lifex-secondary-button {
+  min-height: 49px;
+  padding: 0 25px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 650;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease,
+              background .3s ease;
+}
+
+.lifex-primary-button {
+  color: #001018;
+  border: 1px solid var(--lifex-cyan);
+  background: var(--lifex-cyan);
+  box-shadow: 0 0 24px rgba(6,217,242,.3);
+}
+
+.lifex-primary-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 38px rgba(6,217,242,.5);
+}
+
+.lifex-secondary-button {
+  color: #eaf4fa;
+  border: 1px solid rgba(6,217,242,.65);
+  background: rgba(2,14,23,.55);
+  backdrop-filter: blur(10px);
+}
+
+.lifex-secondary-button:hover {
+  transform: translateY(-4px);
+  background: rgba(6,217,242,.12);
+}
+
+/* SEMICIRCULAR VEHICLE LIFECYCLE JOURNEY */
+
+.lifex-lifecycle {
+  position: absolute;
+  z-index: 5;
+  left: 7%;
+  right: 7%;
+  bottom: 105px;
+  height: 180px;
+  display: block;
+  margin: 0;
+  overflow: visible;
+}
+
+.lifex-lifecycle-curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  overflow: visible;
+  pointer-events: none;
+  filter: drop-shadow(0 0 7px rgba(6,217,242,.55));
+}
+
+.lifex-stage {
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  min-height: 90px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #e2edf4;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transform: translate(-50%, -100%);
+  animation: lifexStageIn .8s ease both;
+  transition: color .3s ease, filter .3s ease;
+}
+
+.lifex-stage svg {
+  width: 29px;
+  height: 29px;
+  color: #82efff;
+  filter: drop-shadow(0 0 8px rgba(6,217,242,.35));
+  transition: transform .35s ease;
+}
+
+.lifex-stage span {
+  display: block;
+  color: #e2edf4;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lifex-stage i {
+  display: block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--lifex-cyan);
+  box-shadow: 0 0 9px var(--lifex-cyan), 0 0 20px rgba(6,217,242,.5);
+}
+
+.lifex-stage:hover {
+  color: var(--lifex-cyan);
+  filter: drop-shadow(0 0 10px rgba(6,217,242,.5));
+}
+
+.lifex-stage:hover svg {
+  transform: translateY(-5px) scale(1.15);
+}
+
+/* SVG is child 1; the seven stage buttons are children 2–8. */
+.lifex-stage:nth-child(2) { left: 0%; top: 145px; }
+.lifex-stage:nth-child(3) { left: 16.67%; top: 108px; }
+.lifex-stage:nth-child(4) { left: 33.33%; top: 78px; }
+.lifex-stage:nth-child(5) { left: 50%; top: 65px; }
+.lifex-stage:nth-child(6) { left: 66.67%; top: 78px; }
+.lifex-stage:nth-child(7) { left: 83.33%; top: 108px; }
+.lifex-stage:nth-child(8) { left: 100%; top: 145px; }
+
+/* Scroll cue stays beneath the lifecycle, inside the hero. */
+.lifex-scroll-cue {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  color: #d4e2e9;
+  border: 0;
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.lifex-scroll-cue svg {
+  color: var(--lifex-cyan);
+  animation: lifexArrowBounce 1.5s ease-in-out infinite;
+}
+
+/* ABOUT */
+
+.lifex-about {
+  min-height: 340px;
+  position: relative;
+  padding: 85px 7%;
+  display: grid;
+  grid-template-columns: 36% 40% 24%;
+  align-items: center;
+  border-top: 1px solid rgba(6,217,242,.13);
+  background:
+    radial-gradient(ellipse at 85% 50%, rgba(0,112,150,.15), transparent 45%),
+    #030b13;
+  overflow: hidden;
+}
+
+.lifex-section-label {
+  display: block;
+  color: var(--lifex-cyan);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  margin-bottom: 15px;
+}
+
+.lifex-about-heading h2,
+.lifex-capabilities-intro h2 {
+  color: #f2f7fa;
+  font-size: clamp(28px, 3vw, 39px);
+  letter-spacing: -1px;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.lifex-about-copy {
+  border-left: 1px solid rgba(6,217,242,.5);
+  padding: 15px 35px;
+}
+
+.lifex-about-copy p,
+.lifex-capabilities-intro p {
+  color: #aebfca;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.lifex-text-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--lifex-cyan);
+  font-weight: 650;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.lifex-about-visual {
+  height: 190px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.lifex-orbit {
+  position: absolute;
+  border: 1px solid rgba(6,217,242,.35);
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  animation: lifexOrbit 13s linear infinite;
+}
+
+.orbit-one {
+  width: 230px;
+  height: 85px;
+}
+
+.orbit-two {
+  width: 190px;
+  height: 140px;
+  transform: rotate(55deg);
+}
+
+.orbit-three {
+  width: 150px;
+  height: 150px;
+  border-style: dashed;
+}
+
+.lifex-orbit-core {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: var(--lifex-cyan);
+  font-size: 23px;
+  font-weight: 900;
+  background: #071b29;
+  border: 1px solid rgba(6,217,242,.7);
+  box-shadow: 0 0 35px rgba(6,217,242,.2);
+}
+
+.orbit-caption {
+  position: absolute;
+  bottom: 0;
+  color: #7196a6;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* CAPABILITIES */
+
+.lifex-capabilities {
+  padding: 95px 7% 110px;
+  background: #06111b;
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.lifex-capabilities-intro {
+  max-width: 680px;
+  margin-bottom: 45px;
+}
+
+.lifex-capabilities-intro h2 span {
+  color: var(--lifex-cyan);
+}
+
+.lifex-capabilities-intro p {
+  max-width: 570px;
+}
+
+.lifex-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.lifex-capability {
+  min-height: 240px;
+  padding: 27px 24px;
+  text-align: left;
+  color: white;
+  border: 1px solid rgba(130,180,200,.15);
+  background: linear-gradient(145deg, #0c1c29, #07121c);
+  cursor: pointer;
+  transition: transform .35s ease, border-color .35s ease,
+              background .35s ease, box-shadow .35s ease;
+}
+
+.lifex-capability:hover {
+  transform: translateY(-9px);
+  border-color: rgba(6,217,242,.7);
+  background: linear-gradient(145deg, #102b3b, #081722);
+  box-shadow: 0 18px 45px rgba(0,0,0,.3);
+}
+
+.lifex-capability-number {
+  color: var(--lifex-cyan);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.lifex-capability h3 {
+  margin-top: 30px;
+  font-size: 19px;
+}
+
+.lifex-capability p {
+  color: #9fb1bd;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.lifex-capability-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--lifex-cyan);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* FOOTER */
+
+.lifex-footer {
+  min-height: 110px;
+  padding: 25px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(6,217,242,.12);
+  background: #02080e;
+}
+
+.lifex-footer-brand {
+  font-size: 22px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.lifex-footer-brand p {
+  color: #8196a4;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lifex-footer > span {
+  color: #8196a4;
+  font-size: 12px;
+}
+
+/* ANIMATIONS */
+
+@keyframes lifexSceneDrift {
+  from { transform: scale(1.02) translateX(0); }
+  to { transform: scale(1.1) translateX(-1.2%); }
+}
+
+@keyframes lifexGlow {
+  from { opacity: .4; transform: translateY(0); }
+  to { opacity: .9; transform: translateY(-25px); }
+}
+
+@keyframes lifexContentIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lifexStageIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lifexArrowBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+@keyframes lifexMouseScroll {
+  0% { opacity: 0; transform: translateY(0); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(9px); }
+}
+
+@keyframes lifexOrbit {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .lifex-brand-description,
+  .lifex-brand-divider {
+    display: none;
+  }
+
+  .lifex-nav-links {
+    gap: 18px;
+  }
+
+  .lifex-hero-content {
+    width: 70%;
+  }
+
+  .lifex-lifecycle {
+    left: 4%;
+    right: 4%;
+  }
+
+  .lifex-stage {
+    width: 75px;
+  }
+
+  .lifex-capability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lifex-about {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lifex-about-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .lifex-nav {
+    padding: 15px 5%;
+  }
+
+  .lifex-brand-name {
+    font-size: 25px;
+  }
+
+  .lifex-nav-links {
+    display: none;
+  }
+
+  .lifex-hero {
+    min-height: 900px;
+    height: 900px;
+  }
+
+  .lifex-hero-video {
+    object-position: 65% center;
+  }
+
+  .lifex-hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(2,9,16,.92), rgba(2,9,16,.45)),
+      linear-gradient(0deg, #030b13 0%, transparent 70%);
+  }
+
+  .lifex-hero-content {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 155px;
+  }
+
+  .lifex-hero-content h1 {
+    font-size: clamp(39px, 10vw, 52px);
+    letter-spacing: -1.5px;
+  }
+
+  .lifex-hero-description {
+    font-size: 14px;
+  }
+
+  .lifex-lifecycle {
+    left: 4%;
+    right: 4%;
+    bottom: 125px;
+    height: 145px;
+  }
+
+  .lifex-lifecycle-curve {
+    height: 125px;
+  }
+
+  .lifex-stage {
+    width: 55px;
+    min-height: 65px;
+    gap: 5px;
+  }
+
+  .lifex-stage svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .lifex-stage span {
+    font-size: 8px;
+  }
+
+  .lifex-stage i {
+    width: 7px;
+    height: 7px;
+  }
+
+  .lifex-stage:nth-child(2) { top: 112px; }
+  .lifex-stage:nth-child(3) { top: 88px; }
+  .lifex-stage:nth-child(4) { top: 65px; }
+  .lifex-stage:nth-child(5) { top: 55px; }
+  .lifex-stage:nth-child(6) { top: 65px; }
+  .lifex-stage:nth-child(7) { top: 88px; }
+  .lifex-stage:nth-child(8) { top: 112px; }
+
+  .lifex-about {
+    display: block;
+    padding: 65px 7%;
+  }
+
+  .lifex-about-copy {
+    margin-top: 25px;
+    padding: 10px 20px;
+  }
+
+  .lifex-capabilities {
+    padding: 65px 6%;
+  }
+
+  .lifex-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lifex-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .lifex-landing *,
+  .lifex-landing *::before,
+  .lifex-landing *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ==========================================
+   LIFEX CINEMATIC SCROLL EFFECTS
+========================================== */
+
+/* 1. Scroll reveal from bottom */
+
+.lifex-scroll-reveal {
+  opacity: 0;
+  transform: translateY(75px) scale(.96);
+  filter: blur(7px);
+  transition:
+    opacity .9s ease,
+    transform 1.1s cubic-bezier(.16,1,.3,1),
+    filter .9s ease;
+}
+
+.lifex-scroll-reveal.lifex-in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* 2. Reveal from left */
+
+.lifex-scroll-left {
+  opacity: 0;
+  transform: translateX(-90px);
+  filter: blur(5px);
+  transition:
+    opacity 1s ease,
+    transform 1.1s cubic-bezier(.16,1,.3,1),
+    filter 1s ease;
+}
+
+.lifex-scroll-left.lifex-in-view {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+/* 3. Reveal from right */
+
+.lifex-scroll-right {
+  opacity: 0;
+  transform: translateX(90px);
+  filter: blur(5px);
+  transition:
+    opacity 1s ease,
+    transform 1.1s cubic-bezier(.16,1,.3,1),
+    filter 1s ease;
+}
+
+.lifex-scroll-right.lifex-in-view {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+/* 4. Stagger capability cards */
+
+.lifex-capability:nth-child(2) {
+  transition-delay: .12s;
+}
+
+.lifex-capability:nth-child(3) {
+  transition-delay: .24s;
+}
+
+.lifex-capability:nth-child(4) {
+  transition-delay: .36s;
+}
+
+/* 5. Engineering orbit animation */
+
+.lifex-orbit {
+  animation: lifexOrbitSpin 18s linear infinite;
+}
+
+.lifex-orbit:nth-child(2) {
+  animation-direction: reverse;
+  animation-duration: 24s;
+}
+
+.lifex-orbit-core {
+  animation: lifexCoreGlow 3s ease-in-out infinite;
+}
+
+/* 6. Capability cards have a light sweep */
+
+.lifex-capability {
+  overflow: hidden;
+}
+
+.lifex-capability::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 80%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6,217,242,.13),
+    transparent
+  );
+  transition: left .8s ease;
+  pointer-events: none;
+}
+
+.lifex-capability:hover::after {
+  left: 150%;
+}
+
+/* 7. Section background light */
+
+.lifex-about::before,
+.lifex-capabilities::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(6,217,242,.06);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.lifex-about::before {
+  right: -150px;
+  top: -180px;
+}
+
+.lifex-capabilities::before {
+  left: -150px;
+  bottom: -180px;
+}
+
+/* 8. Lifecycle glowing line */
+
+.lifex-lifecycle-curve {
+  filter: drop-shadow(0 0 7px rgba(6,217,242,.6));
+  animation: lifexCurveGlow 4s ease-in-out infinite;
+}
+
+/* Animations */
+
+@keyframes lifexOrbitSpin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+@keyframes lifexCoreGlow {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(6,217,242,.15);
+  }
+  50% {
+    box-shadow: 0 0 42px rgba(6,217,242,.55);
+  }
+}
+
+@keyframes lifexCurveGlow {
+  0%, 100% { opacity: .65; }
+  50% { opacity: 1; }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .lifex-scroll-reveal,
+  .lifex-scroll-left,
+  .lifex-scroll-right {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .lifex-orbit,
+  .lifex-orbit-core,
+  .lifex-lifecycle-curve {
+    animation: none;
+  }
+}
+/* Paste everything below at the END of your existing src/index.css */
+
+/* LIFEX LOGIN — cinematic automotive access experience */
+.lifex-login {
+  --login-cyan: #06d9f2;
+  --login-teal: #00bfae;
+  --login-ink: #030b13;
+  --login-muted: #a8bdc9;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+  color: #f4fbff;
+  background:
+    radial-gradient(ellipse at 22% 78%, rgba(0, 174, 205, .15), transparent 34%),
+    radial-gradient(ellipse at 83% 24%, rgba(0, 115, 157, .16), transparent 30%),
+    linear-gradient(115deg, #020910 0%, #061522 52%, #020a12 100%);
+  font-family: inherit;
+}
+
+.lifex-login * { box-sizing: border-box; }
+
+.lifex-login-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .12;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(65, 207, 231, .12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(65, 207, 231, .12) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(90deg, black, transparent 75%);
+}
+
+.lifex-login-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: .045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+.lifex-login-aura {
+  position: absolute;
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  animation: lifexLoginAura 9s ease-in-out infinite alternate;
+}
+.lifex-login-aura-one { left: 12%; bottom: -230px; background: rgba(0, 206, 232, .15); }
+.lifex-login-aura-two { right: 4%; top: -250px; background: rgba(0, 119, 178, .16); animation-delay: -4s; }
+
+.lifex-login-header {
+  position: relative;
+  z-index: 2;
+  min-height: 88px;
+  padding: 22px clamp(24px, 6vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(81, 198, 219, .13);
+  background: rgba(2, 10, 17, .42);
+  backdrop-filter: blur(16px);
+}
+
+.lifex-login-brand { display: inline-flex; align-items: center; gap: 18px; color: inherit; text-decoration: none; }
+.lifex-login-brand-word { font-size: 32px; font-weight: 900; font-style: italic; letter-spacing: -2px; }
+.lifex-login-brand-word span { color: var(--login-cyan); }
+.lifex-login-brand-divider { width: 1px; height: 38px; background: rgba(111, 220, 236, .42); }
+.lifex-login-brand-tagline { color: #c2d0d8; font-size: 12px; line-height: 1.5; font-weight: 500; }
+.lifex-login-header-note { display: flex; align-items: center; gap: 10px; color: #8ca7b4; font-size: 10px; letter-spacing: .17em; }
+
+.lifex-live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--login-cyan); box-shadow: 0 0 12px var(--login-cyan); animation: lifexDotPulse 1.8s ease-in-out infinite; }
+
+.lifex-login-layout {
+  position: relative;
+  z-index: 1;
+  width: min(1500px, 100%);
+  min-height: calc(100vh - 145px);
+  margin: 0 auto;
+  padding: 36px clamp(24px, 6vw, 100px) 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(420px, .92fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 90px);
+}
+
+.lifex-login-showcase { position: relative; min-height: 650px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px 0 4px; }
+.lifex-login-copy { position: relative; z-index: 2; max-width: 700px; animation: lifexLoginTextIn .9s cubic-bezier(.2,.8,.2,1) both; }
+.lifex-login-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; color: #b7d0da; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+.lifex-login-eyebrow span { width: 30px; height: 2px; background: var(--login-cyan); box-shadow: 0 0 12px var(--login-cyan); }
+.lifex-login-copy h1 { margin: 0; color: #f3f8fb; font-size: clamp(38px, 4.2vw, 66px); line-height: 1.04; font-weight: 800; letter-spacing: -.045em; }
+.lifex-login-copy h1 em { color: var(--login-cyan); font-style: normal; text-shadow: 0 0 30px rgba(6, 217, 242, .2); }
+.lifex-login-description { max-width: 550px; margin: 22px 0 0; color: #b4c6d0; font-size: 15px; line-height: 1.8; }
+
+.lifex-login-capabilities { display: flex; align-items: flex-start; gap: clamp(16px, 2.5vw, 40px); margin-top: 32px; }
+.lifex-login-capability { min-width: 86px; display: flex; flex-direction: column; align-items: center; gap: 10px; color: #c7d7df; font-size: 11px; line-height: 1.4; text-align: center; }
+.lifex-login-capability-icon { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid rgba(6, 217, 242, .48); border-radius: 14px; color: var(--login-cyan); background: linear-gradient(145deg, rgba(6, 217, 242, .16), rgba(5, 22, 34, .6)); box-shadow: inset 0 0 18px rgba(6, 217, 242, .08), 0 0 22px rgba(6, 217, 242, .07); transition: transform .35s ease, box-shadow .35s ease, background .35s ease; }
+.lifex-login-capability-icon svg { width: 22px; height: 22px; stroke-width: 1.6; }
+.lifex-login-capability:hover .lifex-login-capability-icon { transform: translateY(-6px); box-shadow: 0 0 24px rgba(6, 217, 242, .24); background: rgba(6, 217, 242, .2); }
+
+.lifex-login-vehicle-stage { position: absolute; left: -8%; right: -8%; bottom: 26px; height: 340px; overflow: hidden; pointer-events: none; }
+.lifex-login-vehicle-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  height: 330px;
+  background-image:
+    linear-gradient(0deg, #030b13 0%, rgba(3, 11, 19, .1) 42%, rgba(3, 11, 19, .02) 100%),
+    linear-gradient(90deg, rgba(3, 11, 19, .2), rgba(3, 11, 19, .02) 65%, rgba(3, 11, 19, .65)),
+    url('/images/lifex-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 58%;
+  opacity: .72;
+  filter: saturate(.82) contrast(1.08);
+  mask-image: linear-gradient(180deg, transparent 0%, black 18%, black 72%, transparent 100%);
+  animation: lifexVehicleFloat 8s ease-in-out infinite;
+}
+.lifex-login-vehicle-halo { position: absolute; width: 65%; height: 90px; left: 12%; bottom: 22px; border-radius: 50%; background: rgba(0, 210, 240, .17); filter: blur(38px); }
+.lifex-login-vehicle-ring { position: absolute; left: 11%; bottom: 26px; width: 65%; height: 105px; border: 1px solid rgba(6, 217, 242, .42); border-radius: 50%; transform: perspective(400px) rotateX(67deg); box-shadow: 0 0 22px rgba(6, 217, 242, .12); }
+.lifex-login-vehicle-ring.ring-b { left: 17%; bottom: 40px; width: 53%; height: 75px; border-style: dashed; opacity: .7; animation: lifexRingSpin 18s linear infinite; }
+.lifex-login-scanline { position: absolute; left: 15%; right: 14%; top: 20%; height: 1px; background: linear-gradient(90deg, transparent, rgba(6, 217, 242, .8), transparent); box-shadow: 0 0 15px var(--login-cyan); animation: lifexScan 5s ease-in-out infinite; }
+.lifex-login-stage-label { position: absolute; right: 13%; bottom: 12px; display: flex; align-items: center; gap: 9px; color: #8fb2c0; font: 9px/1.2 monospace; letter-spacing: .15em; }
+
+.lifex-login-footnote { position: absolute; left: 0; bottom: 0; display: flex; align-items: center; gap: 12px; color: #6f909f; font: 9px monospace; letter-spacing: .16em; }
+.lifex-login-footnote-line { width: 55px; height: 1px; background: rgba(6, 217, 242, .5); }
+
+.lifex-login-form-side { display: flex; justify-content: center; align-items: center; perspective: 1200px; }
+.lifex-login-card {
+  position: relative;
+  width: min(100%, 510px);
+  padding: 42px clamp(26px, 3.5vw, 52px) 30px;
+  overflow: hidden;
+  border: 1px solid rgba(64, 213, 235, .58);
+  border-radius: 30px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(0, 180, 220, .16), transparent 43%),
+    linear-gradient(145deg, rgba(10, 31, 45, .88), rgba(2, 12, 20, .91));
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .08), 0 0 45px rgba(0, 190, 220, .09);
+  backdrop-filter: blur(24px);
+  animation: lifexCardIn 1s cubic-bezier(.2,.8,.2,1) .12s both;
+}
+.lifex-login-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, rgba(6, 217, 242, .6), transparent 35%, transparent 68%, rgba(0, 191, 174, .5)); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; pointer-events: none; }
+.lifex-login-card-orbit { position: absolute; top: -86px; left: 50%; width: 190px; height: 190px; border: 1px solid rgba(6, 217, 242, .22); border-radius: 50%; transform: translateX(-50%) rotate(-28deg) scaleX(.62); pointer-events: none; }
+.lifex-login-card-orbit.orbit-b { width: 220px; height: 220px; top: -100px; transform: translateX(-50%) rotate(48deg) scaleX(.48); border-style: dashed; opacity: .6; }
+
+.lifex-login-card-mark { position: relative; z-index: 1; width: 68px; height: 68px; display: grid; place-items: center; margin: 0 auto 22px; border: 1px solid rgba(6, 217, 242, .8); border-radius: 20px; color: #e8fcff; font-size: 27px; font-weight: 900; letter-spacing: -2px; background: linear-gradient(145deg, rgba(6, 217, 242, .3), rgba(0, 50, 70, .8)); box-shadow: 0 0 32px rgba(6, 217, 242, .24), inset 0 0 20px rgba(6, 217, 242, .16); }
+.lifex-login-card-heading { position: relative; z-index: 1; margin-bottom: 30px; text-align: center; }
+.lifex-login-kicker { color: var(--login-cyan); font-size: 9px; font-weight: 800; letter-spacing: .23em; }
+.lifex-login-card-heading h2 { margin: 10px 0 7px; color: #f3f9fc; font-size: clamp(26px, 2.3vw, 34px); font-weight: 750; letter-spacing: -.035em; }
+.lifex-login-card-heading h2 span { color: var(--login-cyan); }
+.lifex-login-card-heading p { margin: 0; color: #a9bec9; font-size: 13px; }
+
+.lifex-login-form { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 19px; }
+.lifex-login-field { display: flex; flex-direction: column; gap: 8px; }
+.lifex-login-label { color: #a8c4d0; font-size: 10px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.lifex-login-input-wrap { min-height: 58px; display: flex; align-items: center; gap: 13px; padding: 0 17px; border: 1px solid rgba(104, 166, 185, .42); border-radius: 15px; color: #80a8b8; background: rgba(2, 13, 22, .72); transition: border-color .25s ease, box-shadow .25s ease, background .25s ease, transform .25s ease; }
+.lifex-login-input-wrap:focus-within { border-color: var(--login-cyan); background: rgba(3, 22, 33, .95); box-shadow: 0 0 0 3px rgba(6, 217, 242, .09), 0 0 25px rgba(6, 217, 242, .11); transform: translateY(-1px); }
+.lifex-login-input-wrap input { width: 100%; min-width: 0; border: 0; outline: 0; color: #f3fbff; background: transparent; font: inherit; font-size: 14px; }
+.lifex-login-input-wrap input::placeholder { color: #718d9b; }
+.lifex-login-valid { flex: 0 0 auto; color: #43dfc5; }
+.lifex-login-eye { display: grid; place-items: center; padding: 5px; border: 0; color: #9bb6c2; background: transparent; cursor: pointer; transition: color .2s ease, transform .2s ease; }
+.lifex-login-eye:hover { color: var(--login-cyan); transform: scale(1.1); }
+
+.lifex-login-options { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: -2px; color: #b5c7d0; font-size: 11px; }
+.lifex-login-remember { position: relative; display: inline-flex; align-items: center; gap: 9px; cursor: pointer; user-select: none; }
+.lifex-login-remember input { position: absolute; opacity: 0; pointer-events: none; }
+.lifex-login-check { width: 17px; height: 17px; display: grid; place-items: center; border: 1px solid rgba(123, 173, 190, .65); border-radius: 4px; color: #031018; background: transparent; transition: all .2s ease; }
+.lifex-login-remember input:checked + .lifex-login-check { border-color: var(--login-cyan); background: var(--login-cyan); box-shadow: 0 0 12px rgba(6, 217, 242, .35); }
+.lifex-login-forgot { padding: 4px 0; border: 0; color: var(--login-cyan); background: transparent; font: inherit; cursor: pointer; transition: color .2s ease; }
+.lifex-login-forgot:hover { color: #a6f7ff; text-decoration: underline; }
+.lifex-login-message { margin: -7px 0 0; color: #f4c67a; font-size: 11px; line-height: 1.5; }
+
+.lifex-login-submit { position: relative; min-height: 58px; display: flex; align-items: center; justify-content: center; gap: 13px; margin-top: 3px; overflow: hidden; border: 1px solid rgba(91, 255, 255, .7); border-radius: 999px; color: #00131b; background: linear-gradient(100deg, #06d9f2, #00c9b6); box-shadow: 0 9px 30px rgba(0, 205, 220, .23); font-size: 14px; font-weight: 850; letter-spacing: .04em; cursor: pointer; transition: transform .25s ease, box-shadow .25s ease, filter .25s ease; }
+.lifex-login-submit:hover:not(:disabled) { transform: translateY(-3px); filter: brightness(1.08); box-shadow: 0 14px 38px rgba(0, 205, 220, .38); }
+.lifex-login-submit:active:not(:disabled) { transform: translateY(0) scale(.985); }
+.lifex-login-submit:disabled { cursor: wait; opacity: .8; }
+.lifex-login-submit svg { transition: transform .25s ease; }
+.lifex-login-submit:hover svg { transform: translateX(5px); }
+.lifex-login-button-shine { position: absolute; top: -50%; left: -40%; width: 24%; height: 200%; transform: rotate(22deg); background: rgba(255, 255, 255, .38); filter: blur(8px); animation: lifexButtonShine 4s ease-in-out infinite; }
+
+.lifex-login-divider { display: flex; align-items: center; gap: 15px; margin: 23px 0 18px; color: #7f9ba8; font-size: 10px; letter-spacing: .16em; }
+.lifex-login-divider::before, .lifex-login-divider::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(91, 173, 194, .35)); }
+.lifex-login-divider::after { transform: rotate(180deg); }
+.lifex-login-guest { width: 100%; min-height: 54px; display: flex; align-items: center; justify-content: center; gap: 11px; border: 1px solid rgba(6, 217, 242, .62); border-radius: 999px; color: #dffaff; background: rgba(3, 20, 31, .65); font-size: 13px; font-weight: 650; cursor: pointer; transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
+.lifex-login-guest:hover:not(:disabled) { transform: translateY(-2px); background: rgba(6, 217, 242, .1); box-shadow: 0 0 24px rgba(6, 217, 242, .13); }
+.lifex-login-guest-icon { display: grid; place-items: center; color: var(--login-cyan); }
+.lifex-login-guest > svg { margin-left: 3px; color: #77ddeb; }
+.lifex-login-demo-note { margin: 18px 0 0; color: #698895; font-size: 9px; text-align: center; letter-spacing: .04em; }
+
+.lifex-login-footer { position: relative; z-index: 2; min-height: 48px; padding: 10px clamp(24px, 6vw, 100px); display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid rgba(81, 198, 219, .12); color: #668391; font-size: 9px; letter-spacing: .09em; }
+
+.lifex-login-transition { position: fixed; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; color: white; background: radial-gradient(circle, #0a3444, #020910 65%); animation: lifexTransitionIn .45s ease both; }
+.lifex-transition-mark { width: 78px; height: 78px; display: grid; place-items: center; border: 1px solid var(--login-cyan); border-radius: 22px; color: var(--login-cyan); font-size: 30px; font-weight: 900; box-shadow: 0 0 45px rgba(6, 217, 242, .3); animation: lifexTransitionPulse 1s ease-in-out infinite alternate; }
+.lifex-transition-line { width: 190px; height: 2px; overflow: hidden; background: rgba(6, 217, 242, .15); }
+.lifex-transition-line::after { content: ""; display: block; width: 45%; height: 100%; background: var(--login-cyan); box-shadow: 0 0 15px var(--login-cyan); animation: lifexTransitionLoad .8s ease-in-out infinite; }
+.lifex-login-transition p { color: #9cc8d4; font: 10px monospace; letter-spacing: .2em; }
+
+.lifex-login.is-entering .lifex-login-card { animation: lifexCardExit .7s ease forwards; }
+.lifex-login.is-entering .lifex-login-showcase { animation: lifexShowcaseExit .7s ease forwards; }
+
+@keyframes lifexLoginAura { from { transform: translate3d(-12px, 0, 0) scale(.92); opacity: .55; } to { transform: translate3d(25px, -25px, 0) scale(1.12); opacity: 1; } }
+@keyframes lifexDotPulse { 0%, 100% { opacity: .65; box-shadow: 0 0 5px var(--login-cyan); } 50% { opacity: 1; box-shadow: 0 0 15px var(--login-cyan); } }
+@keyframes lifexLoginTextIn { from { opacity: 0; transform: translateY(24px); filter: blur(7px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+@keyframes lifexCardIn { from { opacity: 0; transform: translateY(28px) rotateY(-5deg) scale(.97); filter: blur(8px); } to { opacity: 1; transform: translateY(0) rotateY(0) scale(1); filter: blur(0); } }
+@keyframes lifexVehicleFloat { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-9px) scale(1.015); } }
+@keyframes lifexRingSpin { from { transform: perspective(400px) rotateX(67deg) rotateZ(0deg); } to { transform: perspective(400px) rotateX(67deg) rotateZ(360deg); } }
+@keyframes lifexScan { 0%, 100% { transform: translateY(0); opacity: 0; } 20%, 80% { opacity: .8; } 50% { transform: translateY(180px); } }
+@keyframes lifexButtonShine { 0%, 65% { left: -40%; } 100% { left: 130%; } }
+@keyframes lifexTransitionIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lifexTransitionPulse { from { transform: scale(.96); box-shadow: 0 0 20px rgba(6, 217, 242, .2); } to { transform: scale(1.04); box-shadow: 0 0 55px rgba(6, 217, 242, .45); } }
+@keyframes lifexTransitionLoad { from { transform: translateX(-110%); } to { transform: translateX(250%); } }
+@keyframes lifexCardExit { to { opacity: 0; transform: translateY(-18px) scale(.96); filter: blur(8px); } }
+@keyframes lifexShowcaseExit { to { opacity: 0; transform: translateX(-20px); } }
+
+@media (max-width: 1050px) {
+  .lifex-login-layout { grid-template-columns: minmax(0, 1fr) minmax(370px, .9fr); gap: 28px; padding-left: 32px; padding-right: 32px; }
+  .lifex-login-copy h1 { font-size: clamp(36px, 4.4vw, 52px); }
+  .lifex-login-showcase { min-height: 610px; }
+  .lifex-login-vehicle-stage { left: -15%; right: -15%; }
+}
+
+@media (max-width: 800px) {
+  .lifex-login-header { min-height: 76px; }
+  .lifex-login-header-note { display: none; }
+  .lifex-login-layout { min-height: auto; grid-template-columns: 1fr; padding: 42px 22px 55px; gap: 25px; }
+  .lifex-login-showcase { min-height: 440px; padding-top: 8px; }
+  .lifex-login-copy h1 { font-size: clamp(36px, 8vw, 56px); }
+  .lifex-login-description { max-width: 620px; }
+  .lifex-login-vehicle-stage { height: 230px; bottom: 0; left: -5%; right: -5%; }
+  .lifex-login-vehicle-image { height: 230px; }
+  .lifex-login-footnote { display: none; }
+  .lifex-login-form-side { width: 100%; }
+  .lifex-login-card { width: min(100%, 560px); }
+}
+
+@media (max-width: 480px) {
+  .lifex-login-header { padding: 17px 20px; }
+  .lifex-login-brand-word { font-size: 27px; }
+  .lifex-login-brand-tagline { font-size: 10px; }
+  .lifex-login-layout { padding: 30px 17px 38px; }
+  .lifex-login-showcase { min-height: 390px; }
+  .lifex-login-eyebrow { font-size: 9px; }
+  .lifex-login-copy h1 { font-size: 36px; }
+  .lifex-login-description { font-size: 13px; }
+  .lifex-login-capabilities { gap: 7px; justify-content: space-between; }
+  .lifex-login-capability { min-width: 0; font-size: 9px; }
+  .lifex-login-capability-icon { width: 42px; height: 42px; }
+  .lifex-login-card { padding: 34px 21px 25px; border-radius: 23px; }
+  .lifex-login-footer { align-items: flex-start; flex-direction: column; justify-content: center; padding: 13px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lifex-login *, .lifex-login *::before, .lifex-login *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* LIFEX: Vehicle Configuration -> Vehicle Architecture transition */
+.lifex-vehicle-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(0, 173, 204, .13), transparent 38%),
+    rgba(2, 10, 18, .97);
+  backdrop-filter: blur(18px);
+  animation: lifexVehicleOverlayIn .32s ease-out both;
+}
+
+.lifex-vehicle-transition::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .17;
+  background-image:
+    linear-gradient(rgba(30, 200, 220, .13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 200, 220, .13) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+}
+
+.lifex-vehicle-transition-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px;
+  text-align: center;
+  animation: lifexVehicleContentIn .65s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.lifex-vehicle-scanner {
+  position: relative;
+  width: 116px;
+  height: 116px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+}
+
+.lifex-vehicle-scanner-ring {
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(6, 217, 242, .48);
+  border-radius: 50%;
+  box-shadow: 0 0 26px rgba(6, 217, 242, .08), inset 0 0 24px rgba(6, 217, 242, .06);
+}
+
+.lifex-ring-one { animation: lifexVehicleRing 2.2s ease-out infinite; }
+.lifex-ring-two { inset: 17px; border-style: dashed; animation: lifexVehicleSpin 12s linear infinite; }
+
+.lifex-vehicle-scanner-core {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  color: #6ceeff;
+  border: 1px solid rgba(6, 217, 242, .7);
+  border-radius: 19px;
+  background: linear-gradient(145deg, rgba(6, 217, 242, .2), rgba(4, 23, 36, .95));
+  box-shadow: 0 0 35px rgba(6, 217, 242, .2);
+}
+
+.lifex-vehicle-scanner-core svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lifex-vehicle-scan-line {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 50%;
+  height: 1px;
+  background: #54eaff;
+  box-shadow: 0 0 12px 2px rgba(6, 217, 242, .7);
+  animation: lifexVehicleScan 1.6s ease-in-out infinite alternate;
+}
+
+.lifex-vehicle-kicker {
+  margin: 0;
+  color: #62e8f7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .28em;
+}
+
+.lifex-vehicle-transition h2 {
+  margin: 13px 0 0;
+  color: #f4fbff;
+  font-size: clamp(23px, 3.5vw, 34px);
+  font-weight: 750;
+  letter-spacing: -.035em;
+}
+
+.lifex-vehicle-description {
+  margin: 12px 0 0;
+  color: #9db2c0;
+  font-size: 13px;
+}
+
+.lifex-vehicle-progress {
+  width: min(260px, 70vw);
+  height: 2px;
+  margin-top: 29px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(6, 217, 242, .14);
+}
+
+.lifex-vehicle-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #32e6f5;
+  box-shadow: 0 0 12px #32e6f5;
+  animation: lifexVehicleProgress .9s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.lifex-vehicle-status {
+  margin-top: 11px;
+  color: #547b8d;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .22em;
+}
+
+@keyframes lifexVehicleOverlayIn {
+  from { opacity: 0; backdrop-filter: blur(0); }
+  to { opacity: 1; backdrop-filter: blur(18px); }
+}
+@keyframes lifexVehicleContentIn {
+  from { opacity: 0; transform: translateY(18px) scale(.97); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes lifexVehicleRing {
+  0% { transform: scale(.82); opacity: .85; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+@keyframes lifexVehicleSpin {
+  to { transform: rotate(360deg); }
+}
+@keyframes lifexVehicleScan {
+  from { transform: translateY(-29px); opacity: .35; }
+  to { transform: translateY(29px); opacity: 1; }
+}
+@keyframes lifexVehicleProgress {
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lifex-vehicle-transition *,
+  .lifex-vehicle-transition::before {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* LIFEX component-workflow page transitions and card interactions */
+@keyframes lifexPageEnter { from { opacity: 0; transform: translateY(12px) scale(.995); filter: blur(3px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+.lifex-page-enter { animation: lifexPageEnter .48s cubic-bezier(.2,.75,.25,1) both; }
+.lifex-page-enter button { -webkit-tap-highlight-color: transparent; }
+.lifex-page-enter button:active { transform: scale(.985); }
+
+
+/* LIFEX brand consistency and login viewport alignment */
+.lifex-landing-logo {
+  display: block;
+  width: clamp(260px, 28vw, 360px);
+  height: auto;
+  max-height: 110px;
+  object-fit: contain;
+  object-position: left center;
+}
+.lifex-orbit-core { color: var(--lifex-cyan); }
+.lifex-orbit-core svg { filter: drop-shadow(0 0 9px rgba(6, 217, 242, .45)); }
+.lifex-login { display: flex; flex-direction: column; min-height: 100svh; }
+.lifex-login-layout { flex: 1 0 auto; min-height: calc(100svh - 48px); }
+.lifex-login-footer { flex: 0 0 auto; }
+.lifex-login-card-mark {
+  width: min(340px, 85%);
+  height: 115px; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; padding: 3px 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.lifex-login-card-mark img {
+  display: block;
+  width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+}
+.lifex-transition-mark { width: min(230px, 64vw); height: 76px; display: flex; align-items: center; justify-content: center; padding: 8px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.lifex-transition-mark img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; animation: lifexTransitionPulse 1s ease-in-out infinite alternate; }
+@media (max-width: 800px) { .lifex-login-layout { min-height: auto; flex: 1 0 auto; } }
+@media (max-width: 480px) {
+  .lifex-landing-logo {
+    width: 220px;
+    max-height: 85px;
+  }
+
+  .lifex-login-card-mark {
+    width: min(280px, 88%);
+    height: 95px;
+  }
+
+  .lifex-login-card-mark img {
+    max-height: 90px;
+  }
+}
+
+/* ===== LIFEX Engineering Intelligence Extraction page ===== */
+/* ===== LIFEX Engineering Intelligence Extraction page ===== */
+:root{--bg:#001019;--panel:#041d28;--cyan:#08d9ec;--bright:#42eff7;--border:#07576a;--text:#f1f8fb;--muted:#a9c0ca}
+*{box-sizing:border-box}
+.lifex-app{min-height:100vh;display:flex;color:var(--text);background:radial-gradient(ellipse at 72% 26%,rgba(0,125,151,.13),transparent 42%),var(--bg);font-family:Inter,Arial,sans-serif}
+.lifex-sidebar{width:205px;min-width:205px;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;border-right:1px solid var(--border);background:linear-gradient(180deg,#031722,#001019)}
+.lifex-logo{height:65px;display:flex;align-items:center;padding:0 25px;border-bottom:1px solid var(--border);color:var(--bright);font-size:29px;font-weight:800;letter-spacing:-1px}
+.lifex-sidebar nav{display:flex;flex-direction:column;gap:8px;padding:25px 7px}
+.sidebar-item{min-height:47px;width:100%;display:flex;align-items:center;gap:14px;padding:10px 13px;border:1px solid transparent;border-radius:11px;background:transparent;color:#d2e2e9;text-align:left;font:inherit;font-size:12px;cursor:pointer;transition:.22s}
+.sidebar-item:hover{color:var(--bright);background:#073342;transform:translateX(3px)}
+.sidebar-item.active{color:var(--bright);border-color:#009db3;background:linear-gradient(110deg,#075568,#063d4b);box-shadow:0 0 18px #00d8ed20}
+.sidebar-decoration{height:125px;margin-top:auto;padding:14px;display:flex;align-items:flex-end;color:#078ca2;font-size:8px;letter-spacing:1.7px;background:radial-gradient(ellipse at 45% 110%,#00d8ed22,transparent 65%),repeating-linear-gradient(0deg,transparent 0 18px,#00d8ed0b 19px)}
+.lifex-main{flex:1;min-width:0}
+.lifex-topbar{height:65px;display:flex;align-items:center;gap:20px;padding:0 28px;border-bottom:1px solid var(--border);background:#02141ef5}
+.topbar-brand{display:flex;align-items:center;gap:25px;white-space:nowrap;font-size:11px;color:#d9e8ed}
+.brand-name{color:var(--bright);font-size:29px;letter-spacing:-1px}
+.top-search{width:min(39%,510px);height:38px;display:flex;align-items:center;gap:10px;margin-left:auto;padding:0 14px;border:1px solid #086276;border-radius:24px;background:#031b26;color:var(--muted)}
+.top-search:focus-within{border-color:var(--cyan);box-shadow:0 0 12px #00d8ed22}
+.top-search input{width:100%;min-width:0;border:0;outline:0;color:white;background:transparent;font:inherit;font-size:11px}
+.top-search input::placeholder{color:#9eb4bf}
+.icon-button{position:relative;width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:50%;color:#dcecf1;background:transparent;cursor:pointer}
+.icon-button:hover{color:var(--bright);background:#0a3442}
+.icon-button i{position:absolute;top:5px;right:5px;width:6px;height:6px;border-radius:50%;background:#ff9b62}
+.user-profile{display:flex;align-items:center;gap:9px;white-space:nowrap;font-size:11px}
+.user-profile>b{width:37px;height:37px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#637f90,#294655)}
+.user-profile strong,.user-profile small{display:block}.user-profile small{margin-top:3px;color:var(--muted);font-size:10px}
+.workspace{width:100%;max-width:1800px;margin:auto;padding:17px 20px 24px}
+.breadcrumb{display:flex;align-items:center;gap:9px;margin-bottom:17px;color:var(--muted);font-size:10px}.breadcrumb strong{color:var(--bright)}
+.page-heading{display:flex;align-items:center;gap:14px;padding-bottom:17px;border-bottom:1px solid var(--border)}
+.heading-icon{width:57px;height:57px;flex:0 0 57px;display:grid;place-items:center;border:1px solid var(--border);border-radius:14px;color:var(--cyan);background:#042530}
+.heading-copy{min-width:250px}.page-heading h1{margin:0 0 6px;font-size:clamp(18px,1.55vw,23px);font-weight:750}.page-heading p{margin:0;color:#c0d5df;font-size:11px}
+.component-card{min-width:280px;display:flex;align-items:center;gap:13px;margin-left:auto;padding:9px 12px;border:1px solid var(--border);border-radius:13px;background:#05232e}
+.bumper-icon{width:43px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;filter:drop-shadow(0 0 5px #f5ce9c40)}
+.bumper-icon i{width:22px;height:9px;border:1px solid #b99670;border-radius:50%/35%;background:linear-gradient(90deg,#9c7956,#f0d2a6 45%,#b38e65)}.bumper-icon i:nth-child(2),.bumper-icon i:nth-child(3){width:27px}
+.component-card strong{font-size:12px}.component-card small{display:block;margin-top:5px;color:var(--muted);font-size:9px;white-space:nowrap}.component-card>span{margin-left:auto;padding:5px 8px;border:1px solid var(--border);border-radius:20px;color:var(--bright);font-size:8px;font-weight:700;white-space:nowrap}
+.workflow-row{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:19px 0}
+.source-tabs{width:48%;display:flex;gap:9px}.source-tabs button{flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;gap:12px;border:1px solid #285365;border-radius:12px;color:#eaf4f8;background:linear-gradient(130deg,#09232f,#031722);font:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.23s}
+.source-tabs button:hover{border-color:var(--cyan);color:var(--bright);box-shadow:0 0 15px #00d8ed25;transform:translateY(-1px)}
+.source-tabs button.selected{color:#00151e;background:linear-gradient(110deg,#56f2f4,#00d8ed);border-color:var(--bright);box-shadow:0 0 18px #00d8ed38}
+.steps{display:flex;align-items:center;justify-content:flex-end;gap:11px;color:#e5f2f6;font-size:10px;white-space:nowrap}.steps>div{display:flex;align-items:center;gap:8px}.steps b{width:34px;height:34px;display:grid;place-items:center;border:2px solid #8ca8b4;border-radius:50%;font-size:13px}.steps .current b{border-color:var(--cyan);color:#00151e;background:var(--cyan);box-shadow:0 0 16px #00d8ed7a}.steps i{width:27px;height:1px;background:#6b8c99}
+.content-layout{min-height:520px;display:grid;grid-template-columns:minmax(275px,32%) minmax(0,1fr);gap:12px}
+.thread-panel,.detail-panel{min-width:0;border:1px solid #087187;border-radius:15px;background:linear-gradient(145deg,#05222e,#031721)}
+.thread-panel{padding:13px 10px}.thread-panel h2,.detail-heading{display:flex;align-items:center;gap:11px}
+.thread-panel h2{margin:0 5px 15px;padding-bottom:12px;border-bottom:1px solid #103a49;font-size:14px}
+.thread-list{display:flex;flex-direction:column;gap:8px}
+.thread-card{width:100%;min-height:64px;display:flex;align-items:center;gap:10px;padding:9px 11px;border:1px solid #285365;border-radius:11px;color:white;background:linear-gradient(115deg,#092734,#051b26);text-align:left;cursor:pointer;transition:.22s}
+.thread-card:hover{border-color:var(--cyan);transform:translateY(-2px);box-shadow:0 5px 18px #00d8ed1a}
+.thread-card.chosen{border:1.5px solid var(--bright);background:linear-gradient(110deg,#0b3946,#082936);box-shadow:inset 0 0 15px #00d8ed12,0 0 12px #00d8ed19}
+.thread-card>svg{flex:0 0 auto;color:#d9f7fc}.thread-info{flex:1;min-width:0}.thread-info strong{display:block;overflow:hidden;margin-bottom:5px;font-size:10px;text-overflow:ellipsis;white-space:nowrap}.thread-info small{display:block;overflow:hidden;color:#bfd2db;font-size:8.5px;text-overflow:ellipsis;white-space:nowrap}
+.thread-card em,.resolved{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:4px 8px;border:1px solid #149b5b;border-radius:20px;color:#c5ffdf;background:#075438;font-size:8px;font-style:normal;font-weight:700}
+.detail-panel{display:flex;flex-direction:column;padding:13px 14px}.detail-heading{min-height:38px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #103d4b}.detail-heading h2{min-width:0;margin:0;font-size:15px}.resolved{margin-left:auto;padding:6px 10px;font-size:10px}
+.email-timeline{position:relative;display:flex;flex-direction:column;gap:9px;padding-left:25px}.email-timeline:before{content:"";position:absolute;top:16px;bottom:16px;left:6px;width:1px;background:linear-gradient(#ff8999,#7cdcf2,#76e94b)}
+.timeline-entry{position:relative}.timeline-entry>.dot{position:absolute;z-index:1;top:15px;left:-25px;width:11px;height:11px;border:1px solid #d8f5fc;border-radius:50%}.dot-0{background:#ff8d9b}.dot-1{background:#7cdcf2}.dot-2{background:#83ed4e}
+.message-card{display:flex;gap:11px;padding:10px;border:1px solid #385869;border-radius:12px;background:linear-gradient(110deg,#172e3b,#102733);transition:.2s}.message-card:hover{border-color:#08a9c0;background:#183542}
+.message-avatar{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:50%;color:white;background:linear-gradient(145deg,#637f90,#294655);font-size:16px}
+.message-content{flex:1;min-width:0}.message-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:3px}.message-top strong{font-size:11px}.message-top time{color:#d4e2e8;font-size:8.5px;white-space:nowrap}.message-content small{color:#c4d4dc;font-size:9px}.message-content p{margin:7px 0 0;color:#f0f6f8;font-size:10px;line-height:1.5}
+.meeting-detail{display:flex;flex-direction:column;gap:11px}.meeting-meta{display:grid;grid-template-columns:1fr 2fr;gap:10px;padding:13px;border:1px solid #315365;border-radius:11px;background:#102b37}.meeting-meta small{display:block;margin-bottom:6px;color:var(--muted);font-size:8px;letter-spacing:.8px}.meeting-meta strong{font-size:10px;font-weight:600}.meeting-detail h3{margin:4px 0 0;color:var(--bright);font-size:12px}
+.transcript-line{display:flex;gap:13px;padding:12px;border:1px solid #315365;border-radius:10px;background:#102b37}.transcript-line b{color:var(--cyan);font-size:10px}.transcript-line p{margin:0;color:#e8f1f5;font-size:10px;line-height:1.5}
+.detail-footer{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:auto;padding-top:15px}
+.store-button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:0 18px;border:1px solid var(--cyan);border-radius:11px;color:#00151e;background:linear-gradient(110deg,#56f2f4,#00d8ed);box-shadow:0 0 16px #00d8ed33;font:inherit;font-size:12px;font-weight:750;cursor:pointer;transition:.22s}
+.store-button:hover{transform:translateY(-2px);box-shadow:0 0 25px #00d8ed61;filter:brightness(1.06)}.store-button:active{transform:scale(.99)}.store-button.stored{color:#dffff0;border-color:#20bd75;background:linear-gradient(110deg,#08784e,#075438);box-shadow:0 0 15px #20bd7530}
+.stored-note{display:inline-flex;align-items:center;gap:6px;color:#8df0bd;font-size:9px}.empty-state{padding:20px 12px;color:var(--muted);font-size:11px}.demo-note{margin:10px 2px 0;color:#6f919e;font-size:8px;text-align:right}
+button:focus-visible{outline:2px solid var(--bright);outline-offset:3px}
+@media(min-width:1500px){.workspace{padding-right:28px;padding-left:28px}.content-layout{min-height:590px}.message-content p{font-size:11px}}
+@media(max-width:1100px){.lifex-sidebar{width:175px;min-width:175px}.lifex-topbar{gap:13px;padding:0 16px}.topbar-brand>span{display:none}.workflow-row{align-items:stretch;flex-direction:column}.source-tabs{width:100%}.steps{justify-content:center}.content-layout{grid-template-columns:minmax(245px,34%) minmax(0,1fr)}.component-card{min-width:245px}}
+@media(max-width:760px){.lifex-sidebar{width:58px;min-width:58px}.lifex-logo{justify-content:center;padding:0;font-size:17px}.lifex-sidebar nav{padding:15px 5px}.sidebar-item{justify-content:center;padding:10px 5px}.sidebar-item span,.sidebar-decoration{display:none}.lifex-topbar{height:58px;padding:0 10px;gap:9px}.brand-name{font-size:20px}.top-search{width:auto;flex:1;min-width:0}.user-profile span,.user-profile>svg{display:none}.workspace{padding:13px 10px}.breadcrumb{flex-wrap:wrap;font-size:9px}.page-heading{flex-wrap:wrap}.page-heading h1{font-size:17px}.page-heading p{font-size:10px}.component-card{width:100%;margin-left:0}.source-tabs{gap:6px}.source-tabs button{min-height:44px;gap:6px;font-size:11px}.steps{gap:6px;font-size:8px}.steps>div{gap:4px}.steps b{width:27px;height:27px;font-size:11px}.steps i{width:12px}.content-layout{grid-template-columns:1fr}.thread-panel{min-height:auto}.detail-panel{min-height:440px}.message-top{align-items:flex-start;flex-direction:column;gap:3px}.detail-footer{align-items:stretch;flex-direction:column}.store-button{width:100%}.stored-note{justify-content:center}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+
+/* ===== Extraction page: remove duplicated inner app chrome =====
+   The host LIFEX shell already provides the global header/navigation.
+   Keep the extraction workspace content and avoid a second header/sidebar. */
+.lifex-app > .lifex-sidebar,
+.lifex-app .lifex-topbar {
+  display: none !important;
+}
+.lifex-app {
+  display: block;
+  min-height: 0;
+  width: 100%;
+  background: transparent;
+}
+.lifex-app > .lifex-main,
+.lifex-app .lifex-main {
+  width: 100%;
+  min-width: 0;
+}
+.lifex-app .workspace {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 18px clamp(16px, 2.2vw, 34px) 28px;
+}
+
+/* ===== Clear hover, press and touch feedback ===== */
+.lifex-app button,
+.lifex-app [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition:
+    transform .22s cubic-bezier(.2,.75,.25,1),
+    box-shadow .22s ease,
+    border-color .22s ease,
+    background-color .22s ease,
+    color .22s ease,
+    filter .22s ease;
+}
+.lifex-app button:active,
+.lifex-app [role="button"]:active {
+  transform: scale(.975);
+  filter: brightness(1.12);
+}
+.lifex-app button:focus-visible,
+.lifex-app [role="button"]:focus-visible {
+  outline: 2px solid #42eff7;
+  outline-offset: 3px;
+}
+.lifex-app .source-tabs button:active,
+.lifex-app .thread-card:active,
+.lifex-app .store-button:active,
+.lifex-app .sidebar-item:active {
+  box-shadow: 0 0 0 3px rgba(8,217,236,.18), 0 0 22px rgba(8,217,236,.22);
+}
+.lifex-app .source-tabs button.selected {
+  box-shadow: 0 0 0 1px rgba(66,239,247,.35), 0 0 22px rgba(0,216,237,.32);
+}
+.lifex-app .thread-card.chosen {
+  transform: translateY(-1px);
+  box-shadow: inset 0 0 0 1px rgba(66,239,247,.18), 0 0 20px rgba(0,216,237,.2);
+}
+.lifex-app .message-card {
+  transition: border-color .22s ease, background .22s ease, transform .22s ease;
+}
+.lifex-app .message-card:active {
+  transform: scale(.995);
+}
+.lifex-app .store-button:focus-visible {
+  outline-offset: 4px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .lifex-app .thread-card:hover,
+  .lifex-app .source-tabs button:hover,
+  .lifex-app .store-button:hover {
+    transform: translateY(-3px);
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .lifex-app .thread-card:active,
+  .lifex-app .source-tabs button:active,
+  .lifex-app .store-button:active {
+    border-color: #42eff7;
+    box-shadow: 0 0 0 3px rgba(8,217,236,.2), 0 0 24px rgba(8,217,236,.25);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lifex-app button,
+  .lifex-app [role="button"],
+  .lifex-app .message-card {
+    transition: none !important;
+  }
+}
+
+/* LIFEX extraction workspace — clean discussion and dedicated report screen */
+.lifex-extraction-page{width:100%;min-height:calc(100vh - 100px);padding:24px clamp(18px,2.2vw,38px) 38px;color:#eaf7fb;background:#020b12;box-sizing:border-box;animation:lifexWorkspaceIn .45s ease both}
+.lifex-extraction-page *{box-sizing:border-box}
+.lifex-extraction-breadcrumb{display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:#8faebb;font-size:12px;margin:0 0 24px}
+.lifex-extraction-breadcrumb strong{color:#13d9ed}
+.lifex-back-link{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(42,193,215,.35);border-radius:9px;padding:9px 12px;margin-right:10px;color:#bceef4;background:#06202b;cursor:pointer;transition:all .22s ease}
+.lifex-back-link:hover{color:#00131a;background:#18d7e9;border-color:#18d7e9;box-shadow:0 0 22px rgba(6,217,242,.22);transform:translateX(-2px)}
+.lifex-extraction-heading{display:flex;align-items:center;gap:17px;padding:0 0 22px;border-bottom:1px solid #124052}
+.lifex-extraction-heading-icon,.lifex-report-mark{width:62px;height:62px;flex:0 0 62px;display:grid;place-items:center;border:1px solid #087c91;border-radius:16px;color:#10d9ed;background:linear-gradient(145deg,#073342,#041722);box-shadow:inset 0 0 22px rgba(6,217,242,.08)}
+.lifex-extraction-heading h1{margin:0;color:#f5fbff;font-size:clamp(24px,2vw,32px);line-height:1.2;font-weight:750;letter-spacing:-.5px}
+.lifex-extraction-heading p{margin:8px 0 0;color:#a9c2ce;font-size:13px;line-height:1.6}
+.lifex-extraction-component{margin-left:auto;min-width:290px;display:grid;grid-template-columns:1fr auto;gap:5px 12px;align-items:center;padding:15px 17px;border:1px solid #07566b;border-radius:14px;background:#041a25}
+.lifex-extraction-component strong{font-size:14px}.lifex-extraction-component small{grid-column:1;color:#8eb3c2;font-size:11px}.lifex-extraction-component span{grid-column:2;grid-row:1/3;padding:6px 8px;border:1px solid #08768a;border-radius:20px;color:#2de5f1;font-size:9px;font-weight:800}
+.lifex-extraction-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}
+.lifex-source-tabs{display:flex;gap:10px;width:min(720px,58%)}
+.lifex-source-tabs button{min-height:54px;flex:1;display:flex;align-items:center;justify-content:center;gap:12px;border:1px solid #205367;border-radius:13px;color:#d7edf3;background:linear-gradient(145deg,#071d29,#04141e);font-size:14px;font-weight:700;cursor:pointer;transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease}
+.lifex-source-tabs button:hover{transform:translateY(-2px);border-color:#14d6e9;box-shadow:0 8px 24px rgba(0,205,230,.12)}
+.lifex-source-tabs button:active,.lifex-primary-action:active,.lifex-save-action:active{transform:scale(.975)}
+.lifex-source-tabs button.active{color:#00151c;border-color:#46f3f5;background:linear-gradient(105deg,#4ce9e9,#05c9e3);box-shadow:0 0 24px rgba(6,217,242,.24),inset 0 1px rgba(255,255,255,.3)}
+.lifex-extraction-steps{display:flex;align-items:center;gap:12px;color:#9ab4c0;font-size:11px;white-space:nowrap}
+.lifex-extraction-steps span{display:flex;align-items:center;gap:8px}.lifex-extraction-steps b{width:34px;height:34px;display:grid;place-items:center;border:2px solid #6d8b99;border-radius:50%;font-size:13px}.lifex-extraction-steps .active{color:#f2fcff}.lifex-extraction-steps .active b{border-color:#08d7ea;color:#00151b;background:#08d7ea;box-shadow:0 0 18px rgba(6,217,242,.32)}.lifex-extraction-steps i{width:28px;height:1px;background:#557786}
+.lifex-extraction-grid{display:grid;grid-template-columns:minmax(300px,.36fr) minmax(0,.64fr);gap:14px;align-items:start}
+.lifex-source-list,.lifex-discussion-panel{min-width:0;border:1px solid #12566a;border-radius:16px;background:linear-gradient(155deg,#06212d,#03131d);box-shadow:0 12px 32px rgba(0,0,0,.13)}
+.lifex-source-list{padding:17px;position:sticky;top:18px}
+.lifex-panel-heading{display:flex;align-items:center;justify-content:space-between;padding:0 0 13px;border-bottom:1px solid #164354}.lifex-panel-heading strong{font-size:15px}.lifex-panel-heading span{min-width:25px;padding:4px 7px;border-radius:20px;text-align:center;color:#baf8ff;background:#075064;font-size:11px}
+.lifex-source-search{display:flex;align-items:center;gap:9px;margin:13px 0;padding:10px 12px;border:1px solid #1a4b5e;border-radius:9px;color:#7fb0c0;background:#03131c}.lifex-source-search:focus-within{border-color:#0bd7ea;box-shadow:0 0 0 3px rgba(6,217,242,.09)}.lifex-source-search input{width:100%;min-width:0;border:0;outline:0;color:#effcff;background:transparent;font:inherit;font-size:12px}.lifex-source-items{display:grid;gap:9px}
+.lifex-source-item{width:100%;min-width:0;display:flex;align-items:center;gap:11px;padding:14px 11px;border:1px solid #1b4c5e;border-radius:12px;text-align:left;color:#d9edf3;background:#061b26;cursor:pointer;transition:all .22s cubic-bezier(.2,.8,.2,1)}.lifex-source-item>svg:first-child{flex:0 0 auto;color:#72dcea}.lifex-source-item>svg:last-child{flex:0 0 auto;color:#86a9b8}.lifex-source-item>span{min-width:0;flex:1}.lifex-source-item strong{display:block;overflow-wrap:anywhere;font-size:12px;line-height:1.5}.lifex-source-item small{display:block;margin-top:5px;color:#91b3c0;font-size:10px;line-height:1.45}.lifex-source-item em{flex:0 0 auto;padding:5px 7px;border:1px solid #087b59;border-radius:20px;color:#72efbd;background:#063b30;font-size:9px;font-style:normal}.lifex-source-item:hover{transform:translateX(3px);border-color:#12cde0;background:#092b39;box-shadow:0 7px 18px rgba(0,0,0,.18)}.lifex-source-item:active{transform:scale(.985)}.lifex-source-item.selected{border-color:#0bd9e9;background:linear-gradient(110deg,#0a3441,#062331);box-shadow:inset 3px 0 #12e2ef,0 0 20px rgba(6,217,242,.1)}.lifex-source-item.selected>svg:first-child{color:#25e6f1}
+.lifex-discussion-panel{padding:20px 22px}.lifex-discussion-title{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:15px;border-bottom:1px solid #164657}.lifex-discussion-title>div{display:flex;align-items:center;gap:12px;min-width:0}.lifex-discussion-title>div>svg{flex:0 0 auto;color:#9cebf3}.lifex-discussion-title h2{margin:0;color:#f5fbff;font-size:18px;line-height:1.4;overflow-wrap:anywhere}.lifex-status{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;padding:7px 11px;border:1px solid #087c5c;border-radius:20px;color:#82f2c5;background:#063b30;font-size:10px;font-weight:700}
+.lifex-source-intro{padding:17px 0 14px}.lifex-source-intro>strong{font-size:14px;color:#f4fbff}.lifex-source-intro>p{margin:7px 0 12px;color:#c0d4dc;font-size:13px;line-height:1.7}.lifex-source-intro>div{display:flex;flex-wrap:wrap;gap:14px;color:#91b5c2;font-size:10px}.lifex-source-intro>div span{display:inline-flex;align-items:center;gap:5px}
+.lifex-message-timeline{display:grid;gap:11px;padding:3px 0 17px}.lifex-message{display:flex;gap:12px;padding:14px;border:1px solid #28566a;border-radius:13px;background:linear-gradient(120deg,#102e3c,#0a202c);transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}.lifex-message:hover{border-color:#19a9be;transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.16)}.lifex-avatar{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:50%;color:#e8fbff;background:linear-gradient(145deg,#52798a,#244555);font-size:15px}.lifex-message>div{min-width:0;flex:1}.lifex-message-meta{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.lifex-message-meta strong{color:#effaff;font-size:12px}.lifex-message-meta time{color:#9dc3d1;font-size:10px;text-align:right}.lifex-message small{display:block;margin-top:5px;color:#9ab9c6;font-size:10px}.lifex-message p{margin:10px 0 0;color:#d6e6ec;font-size:12px;line-height:1.7}
+.lifex-meeting-meta{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;padding:16px 0}.lifex-meeting-meta>div{padding:12px;border:1px solid #1a4d60;border-radius:10px;background:#041923}.lifex-meeting-meta small,.lifex-report-meta-grid small{display:block;margin-bottom:7px;color:#6ed5e2;font-size:9px;font-weight:800;letter-spacing:.12em}.lifex-meeting-meta strong{display:block;color:#e4f5fa;font-size:11px;line-height:1.6}.lifex-section-heading{margin:12px 0;color:#f2fbff;font-size:14px}.lifex-transcript{display:grid;gap:0}.lifex-transcript article{display:grid;grid-template-columns:82px 1fr;gap:13px;padding:13px 0;border-bottom:1px solid rgba(36,91,109,.6)}.lifex-transcript time{color:#43d7e8;font-size:11px;font-weight:700}.lifex-transcript strong{color:#e9faff;font-size:12px}.lifex-transcript p{margin:5px 0 0;color:#c2d6de;font-size:12px;line-height:1.7}.lifex-decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}.lifex-decision-grid section{padding:13px;border:1px solid #1c5062;border-radius:11px;background:#041923}.lifex-decision-grid h3{margin:0 0 9px;color:#63e2ee;font-size:12px}.lifex-decision-grid ul,.lifex-report-sections ul{margin:0;padding-left:18px;color:#c8dbe2;font-size:11px;line-height:1.75}.lifex-decision-grid li+li,.lifex-report-sections li+li{margin-top:6px}
+.lifex-report-cta{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:18px;padding:15px;border:1px solid #12647a;border-radius:13px;background:linear-gradient(110deg,#062b38,#041923)}.lifex-report-cta>div{display:flex;align-items:center;gap:10px;color:#20d9eb}.lifex-report-cta>div span{display:grid;gap:4px}.lifex-report-cta>div strong{color:#eefaff;font-size:12px}.lifex-report-cta>div small{color:#92b3c0;font-size:10px}.lifex-report-cta label,.lifex-report-savebar label{display:grid;gap:6px;color:#9fc3cf;font-size:10px}.lifex-report-cta select,.lifex-report-savebar select{min-width:205px;padding:9px 30px 9px 10px;border:1px solid #236176;border-radius:8px;color:#e8faff;background:#061b26;font:inherit;font-size:11px;cursor:pointer}.lifex-primary-action,.lifex-save-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:42px;padding:0 17px;border:1px solid #4bf0f2;border-radius:9px;color:#00141a;background:linear-gradient(100deg,#42e9e8,#05c8df);font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 5px 20px rgba(6,217,242,.16);transition:all .2s ease}.lifex-primary-action:hover,.lifex-save-action:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 9px 26px rgba(6,217,242,.3)}
+.lifex-repository-counts{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:17px;padding:12px 14px;border:1px solid #17485b;border-radius:11px;color:#9dbac5;background:#041721;font-size:10px}.lifex-repository-counts>strong{display:flex;align-items:center;gap:7px;color:#cdeaf0}.lifex-repository-counts span b{color:#38e1ec}.lifex-empty{padding:18px;color:#9ab7c3;font-size:12px}
+/* Dedicated report page: no inline preformatted dump or horizontal overflow */
+.lifex-report-page{width:min(1120px,100%);margin:0 auto;padding:8px 0 28px;animation:lifexReportIn .38s cubic-bezier(.2,.8,.2,1) both}.lifex-report-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.lifex-report-topline>span{color:#4ddbe9;font-size:9px;font-weight:800;letter-spacing:.2em}.lifex-report-header{display:flex;align-items:center;gap:17px;padding:23px;border:1px solid #14586b;border-radius:16px;background:linear-gradient(115deg,#082c39,#041923);box-shadow:0 15px 35px rgba(0,0,0,.16)}.lifex-report-header>div:nth-child(2){min-width:0;flex:1}.lifex-report-header p{margin:0 0 7px;color:#39dce9;font-size:9px;font-weight:800;letter-spacing:.16em}.lifex-report-header h1{margin:0;color:#f4fbff;font-size:clamp(20px,2.1vw,28px);line-height:1.3;overflow-wrap:anywhere}.lifex-report-header>div:nth-child(2)>span{display:block;margin-top:7px;color:#a7c3ce;font-size:11px}.lifex-report-status{display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border:1px solid #087c5c;border-radius:30px;color:#80efc2;background:#063b30;font-size:10px;white-space:nowrap}
+.lifex-report-meta-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:15px 0}.lifex-report-meta-grid>div{min-width:0;padding:13px;border:1px solid #174b5d;border-radius:11px;background:#041923}.lifex-report-meta-grid strong{display:block;color:#e3f4f9;font-size:11px;line-height:1.55;overflow-wrap:anywhere}
+.lifex-report-sections{display:grid;gap:12px}.lifex-report-sections>section{padding:18px 20px;border:1px solid #174b5d;border-radius:12px;background:linear-gradient(145deg,#071e2a,#04151e)}.lifex-report-sections>section>small{display:block;margin-bottom:9px;color:#43d9e8;font-size:9px;font-weight:850;letter-spacing:.14em}.lifex-report-sections>section>p{margin:0;color:#d5e5eb;font-size:13px;line-height:1.8}.lifex-report-history article{padding:12px 0;border-top:1px solid rgba(41,92,108,.55)}.lifex-report-history article:first-of-type{border-top:0}.lifex-report-history article>div{display:flex;align-items:center;justify-content:space-between;gap:12px}.lifex-report-history article strong{color:#e8f8fc;font-size:12px}.lifex-report-history article time{color:#8db5c3;font-size:10px}.lifex-report-history article p{margin:7px 0 0;color:#c7dce4;font-size:12px;line-height:1.75}
+.lifex-report-savebar{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:16px;padding:17px;border:1px solid #17647a;border-radius:13px;background:#062431}.lifex-save-action{min-width:210px}.lifex-save-action:disabled{opacity:.7;cursor:wait}.lifex-save-success{display:flex;align-items:center;gap:11px;margin-top:13px;padding:13px 15px;border:1px solid #13815f;border-radius:11px;color:#83f1c5;background:#06372d;animation:lifexSuccessIn .3s ease both}.lifex-save-success span{display:grid;gap:3px}.lifex-save-success strong{font-size:12px}.lifex-save-success small{color:#a8d9c9;font-size:10px}.lifex-report-disclaimer{margin:14px 0 0;color:#7696a3;font-size:10px;line-height:1.6}
+.lifex-extraction-page button:focus-visible,.lifex-extraction-page select:focus-visible,.lifex-extraction-page input:focus-visible{outline:2px solid #54edf5;outline-offset:3px}
+@keyframes lifexWorkspaceIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes lifexReportIn{from{opacity:0;transform:translateY(12px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes lifexSuccessIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1050px){.lifex-extraction-toolbar{align-items:flex-start;flex-direction:column}.lifex-source-tabs{width:100%}.lifex-extraction-steps{flex-wrap:wrap}.lifex-extraction-grid{grid-template-columns:minmax(260px,.38fr) minmax(0,.62fr)}}
+@media(max-width:760px){.lifex-extraction-heading{align-items:flex-start;flex-wrap:wrap}.lifex-extraction-component{width:100%;margin-left:0}.lifex-extraction-grid{grid-template-columns:1fr}.lifex-source-list{position:static}.lifex-source-items{grid-template-columns:1fr 1fr}.lifex-report-meta-grid{grid-template-columns:1fr 1fr}.lifex-decision-grid{grid-template-columns:1fr}.lifex-report-header{align-items:flex-start;flex-wrap:wrap}.lifex-report-status{margin-left:79px}}
+@media(max-width:520px){.lifex-extraction-page{padding:16px 12px 28px}.lifex-source-items{grid-template-columns:1fr}.lifex-extraction-steps{font-size:9px;gap:7px}.lifex-extraction-steps i{width:12px}.lifex-discussion-panel{padding:15px}.lifex-message-meta{flex-direction:column;gap:4px}.lifex-meeting-meta,.lifex-report-meta-grid{grid-template-columns:1fr}.lifex-report-topline{align-items:flex-start;flex-direction:column}.lifex-report-status{margin-left:0}.lifex-report-savebar{align-items:stretch;flex-direction:column}.lifex-save-action{width:100%}}
+
+/* Extraction source selection: visible hover, focus and pressed feedback */
+.lifex-source-item,
+.lifex-source-tabs button,
+.lifex-primary-action,
+.lifex-save-action,
+.lifex-back-link {
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease,
+              background-color .22s ease, color .22s ease, filter .22s ease;
+}
+.lifex-source-item { cursor: pointer; }
+.lifex-source-item:hover,
+.lifex-source-tabs button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(6, 217, 242, .9) !important;
+  box-shadow: 0 8px 24px rgba(0, 190, 220, .13), inset 0 0 18px rgba(6, 217, 242, .06);
+  filter: brightness(1.08);
+}
+.lifex-source-item:active,
+.lifex-source-tabs button:active,
+.lifex-primary-action:active,
+.lifex-save-action:active,
+.lifex-back-link:active {
+  transform: scale(.975);
+}
+.lifex-source-item.selected {
+  border-color: #06d9f2 !important;
+  background: linear-gradient(110deg, rgba(6, 217, 242, .17), rgba(4, 34, 48, .92)) !important;
+  box-shadow: 0 0 0 1px rgba(6, 217, 242, .18), 0 0 22px rgba(6, 217, 242, .12);
+}
+.lifex-source-item:focus-visible,
+.lifex-source-tabs button:focus-visible,
+.lifex-primary-action:focus-visible,
+.lifex-save-action:focus-visible {
+  outline: 2px solid #7cf5ff;
+  outline-offset: 3px;
+}
+.lifex-save-action:disabled { opacity: .65; cursor: wait; }
+.lifex-report-page { animation: lifexReportEnter .38s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes lifexReportEnter {
+  from { opacity: 0; transform: translateY(12px); filter: blur(3px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lifex-source-item, .lifex-source-tabs button, .lifex-primary-action,
+  .lifex-save-action, .lifex-back-link, .lifex-report-page { transition: none !important; animation: none !important; }
+}
+
+/* Approved LIFEX rear-suspension component-selection reference page */
+.rs-component-selection-page{min-height:calc(100vh - 58px);background:#020b12;color:#eefaff;padding:12px 14px 18px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.rs-component-selection-frame{position:relative;width:min(100%,1536px);aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#03121c;box-shadow:0 18px 55px rgba(0,0,0,.28)}
+.rs-component-selection-artwork{display:block;width:100%;height:100%;object-fit:contain;user-select:none}
+.rs-component-hotspot{position:absolute;z-index:3;border:1px solid transparent;border-radius:12px;background:rgba(0,220,245,0);cursor:pointer;transition:background .18s ease,border-color .18s ease,box-shadow .18s ease}
+.rs-component-hotspot:hover,.rs-component-hotspot:focus-visible{outline:none;border-color:rgba(0,235,255,.95);background:rgba(0,220,245,.10);box-shadow:0 0 0 2px rgba(0,220,245,.22),0 0 22px rgba(0,220,245,.35)}
+.rs-component-selection-actions{width:min(100%,1536px);display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 6px}
+.rs-back-project-details{display:inline-flex;align-items:center;gap:10px;border:1px solid #087d94;border-radius:10px;background:#061d29;color:#eafaff;padding:11px 16px;font-size:14px;font-weight:700;transition:all .2s ease}
+.rs-back-project-details:hover{background:#0a3545;border-color:#00d9ef;box-shadow:0 0 18px rgba(0,217,239,.18)}
+.rs-back-project-details span{font-size:20px;color:#00d9ef;line-height:1}
+.rs-component-selection-actions p{margin:0;color:#9dc5d4;font-size:13px;text-align:right}
+@media(max-width:760px){.rs-component-selection-page{padding:8px 6px 14px}.rs-component-selection-frame{aspect-ratio:16/9;border-radius:8px}.rs-component-selection-actions{align-items:flex-start;flex-direction:column}.rs-component-selection-actions p{text-align:left;font-size:12px}}
+
+/* Consistent page-to-page motion across the approved LIFEX workflow. */
+@keyframes lifexPageEnter {
+  from { opacity: 0; transform: translateY(10px); filter: blur(2px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.lifex-page-enter {
+  animation: lifexPageEnter 280ms cubic-bezier(.2,.75,.25,1) both;
+  will-change: opacity, transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lifex-page-enter { animation: none; }
+}
+
+
+
+/* Consistent micro-interactions across LIFEX pages */
+.lifex-page-enter button:not(:disabled),
+.lifex-page-enter a,
+.lifex-page-enter [role="button"] {
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease,
+    background-color .18s ease, color .18s ease, filter .18s ease;
+}
+.lifex-page-enter button:not(:disabled):hover,
+.lifex-page-enter [role="button"]:hover {
+  filter: brightness(1.025);
+}
+.lifex-page-enter button:focus-visible,
+.lifex-page-enter a:focus-visible,
+.lifex-page-enter input:focus-visible,
+.lifex-page-enter select:focus-visible,
+.lifex-page-enter textarea:focus-visible {
+  outline: 3px solid rgba(35, 126, 244, .3);
+  outline-offset: 2px;
+}
+.lifex-page-enter input, .lifex-page-enter select, .lifex-page-enter textarea {
+  transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+.lifex-page-enter input:focus, .lifex-page-enter select:focus, .lifex-page-enter textarea:focus {
+  box-shadow: 0 0 0 3px rgba(35, 126, 244, .10);
+}
+@media (prefers-reduced-motion: reduce) {
+  .lifex-page-enter *, .lifex-page-enter *::before, .lifex-page-enter *::after {
+    transition-duration: .01ms !important; animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important; scroll-behavior: auto !important;
+  }
+}
+
+
+/* LIFEX brand rollout: consistent, larger blue logo on every shared page header. */
+img[src*="lifex-brand.png"],
+img[src*="lifex-logo.png"] {
+  width: 150px !important;
+  height: 62px !important;
+  max-width: 100%;
+  object-fit: contain !important;
+  object-position: left center;
+  image-rendering: auto;
+}

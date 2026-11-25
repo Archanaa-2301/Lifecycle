@@ -1,0 +1,8 @@
+GLOBAL REPOSITORY - CORRECTED SPECIFICATION
+
+1. No Toyota or Innova branding, labels, hierarchy nodes, or breadcrumbs appear in the Global Repository flow.
+2. Landing page has only three repository categories: Design Rules, Templates, Process.
+3. Each repository/category opens its own vehicle-system selection and component hierarchy.
+4. The left hierarchy starts with the selected repository, then selected system, then selected component.
+5. Exactly one document is shown for the selected component in each repository category. If no stored PDF exists for that category, a single generated reference PDF is supplied for preview/download.
+6. Includes the corrected visual design reference at public/global-repository-design-reference.png.

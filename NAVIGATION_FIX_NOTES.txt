@@ -1,0 +1,21 @@
+LIFEX repository navigation correction
+
+Updated navigation:
+Component Workspace (Page 13)
+  -> click one of the four Knowledge Repository categories
+  -> dedicated Repository page (Page 31)
+       - Repository Documents list with PDF view/download
+       - Manual Entry card
+  -> click Manual Entry
+  -> dedicated Manual Entry selection page (Page 32)
+       - Design / Engineering Query (RFI)
+       - Request for Quotation (RFQ)
+       - Design / Development Update
+       - Engineering Decision / Approval
+  -> selecting an option opens the existing lifecycle engineering form page (Page 16)
+  -> Back from form returns to Page 32; Back from Page 32 returns to Page 31.
+
+Engineering Intelligence Extraction remains on its original Component Workspace card and its existing interaction is unchanged.
+The repository document page reads the existing repository-data through the existing /api/reports endpoint. The project includes the repository-data PDF and JSON records.
+
+Validation: changed TSX files passed TypeScript transpile syntax checks. A full tsc/Vite build was not run because node_modules dependencies were unavailable; npm ci timed out in this environment. Run npm install then npm run dev on the target machine.

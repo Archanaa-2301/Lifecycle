@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap');
+
+.lifex-dashboard {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.lifex-dashboard h1,
+.lifex-dashboard h2,
+.lifex-dashboard h3,
+.lifex-dashboard .lifex-display {
+  font-family: 'Sora', 'Inter', sans-serif;
+  letter-spacing: -0.045em;
+}
+
+@keyframes lifex-enter {
+  from { opacity: 0; transform: translateY(18px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes lifex-soft-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(6, 182, 212, 0), inset 0 0 0 rgba(6, 182, 212, 0); }
+  50% { box-shadow: 0 0 24px rgba(6, 182, 212, .09), inset 0 0 18px rgba(6, 182, 212, .035); }
+}
+@keyframes lifex-car-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes lifex-line-pulse {
+  0%, 100% { opacity: .55; transform: scaleX(.78); transform-origin: left; }
+  50% { opacity: 1; transform: scaleX(1); transform-origin: left; }
+}
+@keyframes lifex-card-enter {
+  from { opacity: 0; transform: translateY(16px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.lifex-dashboard .lifex-panel {
+  animation: lifex-enter .75s cubic-bezier(.2,.75,.25,1) both;
+}
+.lifex-dashboard .lifex-sidebar {
+  animation: lifex-enter .65s .08s cubic-bezier(.2,.75,.25,1) both;
+}
+.lifex-dashboard .lifex-hero-copy {
+  animation: lifex-enter .7s .16s cubic-bezier(.2,.75,.25,1) both;
+}
+.lifex-dashboard .lifex-car-frame {
+  animation: lifex-enter .8s .22s cubic-bezier(.2,.75,.25,1) both, lifex-soft-glow 5s 1s ease-in-out infinite;
+}
+.lifex-dashboard .lifex-car-image {
+  animation: lifex-car-float 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 14px rgba(6, 182, 212, .16));
+}
+.lifex-dashboard .lifex-accent-line {
+  animation: lifex-line-pulse 2.8s ease-in-out infinite;
+}
+.lifex-dashboard .lifex-repository-card {
+  opacity: 0;
+  animation: lifex-card-enter .65s cubic-bezier(.2,.75,.25,1) forwards;
+  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease, background-color .28s ease;
+}
+.lifex-dashboard .lifex-repository-card:nth-child(1) { animation-delay: .25s; }
+.lifex-dashboard .lifex-repository-card:nth-child(2) { animation-delay: .36s; }
+.lifex-dashboard .lifex-repository-card:nth-child(3) { animation-delay: .47s; }
+.lifex-dashboard .lifex-repository-card:nth-child(4) { animation-delay: .58s; }
+.lifex-dashboard .lifex-repository-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(34, 211, 238, .85);
+  background-color: #0b2635;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .25), 0 0 26px rgba(6, 182, 212, .13);
+}
+.lifex-dashboard .lifex-nav-link {
+  transition: transform .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.lifex-dashboard .lifex-nav-link:hover {
+  transform: translateX(4px);
+}
+.lifex-dashboard .lifex-nav-link.is-active {
+  box-shadow: inset 3px 0 0 #22d3ee, 0 0 22px rgba(6, 182, 212, .09);
+}
+.lifex-dashboard .lifex-cta {
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+.lifex-dashboard .lifex-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(6, 182, 212, .18);
+}
+.lifex-dashboard .lifex-content-transition {
+  transition: opacity .22s ease, transform .22s ease, filter .22s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lifex-dashboard *,
+  .lifex-dashboard *::before,
+  .lifex-dashboard *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

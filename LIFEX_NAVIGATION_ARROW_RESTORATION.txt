@@ -1,0 +1,7 @@
+LIFEX NAVIGATION / HIERARCHY ARROW UPDATE
+
+- Restored the previous static Component Workspace layout (no selection-flight animation) with the original Explore Repository and Extract Intelligence buttons.
+- On the vehicle overview, selecting Rear Suspension targets the left-side hierarchy panel; the selection route now has a visible arrowhead and an explicit left-pointing Component Hierarchy cue.
+- On the Rear Suspension component hierarchy page, the system node points horizontally right into the component relationship map instead of relying only on vertical lineage arrows.
+- In Global Repository, choosing Design Rules, Templates or Process sends the selection pointer toward the middle content area, not the left edge.
+- Preserved the existing Rebound Bumper Design Rule PDF and the rest of the current project.

@@ -1,0 +1,20 @@
+Project Details auto-fill UI update
+====================================
+
+The Project Details page now follows the supplied reference layout:
+- LIFEX left navigation and top breadcrumb/header
+- Project summary card with project image, name, code, platform, OEMs, project type and initiation date
+- Project Information form with editable prefilled fields
+- OEM multi-select (maximum two)
+- Project description field
+- Six-step project workflow indicator
+
+Project selection passes all project details to the Project Details page:
+name, code, platform, OEMs, project type, initiated date, description and image.
+
+The five project records currently in SelectProjectPage.tsx are sample front-end data.
+The original repository PDF and JSON files are preserved.
+
+Build note:
+A build was attempted, but the extracted archive's node_modules/vite executable is not runnable
+("vite: Permission denied"). Run npm install in the project directory, then npm run build.

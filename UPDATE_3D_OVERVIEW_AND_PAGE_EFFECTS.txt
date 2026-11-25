@@ -1,0 +1,20 @@
+LIFEX UPDATE — INTERACTIVE VEHICLE OVERVIEW
+
+What changed
+- Vehicle Selection (Page 5) now opens the new Vehicle Overview (Page 34).
+- Added a white-mode 3D vehicle overview page with Toyota -> Innova selection path.
+- The 3D vehicle is built from Three.js geometry and can be rotated by dragging, zoomed with the mouse wheel or controls, and reset.
+- The Engine, Transmission, Braking, Suspension, Steering, Electrical, HVAC and Body systems can be selected from the right panel; selection highlights the matching model meshes.
+- Added 3D, X-Ray and Exploded display modes.
+- Added consistent page-entry motion, button hover/press feedback and accessible focus effects across LIFEX pages.
+
+Important model note
+The included vehicle geometry is a simplified, procedural 3D engineering mock-up for interaction and UI development. It is not Toyota's official CAD geometry or an exact production-accurate Innova model. Replace the procedural geometry with a licensed GLB/GLTF vehicle asset when one is available.
+
+Run
+1. Extract the ZIP.
+2. Open the LIFEX folder in VS Code.
+3. Run `npm install`. This installs the added `three` and `@types/three` packages.
+4. Run `npm run dev`.
+
+The npm install/build could not be verified in this environment because dependency installation timed out.

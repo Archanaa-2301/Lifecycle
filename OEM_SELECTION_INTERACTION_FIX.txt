@@ -1,0 +1,8 @@
+OEM SELECTION INTERACTION AND LOGO UPDATE
+
+- Every manufacturer card is the complete click target.
+- Clicking Toyota, Ford, BMW, Honda or Tesla immediately calls onSelectOEM(name) and advances to vehicle selection.
+- Removed the separate Continue to Vehicle Selection button and selected-OEM footer control.
+- Kept Back to Repository as the only separate navigation control.
+- Refreshed the Toyota, Ford, BMW, Honda and Tesla SVG logo assets; LIFEX header logo remains public/lifex-logo.png.
+- Desktop grid remains 3 cards on the first row and 2 on the second; tablet uses 2 columns and mobile uses 1 column.

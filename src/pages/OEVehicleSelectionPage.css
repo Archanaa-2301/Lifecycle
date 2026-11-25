@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+.lva-page{--navy:#101d3c;--blue:#1459d9;--cyan:#13aeca;--muted:#64738f;--line:#dfe7f2;min-height:100vh;background:#f5f7fb;color:var(--navy);font-family:'DM Sans',Arial,sans-serif}
+.lva-page *{box-sizing:border-box}
+.lva-header{height:66px;padding:0 34px;display:flex;align-items:center;gap:26px;background:#fff;border-bottom:1px solid #e5ebf3}
+.lva-brand{width:390px;display:flex;align-items:center;gap:15px;flex:none}.lva-brand img{width:120px;height:50px;object-fit:contain}.lva-brand span{font:700 13px/1.25 Manrope,sans-serif;border-left:1px solid #d7e0ee;padding-left:14px;color:#17264b}
+.lva-search{height:42px;max-width:700px;flex:1;margin:auto;display:flex;align-items:center;gap:12px;padding:0 16px;border:1px solid #d7e4f6;border-radius:24px;background:#f6f9fe}.lva-search svg{width:20px;height:20px}.lva-search input{width:100%;border:0;outline:0;background:transparent;font:500 14px 'DM Sans';color:#17264b}.lva-search input::placeholder{color:#65738e}
+.lva-header-actions{display:flex;align-items:center;gap:20px;color:#152448}.lva-header-actions button{border:0;background:none;padding:0;display:grid;place-items:center;color:inherit;position:relative;cursor:pointer}.lva-header-actions svg{width:22px;height:22px}.lva-header-actions .lva-avatar{width:40px;height:40px;border-radius:50%;background:#1459d9;color:#fff;font-size:18px;font-weight:700}.lva-bell i{position:absolute;right:-1px;top:0;width:8px;height:8px;background:#1459d9;border-radius:50%}
+.lva-main{max-width:1660px;margin:0 auto;padding:19px 34px 15px;min-height:calc(100vh - 66px);display:flex;flex-direction:column}
+.lva-breadcrumb{display:flex;align-items:center;gap:9px;font-size:13px;color:#72809a;margin-bottom:16px}.lva-breadcrumb button{border:0;background:none;padding:0;color:inherit;font:inherit;cursor:pointer}.lva-breadcrumb svg{width:14px;height:14px}.lva-breadcrumb strong{color:#1459d9;font-weight:700}
+.lva-intro{display:flex;justify-content:space-between;align-items:flex-end;padding:3px 0 17px;border-bottom:1px solid #e0e7f0}
+.lva-eyebrow{display:flex;align-items:center;gap:9px;color:#1459d9;font-size:10px;font-weight:800;letter-spacing:1.7px}.lva-eyebrow>span:first-child{width:7px;height:7px;background:#13aeca;border-radius:50%}.lva-eyebrow-line{width:44px;height:1px;background:#a9bfe3}
+.lva-intro h1{margin:7px 0 4px;font:800 34px/1.1 Manrope,sans-serif;letter-spacing:-1.2px;color:#101d3c}.lva-intro h1 em{font-style:normal;color:#1459d9}.lva-intro p{margin:0;font-size:14px;color:#64738f}
+.lva-step-summary{width:180px;flex:none;padding:0 0 2px 18px;border-left:1px solid #dce5f1}.lva-step-summary>span{font-size:10px;letter-spacing:1.2px;color:#78859c}.lva-step-summary>span b{font-size:16px;color:#1459d9;margin:0 3px}.lva-progress{height:4px;border-radius:5px;background:#e1e8f3;margin:7px 0}.lva-progress i{display:block;width:40%;height:100%;background:#1459d9;border-radius:5px}.lva-step-summary small{font-size:11px;color:#687894}
+.lva-flow{display:flex;align-items:center;gap:9px;padding:14px 0 15px}
+.lva-flow-step{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#8b96a9;font-size:12px}.lva-flow-step>span{width:27px;height:27px;border:1px solid #d6dfeb;border-radius:50%;display:grid;place-items:center;background:#fff;font-size:10px;font-weight:700}.lva-flow-step b{font-weight:600}.lva-flow-step.done{color:#167b67}.lva-flow-step.done>span{background:#e7f6f1;border-color:#b8e4d7;color:#13856d}.lva-flow-step.done svg{width:14px;height:14px}.lva-flow-step.active{color:#1459d9}.lva-flow-step.active>span{background:#1459d9;color:white;border-color:#1459d9;box-shadow:0 0 0 4px #e4edff}.lva-flow-step.active b{font-weight:800}.lva-flow-connector{height:1px;background:#dce4ef;flex:1;min-width:20px}.lva-flow-connector.passed{background:#82cdbb}
+.lva-selection{flex:1;min-height:0;display:flex;flex-direction:column}
+.lva-selection-head{display:flex;justify-content:space-between;align-items:flex-end;margin:2px 0 13px}.lva-kicker{font-size:9px;letter-spacing:1.6px;color:#13aeca;font-weight:800}.lva-selection-head h2{margin:3px 0 2px;font:800 23px/1.15 Manrope,sans-serif;color:#101d3c}.lva-selection-head p{margin:0;font-size:12px;color:#6b7890}
+.lva-filter{height:34px;width:210px;display:flex;align-items:center;gap:8px;padding:0 11px;border:1px solid #dce5f0;border-radius:8px;background:#fff;color:#8090a8}.lva-filter svg{width:15px;height:15px}.lva-filter input{width:100%;border:0;outline:0;background:transparent;font:12px 'DM Sans';color:#152448}
+.lva-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:14px;min-height:0}
+.lva-oem-panel{border-radius:13px;background:#122346;color:#fff;padding:17px 15px;display:flex;flex-direction:column;min-height:300px;box-shadow:0 8px 18px rgba(18,35,70,.12)}
+.lva-oem-top{display:flex;align-items:center;justify-content:space-between}.lva-oem-icon{width:34px;height:34px;border-radius:9px;background:#1d3b70;display:grid;place-items:center;color:#7ce0eb}.lva-oem-icon svg{width:20px;height:20px}.lva-oem-label{font-size:8px;letter-spacing:1.2px;color:#91a8cf;font-weight:700}
+.lva-oem-name{font:800 25px Manrope,sans-serif;margin-top:18px;letter-spacing:-.5px}.lva-oem-status{display:flex;align-items:center;gap:7px;color:#8fe0c4;font-size:11px;margin-top:5px}.lva-oem-status svg{width:15px;height:15px}
+.lva-oem-panel>button{display:flex;align-items:center;gap:8px;margin-top:22px;border:1px solid #48628e;border-radius:7px;padding:9px 10px;background:#1a3158;color:#e3edff;font:600 11px 'DM Sans';cursor:pointer}.lva-oem-panel>button svg{width:15px;height:15px}
+.lva-oem-foot{margin-top:auto;padding-top:17px;border-top:1px solid #31476d;color:#8da2c4;font-size:8px;letter-spacing:1.1px;line-height:1.8}.lva-oem-foot strong{font-size:11px;letter-spacing:0;color:#fff;font-weight:600}
+.lva-vehicle-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;min-width:0}
+.lva-vehicle{position:relative;min-width:0;min-height:300px;padding:12px 13px 10px;border:1px solid #e0e7f0;border-radius:13px;background:#fff;text-align:left;color:#142346;cursor:pointer;display:flex;flex-direction:column;box-shadow:0 5px 14px rgba(24,46,86,.045);transition:border .18s,box-shadow .18s,transform .18s}
+.lva-vehicle:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(24,46,86,.09);border-color:#b5c9eb}
+.lva-vehicle.chosen{border:1.5px solid #1459d9;box-shadow:0 0 0 3px #e5edff,0 8px 18px rgba(20,89,217,.09);background:#fbfdff}
+.lva-vehicle-topline{display:flex;justify-content:space-between;align-items:center;height:19px;font-size:9px;letter-spacing:1px;font-weight:800;color:#9aa6b9}.lva-selected{display:flex;align-items:center;gap:4px;color:#1459d9}.lva-selected svg{width:12px;height:12px}.lva-choose{display:flex;align-items:center;gap:4px;color:#9aa6b9}.lva-choose svg{width:12px;height:12px}
+.lva-photo{height:154px;margin:4px -2px 5px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:8px;background:radial-gradient(ellipse at center,#f0f4fa 0%,#f7f9fc 58%,#fff 100%)}
+.lva-photo img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform .25s}.lva-vehicle:hover .lva-photo img{transform:scale(1.04)}
+.lva-vehicle-info{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.lva-vehicle-info h3{margin:0;font:800 21px/1.2 Manrope,sans-serif;letter-spacing:-.4px}.lva-vehicle-info p{margin:3px 0 0;font-size:10px;color:#8490a4}.lva-type{border-radius:5px;background:#f0f4fa;padding:4px 7px;color:#52647f;font-size:9px;font-weight:700}
+.lva-vehicle-bottom{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:auto;padding-top:10px;border-top:1px solid #edf1f6;color:#7a879d;font-size:9px}.lva-vehicle-bottom span{display:flex;align-items:center;gap:4px;white-space:nowrap}.lva-vehicle-bottom svg{width:12px;height:12px;color:#13aeca}
+.lva-empty{grid-column:1/-1;min-height:180px;display:grid;place-items:center;border:1px dashed #cdd8e7;border-radius:12px;color:#74839a;font-size:13px}
+.lva-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;padding:12px 0 0;border-top:1px solid #e1e8f1}
+.lva-current-selection{display:flex;align-items:center;gap:8px;color:#78869d;font-size:9px;letter-spacing:.8px}.lva-current-selection svg{width:16px;height:16px;color:#13aeca}.lva-current-selection strong{color:#1a2b50;font-size:12px;letter-spacing:0}
+.lva-footer-actions{display:flex;align-items:center;gap:9px}.lva-footer-actions button{height:38px;padding:0 17px;border-radius:7px;display:flex;align-items:center;justify-content:center;gap:9px;font:700 11px 'DM Sans';cursor:pointer}.lva-footer-actions svg{width:15px;height:15px}
+.lva-back{border:1px solid #cbd7e8;background:#fff;color:#344767}.lva-next{border:1px solid #1459d9;background:#1459d9;color:#fff;box-shadow:0 4px 10px rgba(20,89,217,.17)}.lva-next:disabled{opacity:.5;cursor:not-allowed}
+@media(min-width:901px) and (max-height:760px){.lva-main{padding-top:12px;padding-bottom:9px}.lva-breadcrumb{margin-bottom:10px}.lva-intro{padding-bottom:12px}.lva-intro h1{font-size:30px}.lva-flow{padding:10px 0}.lva-selection-head{margin-bottom:9px}.lva-vehicle{min-height:260px}.lva-photo{height:125px}.lva-oem-panel{min-height:260px}.lva-footer{margin-top:10px;padding-top:8px}}
+@media(max-width:1100px){.lva-brand{width:300px}.lva-layout{grid-template-columns:160px minmax(0,1fr)}.lva-vehicle-grid{gap:9px}.lva-vehicle{padding:10px}.lva-photo{height:130px}.lva-vehicle-info h3{font-size:18px}}
+@media(max-width:850px){.lva-header{padding:0 15px;gap:12px}.lva-brand{width:auto;flex:1}.lva-brand img{width:90px}.lva-brand span{font-size:10px}.lva-search{display:none}.lva-main{padding:15px}.lva-step-summary{display:none}.lva-layout{grid-template-columns:1fr}.lva-oem-panel{min-height:0;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:12px}.lva-oem-name{margin:0;font-size:20px}.lva-oem-status{margin:0}.lva-oem-panel>button{margin:0}.lva-oem-foot{display:none}.lva-vehicle-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lva-vehicle{min-height:250px}.lva-footer{align-items:flex-start;flex-direction:column}.lva-footer-actions{width:100%;justify-content:flex-end}}
+@media(max-width:520px){.lva-header{height:58px}.lva-brand img{width:74px}.lva-brand span{font-size:9px}.lva-header-actions{gap:11px}.lva-header-actions .lva-avatar{width:32px;height:32px}.lva-main{padding:12px}.lva-intro h1{font-size:27px}.lva-intro p{font-size:12px}.lva-flow{gap:5px;overflow-x:auto}.lva-flow-step{gap:5px;font-size:10px}.lva-flow-step>span{width:24px;height:24px}.lva-flow-connector{min-width:10px}.lva-selection-head{align-items:flex-start;gap:8px;flex-direction:column}.lva-filter{width:100%}.lva-oem-panel{grid-template-columns:auto 1fr;}.lva-oem-status{grid-column:2}.lva-oem-panel>button{grid-column:1/-1;justify-content:center}.lva-vehicle-grid{gap:8px}.lva-vehicle{min-height:215px;padding:8px}.lva-photo{height:105px}.lva-vehicle-info h3{font-size:16px}.lva-vehicle-bottom{font-size:8px;flex-wrap:wrap}.lva-current-selection{flex-wrap:wrap}.lva-footer-actions{justify-content:stretch}.lva-footer-actions button{flex:1}}
+
+/* Vehicle step: animated entrance, two-row model gallery, and tactile selection feedback. */
+@keyframes vehicleStepEnter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes vehicleCardEnter{0%{opacity:0;transform:translateY(28px) scale(.965)}70%{opacity:1;transform:translateY(-4px) scale(1.008)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes vehicleSelectedPop{0%{transform:scale(.975)}60%{transform:scale(1.018)}100%{transform:scale(1)}}
+@keyframes vehicleGlow{0%,100%{box-shadow:0 0 0 3px #e5edff,0 8px 18px rgba(20,89,217,.09)}50%{box-shadow:0 0 0 5px #dce8ff,0 12px 25px rgba(20,89,217,.15)}}
+.lva-intro,.lva-flow,.lva-selection-head,.lva-oem-panel,.lva-footer{animation:vehicleStepEnter .55s cubic-bezier(.2,.75,.25,1) both}
+.lva-flow{animation-delay:.07s}.lva-selection-head{animation-delay:.12s}.lva-oem-panel{animation-delay:.18s}.lva-footer{animation-delay:.3s}
+/* Keep the four models in a balanced 2 × 2 layout on desktop and tablet. */
+.lva-vehicle-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(285px,auto));gap:16px}
+.lva-vehicle{min-height:285px;animation:vehicleCardEnter .62s cubic-bezier(.2,.8,.25,1) both;will-change:transform,opacity;transition:border .22s,box-shadow .22s,transform .22s}
+.lva-vehicle:nth-child(1){animation-delay:.16s}.lva-vehicle:nth-child(2){animation-delay:.25s}.lva-vehicle:nth-child(3){animation-delay:.34s}.lva-vehicle:nth-child(4){animation-delay:.43s}
+.lva-vehicle.chosen{animation:vehicleSelectedPop .36s ease-out both,vehicleGlow 2.8s ease-in-out .36s infinite;border:1.5px solid #1459d9}
+.lva-vehicle:hover{transform:translateY(-5px) scale(1.008);box-shadow:0 15px 28px rgba(24,46,86,.12)}
+.lva-photo{height:145px}.lva-photo img{transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .35s}.lva-vehicle:hover .lva-photo img{transform:scale(1.075);filter:saturate(1.08)}
+.lva-flow-step,.lva-flow-connector{transition:color .25s,background .35s,box-shadow .25s}
+.lva-flow-connector.passed{background:linear-gradient(90deg,#82cdbb,#1459d9);background-size:200% 100%;animation:flowShimmer 2.4s linear infinite}
+@keyframes flowShimmer{from{background-position:100% 0}to{background-position:-100% 0}}
+.lva-next{transition:transform .2s,box-shadow .2s}.lva-next:not(:disabled):hover{transform:translateY(-3px);box-shadow:0 9px 20px rgba(20,89,217,.3)}.lva-next:not(:disabled):active{transform:scale(.97)}
+@media(max-width:1100px){.lva-vehicle-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(250px,auto))}.lva-vehicle{min-height:250px}.lva-photo{height:125px}}
+@media(max-width:850px){.lva-vehicle-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto}.lva-vehicle{min-height:250px}}
+@media(max-width:520px){.lva-vehicle-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.lva-vehicle{min-height:215px}.lva-photo{height:105px}}
+@media(prefers-reduced-motion:reduce){.lva-intro,.lva-flow,.lva-selection-head,.lva-oem-panel,.lva-footer,.lva-vehicle,.lva-vehicle.chosen,.lva-flow-connector.passed{animation:none!important}.lva-vehicle,.lva-photo img,.lva-next{transition:none!important}}
+
+
+/* Shared selection marker: visually matches the OEM selection cards. */
+.lva-vehicle-topline{min-height:29px}
+.lva-vehicle-check{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#0870f4;color:#fff;box-shadow:0 3px 9px rgba(8,112,244,.22);animation:vehicleCheckPop .28s cubic-bezier(.2,.8,.25,1) both}
+.lva-vehicle-check svg{width:16px;height:16px;stroke-width:3}
+.lva-vehicle:focus-visible{outline:3px solid #70a8ff;outline-offset:3px}
+.lva-vehicle.chosen{border:2px solid #0964f4;background:linear-gradient(155deg,#edf5ff 0%,#fff 80%);box-shadow:0 0 0 4px #e3efff,0 12px 26px rgba(7,91,234,.16)}
+@keyframes vehicleCheckPop{0%{opacity:0;transform:scale(.55)}75%{opacity:1;transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.lva-vehicle-check{animation:none}}
+
+/* Live OEM -> vehicle hierarchy: the selected vehicle visibly travels into its slot. */
+.lva-live-hierarchy{padding:15px 12px!important;min-height:340px!important;background:linear-gradient(160deg,#10264d,#0d1d3d)!important;}
+.lva-hierarchy-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;color:#9fc6ff;font-size:9px;font-weight:900;letter-spacing:1.5px;}
+.lva-hierarchy-heading i{width:8px;height:8px;border-radius:50%;background:#27d5a0;box-shadow:0 0 0 5px rgba(39,213,160,.13);}
+.lva-hierarchy-node{display:flex;align-items:center;gap:8px;min-height:64px;padding:9px;border:1px solid rgba(157,190,244,.24);border-radius:12px;background:rgba(255,255,255,.08);color:#fff;box-shadow:0 8px 18px rgba(0,0,0,.08);}
+.lva-hierarchy-node>svg{width:17px;height:17px;flex:none;color:#34d5a0;}
+.lva-hierarchy-logo,.lva-hierarchy-vehicle-icon{width:36px;height:36px;flex:none;border-radius:9px;background:#fff;display:grid;place-items:center;padding:5px;}
+.lva-hierarchy-logo img{width:100%;height:100%;object-fit:contain;}
+.lva-hierarchy-vehicle-icon{background:#e8f1ff;color:#1768e9;}
+.lva-hierarchy-vehicle-icon svg{width:22px;height:22px;}
+.lva-hierarchy-copy{min-width:0;flex:1;}
+.lva-hierarchy-copy strong{display:block;color:#fff;font-size:12px;line-height:1.25;font-weight:800;}
+.lva-hierarchy-copy small{display:block;margin-top:4px;color:#b8c8e4;font-size:9px;line-height:1.3;}
+.lva-hierarchy-link{height:28px;position:relative;display:flex;justify-content:center;align-items:center;}
+.lva-hierarchy-link:before{content:'';height:100%;width:2px;background:linear-gradient(#3d8bff,#20c6df);}
+.lva-hierarchy-link span{position:absolute;bottom:0;width:8px;height:8px;border-right:2px solid #45a0ff;border-bottom:2px solid #45a0ff;transform:rotate(45deg) translateY(-2px);}
+.lva-hierarchy-placeholder{height:64px;border:1px dashed rgba(172,197,235,.45);border-radius:12px;display:flex;align-items:center;justify-content:center;gap:8px;color:#b7c8e5;font-size:10px;text-align:left;line-height:1.4;background:rgba(255,255,255,.035);}
+.lva-hierarchy-placeholder svg{width:20px;height:20px;color:#8dbbff;}
+.lva-hierarchy-vehicle.arriving{animation:lvaVehicleSettles .72s cubic-bezier(.18,.82,.2,1) both;}
+@keyframes lvaVehicleSettles{0%{opacity:0;transform:translate(95px,-18px) scale(.86);filter:blur(3px)}55%{opacity:1;transform:translate(-7px,2px) scale(1.025);filter:blur(0)}100%{opacity:1;transform:translate(0,0) scale(1)}}
+.lva-vehicle{transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s,border-color .28s;}
+.lva-vehicle:active{transform:scale(.985);}
+.lva-vehicle.chosen{animation:lvaVehicleCardSelect .45s ease-out both;}
+@keyframes lvaVehicleCardSelect{0%{transform:scale(1)}45%{transform:scale(1.018)}100%{transform:scale(1)}}
+.lva-next:disabled{opacity:.48;cursor:not-allowed;box-shadow:none;}
+@media(prefers-reduced-motion:reduce){.lva-hierarchy-vehicle.arriving,.lva-vehicle.chosen{animation:none!important}}
+
+/* Strong, shared selection choreography: OEM lands first, then the chosen vehicle. */
+.lva-hierarchy-oem.lva-hierarchy-arrival{animation:lvaOEMHierarchyLand 1.05s cubic-bezier(.16,.82,.2,1) both;border-color:rgba(73,158,255,.78);box-shadow:0 0 0 5px rgba(37,124,255,.13),0 14px 30px rgba(25,112,245,.2);}
+.lva-hierarchy-oem.lva-hierarchy-arrival:after{content:'';position:absolute;inset:0;border-radius:12px;pointer-events:none;background:linear-gradient(110deg,transparent 18%,rgba(91,167,255,.25) 48%,transparent 72%);transform:translateX(-120%);animation:lvaHierarchySheen .95s .12s ease-out both;}
+.lva-hierarchy-oem{position:relative;overflow:hidden;}
+.lva-hierarchy-vehicle-slot{min-height:64px;}
+.lva-hierarchy-vehicle.arriving{animation:lvaVehicleLandsWithImpact 1.05s cubic-bezier(.16,.82,.2,1) both;border-color:#2580ff;box-shadow:0 0 0 5px rgba(37,128,255,.18),0 14px 32px rgba(25,112,245,.22);}
+.lva-hierarchy-placeholder{transition:border-color .25s,background .25s,box-shadow .25s;}
+.lva-hierarchy-placeholder.lifex-selection-target-pulse{border:1px solid #55a2ff;background:rgba(35,111,233,.17);box-shadow:0 0 0 5px rgba(35,111,233,.15),0 0 28px rgba(35,111,233,.24);}
+.lva-vehicle.chosen{position:relative;overflow:hidden;}
+.lva-vehicle.chosen:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg,transparent 20%,rgba(65,145,255,.18) 48%,transparent 75%);transform:translateX(-120%);animation:lvaVehicleCardSheen .8s ease-out both;}
+@keyframes lvaOEMHierarchyLand{0%{opacity:0;transform:translateX(-42px) scale(.86);filter:blur(5px)}48%{opacity:1;transform:translateX(8px) scale(1.035);filter:blur(0)}72%{transform:translateX(-3px) scale(.995)}100%{opacity:1;transform:translateX(0) scale(1)}}
+@keyframes lvaHierarchySheen{to{transform:translateX(120%)}}
+@keyframes lvaVehicleLandsWithImpact{0%{opacity:0;transform:translate(70px,-24px) scale(.78);filter:blur(5px)}48%{opacity:1;transform:translate(-8px,3px) scale(1.06);filter:blur(0)}72%{transform:translate(3px,-1px) scale(.985)}100%{opacity:1;transform:translate(0,0) scale(1)}}
+@keyframes lvaVehicleCardSheen{to{transform:translateX(120%)}}
+@media(prefers-reduced-motion:reduce){.lva-hierarchy-oem.lva-hierarchy-arrival,.lva-hierarchy-vehicle.arriving,.lva-hierarchy-oem.lva-hierarchy-arrival:after,.lva-vehicle.chosen:after{animation:none!important}}

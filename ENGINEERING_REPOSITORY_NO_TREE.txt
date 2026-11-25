@@ -1,0 +1,5 @@
+Engineering Repository update:
+- Removed the Explore Repositories branching tree and animated arrows/labels.
+- Removed the flying selection transition when opening Global Repository or Project Repository.
+- Repository cards navigate directly on click or keyboard selection.
+- Kept existing card content, images, theme toggle and styling.

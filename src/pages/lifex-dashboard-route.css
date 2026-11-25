@@ -1,0 +1,14 @@
+@keyframes lifex-route-overlay-in {
+  from { opacity: 0; backdrop-filter: blur(0); }
+  to { opacity: 1; backdrop-filter: blur(12px); }
+}
+@keyframes lifex-route-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.lifex-route-transition {
+  animation: lifex-route-overlay-in .24s ease-out both;
+}
+.lifex-route-progress {
+  animation: lifex-route-progress .58s cubic-bezier(.2,.7,.2,1) both;
+}

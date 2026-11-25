@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
+.lifex-3d-page{--ink:#101d3d;--blue:#1260e8;--cyan:#13b5d3;--muted:#71809a;min-height:100vh;background:linear-gradient(135deg,#f8fbff 0%,#f2f7ff 55%,#fff 100%);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;display:flex;flex-direction:column}
+.lifex-3d-page *{box-sizing:border-box}
+.lifex-3d-header{height:66px;flex:none;padding:0 30px;display:flex;align-items:center;gap:28px;background:rgba(255,255,255,.94);border-bottom:1px solid #e2eafa;box-shadow:0 2px 12px rgba(32,76,145,.04)}
+.lifex-3d-brand{width:360px;flex:none;display:flex;align-items:center;gap:13px}.lifex-3d-brand img{width:120px;height:48px;object-fit:contain}.lifex-3d-brand span{padding-left:13px;border-left:1px solid #d8e2f0;font:700 12px/1.25 Manrope;color:#15264b}
+.lifex-3d-search{height:41px;max-width:700px;flex:1;margin:auto;display:flex;align-items:center;gap:11px;padding:0 15px;border:1px solid #d8e5fb;border-radius:24px;background:#f1f6ff;color:#15264b}.lifex-3d-search svg{width:20px}.lifex-3d-search input{width:100%;border:0;outline:0;background:transparent;font:500 13px 'DM Sans';color:#15264b}
+.lifex-3d-header-actions{display:flex;align-items:center;gap:19px;color:#10234b}.lifex-3d-header-actions button{border:0;background:none;padding:0;display:grid;place-items:center;color:inherit;cursor:pointer;position:relative}.lifex-3d-header-actions svg{width:21px;height:21px}.lifex-3d-header-actions .profile{width:39px;height:39px;border-radius:50%;background:#145de7;color:white;font-size:17px;font-weight:800}.lifex-3d-header-actions .has-dot:after{content:'';position:absolute;right:0;top:0;width:7px;height:7px;border-radius:50%;background:#1260e8}
+.lifex-3d-main{width:100%;max-width:1740px;margin:0 auto;padding:13px 28px 15px;display:flex;flex-direction:column;flex:1;min-height:calc(100vh - 66px)}
+.lifex-3d-breadcrumb{display:flex;align-items:center;gap:8px;color:#687b9c;font-size:11px;margin-bottom:11px}.lifex-3d-breadcrumb svg{width:13px;height:13px}.lifex-3d-breadcrumb strong{color:#145de7}.lifex-3d-breadcrumb b{color:#0f234a}
+.lifex-3d-steps{display:flex;align-items:center;gap:8px;padding:0 0 12px;border-bottom:1px solid #dfe8f6}.lifex-3d-steps .step{display:flex;align-items:center;gap:8px;white-space:nowrap;padding:7px 13px;border:1px solid #e1e9f5;border-radius:30px;background:#fff;color:#657590;font-size:11px;font-weight:600;box-shadow:0 3px 8px rgba(24,65,125,.04)}.lifex-3d-steps .step span{width:25px;height:25px;border:1px solid #cbdaf1;border-radius:50%;display:grid;place-items:center;color:#18345e;font-size:11px}.lifex-3d-steps .step.complete{color:#147d6d}.lifex-3d-steps .step.complete span{background:#e6f7f1;border-color:#b8e6d8;color:#16866f}.lifex-3d-steps .step.active{background:#145de7;color:#fff;border-color:#145de7;box-shadow:0 5px 14px rgba(20,93,231,.2)}.lifex-3d-steps .step.active span{color:#fff;border-color:rgba(255,255,255,.8)}.lifex-3d-steps>i{height:1px;background:#c9d9f2;flex:1;min-width:12px}
+.lifex-3d-title-row{display:flex;align-items:flex-end;justify-content:space-between;padding:12px 0 12px}.lifex-3d-title-row .eyebrow,.systems-heading .eyebrow{font-size:8px;letter-spacing:1.5px;color:#1598bd;font-weight:800}.lifex-3d-title-row h1{font:800 25px/1.2 Manrope,sans-serif;letter-spacing:-.7px;margin:3px 0 3px;color:#101d3d}.lifex-3d-title-row h1 em{font-style:normal;color:#1762db}.lifex-3d-title-row p{margin:0;font-size:11px;color:#687894}.vehicle-id{display:flex;flex-direction:column;align-items:flex-end;gap:2px;padding:7px 12px;border-left:2px solid #9fc4fa}.vehicle-id span{font-size:8px;letter-spacing:1.1px;color:#8b9ab0}.vehicle-id b{font-size:12px;color:#142b51}.vehicle-id small{font-size:9px;color:#75839a}
+.lifex-3d-workspace{display:grid;grid-template-columns:190px minmax(0,1fr) 270px;gap:14px;flex:1;min-height:0}
+.lifex-3d-vehicle-path{display:flex;flex-direction:column;align-items:stretch;padding:13px;border:1px solid #e0e9f7;border-radius:14px;background:linear-gradient(180deg,#f0f6ff,#fff);box-shadow:0 7px 20px rgba(34,81,150,.06);min-height:0}.path-label{font-size:8px;letter-spacing:1.5px;color:#7b8ba5;font-weight:800;margin-bottom:10px}.path-card{background:#fff;border:1px solid #e1eafa;border-radius:11px;box-shadow:0 4px 12px rgba(33,81,150,.07);padding:12px}.oem-card{display:flex;flex-direction:column;align-items:center;gap:5px}.toyota-mark{width:76px;height:53px;display:grid;place-items:center}.toyota-mark svg{width:70px;height:50px;fill:none;stroke:#17233c;stroke-width:4}.oem-card>b{font:800 20px Manrope;color:#d8292f;letter-spacing:.5px}.oem-card small{font-size:7px;letter-spacing:.65px;color:#8290a5;text-align:center}.path-arrow{height:49px;display:grid;place-items:center}.path-arrow span{height:34px;width:2px;background:#1765e8;position:relative}.path-arrow span:after{content:'';position:absolute;bottom:0;left:-6px;width:11px;height:11px;border-right:2px solid #1765e8;border-bottom:2px solid #1765e8;transform:rotate(45deg)}.model-card{display:flex;align-items:center;gap:8px;padding:9px}.model-card img{width:77px;height:62px;object-fit:cover;object-position:center;border-radius:7px;background:#edf3fc}.model-card>div{min-width:0;display:flex;flex-direction:column;gap:3px}.model-card b{font:800 15px Manrope;color:#172a50}.model-card small{font-size:10px;color:#6d7e99}.model-card span{display:flex;align-items:center;gap:3px;color:#19876d;font-size:8px;white-space:nowrap}.model-card span svg{width:11px;height:11px}.path-note{margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:7px;color:#7b8ba4;font-size:8px;line-height:1.4}.note-dot,.live-dot{width:7px;height:7px;display:inline-block;background:#18b58f;border-radius:50%;box-shadow:0 0 0 3px rgba(24,181,143,.12)}
+.lifex-3d-viewer-panel{min-width:0;min-height:0;border:1px solid #e0e9f7;border-radius:14px;background:radial-gradient(ellipse at 50% 53%,#eaf3ff 0%,#f8fbff 56%,#fff 100%);box-shadow:0 7px 20px rgba(34,81,150,.06);display:flex;flex-direction:column;padding:10px 12px 8px;overflow:hidden}.viewer-topline{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px}.viewer-topline>div:first-child{display:flex;align-items:center;gap:7px;font-size:8px;letter-spacing:1.2px;color:#7a8aa3;font-weight:800}.view-switch{display:flex;align-items:center;gap:3px;padding:3px;background:#eef4fd;border:1px solid #dce7f7;border-radius:8px}.view-switch button{display:flex;align-items:center;gap:5px;border:0;background:transparent;color:#61728f;padding:6px 9px;border-radius:6px;font:700 9px 'DM Sans';cursor:pointer;transition:all .2s}.view-switch button svg{width:13px;height:13px}.view-switch button.active{background:#fff;color:#145de7;box-shadow:0 2px 7px rgba(24,73,147,.12)}
+.lifex-3d-canvas-wrap{position:relative;flex:1;min-height:260px;overflow:hidden;border-radius:10px;background:radial-gradient(ellipse at 48% 55%,rgba(201,225,255,.55),rgba(248,251,255,.12) 58%,transparent 78%)}.lifex-3d-canvas-wrap canvas{display:block;width:100%;height:100%;cursor:grab;outline:none}.lifex-3d-canvas-wrap canvas:active{cursor:grabbing}.canvas-label{position:absolute;left:12px;top:11px;display:flex;flex-direction:column;gap:2px;pointer-events:none}.canvas-label span{font-size:8px;letter-spacing:1.5px;color:#7c8ca5;font-weight:800}.canvas-label b{font:800 16px Manrope;color:#18315c}.canvas-label small{font-size:7px;letter-spacing:1.2px;color:#8a9bb3}.drag-hint{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);display:flex;align-items:center;gap:7px;border:1px solid rgba(185,207,238,.85);border-radius:20px;background:rgba(255,255,255,.82);backdrop-filter:blur(8px);padding:6px 11px;color:#425b7e;font:600 9px 'DM Sans';box-shadow:0 3px 10px rgba(35,80,145,.08);cursor:pointer}.drag-hint svg{width:13px;height:13px;color:#1765e8}.drag-hint span{font-size:13px;color:#94a3b8;margin-left:4px}.canvas-corner{position:absolute;right:11px;top:11px;padding:5px 7px;border:1px solid #dce8f8;border-radius:5px;background:rgba(255,255,255,.75);color:#6b7d99;font-size:7px;letter-spacing:1px;font-weight:800;pointer-events:none}.fullscreen-btn{position:absolute;right:10px;bottom:10px;width:28px;height:28px;border:1px solid #dce7f5;border-radius:7px;background:rgba(255,255,255,.9);color:#31527e;display:grid;place-items:center;cursor:pointer}.fullscreen-btn svg{width:14px;height:14px}.mode-xray canvas{filter:saturate(1.25) contrast(1.04)}.mode-exploded canvas{filter:saturate(1.1)}
+.viewer-controls{display:flex;justify-content:center;gap:7px;padding:8px 0 5px;flex:none}.viewer-controls button{display:flex;align-items:center;gap:5px;border:1px solid #e0e8f5;border-radius:7px;background:#fff;color:#506584;padding:6px 10px;font:600 9px 'DM Sans';cursor:pointer;transition:all .2s}.viewer-controls button:hover{border-color:#9fc2fa;color:#145de7;transform:translateY(-1px);box-shadow:0 3px 9px rgba(25,83,163,.08)}.viewer-controls svg{width:13px;height:13px}.viewer-footnote{display:flex;justify-content:center;gap:20px;padding-top:4px;color:#9aa7ba;font-size:7px;letter-spacing:1px;font-weight:800}.viewer-footnote span:first-child{color:#3e6eaa}.viewer-footnote i{display:inline-block;width:5px;height:5px;background:#18b58f;border-radius:50%;margin-right:5px;vertical-align:1px}
+.lifex-3d-systems{display:flex;flex-direction:column;min-height:0;padding:13px;border:1px solid #e0e9f7;border-radius:14px;background:#fff;box-shadow:0 7px 20px rgba(34,81,150,.06)}.systems-heading{display:flex;align-items:center;justify-content:space-between}.systems-heading h2{margin:3px 0 0;font:800 16px Manrope;color:#15284c}.systems-count{width:27px;height:27px;border-radius:8px;display:grid;place-items:center;background:#eef4ff;color:#145de7;font-size:10px;font-weight:800}.systems-intro{margin:5px 0 10px;color:#8391a7;font-size:9px}.systems-list{display:flex;flex-direction:column;gap:5px;overflow:auto}.systems-list button{display:flex;align-items:center;gap:8px;width:100%;min-height:42px;padding:6px 8px;border:1px solid #e9eef6;border-radius:8px;background:#fff;color:#1a2e53;text-align:left;cursor:pointer;transition:all .18s}.systems-list button:hover{border-color:#b6d0fa;background:#f7faff}.systems-list button.selected{border-color:#a9c9ff;background:linear-gradient(90deg,#eaf2ff,#f7faff);box-shadow:inset 3px 0 #1765e8}.system-icon{width:27px;height:27px;flex:none;border-radius:7px;background:#f0f5fd;color:#2368d9;display:grid;place-items:center}.systems-list button.selected .system-icon{background:#1765e8;color:#fff}.system-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:2px}.system-copy b{font-size:10px;font-weight:700}.system-copy small{font-size:8px;color:#8a98ad}.systems-list button>svg{width:13px;height:13px;color:#9ba9bd}.selected-system-card{display:flex;align-items:center;gap:8px;margin-top:auto;padding:9px;border-radius:9px;background:#f4f8ff;border:1px solid #e1eaf8}.selected-system-icon{width:29px;height:29px;display:grid;place-items:center;border-radius:7px;background:#e1edff;color:#145de7}.selected-system-card>div:nth-child(2){display:flex;flex-direction:column;gap:2px;flex:1}.selected-system-card small{font-size:7px;letter-spacing:1px;color:#8795aa}.selected-system-card b{font-size:10px;color:#17315b}.selected-check{color:#159b7c}.selected-check svg{width:15px;height:15px}
+.lifex-3d-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:11px;margin-top:11px;border-top:1px solid #e0e9f6}.lifex-3d-footer button{height:37px;display:flex;align-items:center;gap:8px;padding:0 15px;border-radius:8px;font:700 10px 'DM Sans';cursor:pointer;transition:all .2s}.lifex-3d-footer button svg{width:15px;height:15px}.back-btn{border:1px solid #bfcfe5;background:#fff;color:#263f67}.back-btn:hover{border-color:#1765e8;color:#145de7}.next-btn{border:1px solid #145de7;background:#145de7;color:#fff;box-shadow:0 4px 11px rgba(20,93,231,.18)}.next-btn:hover{background:#0d4fc9;transform:translateY(-1px);box-shadow:0 7px 15px rgba(20,93,231,.24)}.footer-status{display:flex;align-items:center;gap:7px;color:#8795aa;font-size:8px;letter-spacing:.8px;font-weight:700}
+@media(min-width:1450px) and (min-height:850px){.lifex-3d-main{padding-top:17px}.lifex-3d-workspace{grid-template-columns:205px minmax(0,1fr) 290px}.lifex-3d-canvas-wrap{min-height:390px}.lifex-3d-systems{padding:15px}.systems-list button{min-height:45px}}
+@media(max-width:1100px){.lifex-3d-header{padding:0 15px;gap:12px}.lifex-3d-brand{width:285px}.lifex-3d-main{padding-left:14px;padding-right:14px}.lifex-3d-workspace{grid-template-columns:155px minmax(0,1fr) 240px;gap:9px}.lifex-3d-vehicle-path,.lifex-3d-systems{padding:9px}.systems-list button{min-height:38px}.system-copy small{display:none}}
+@media(max-width:800px){.lifex-3d-header{height:58px}.lifex-3d-brand{width:auto;flex:1}.lifex-3d-brand img{width:90px}.lifex-3d-brand span{font-size:9px}.lifex-3d-search{display:none}.lifex-3d-header-actions{gap:11px}.lifex-3d-main{min-height:calc(100vh - 58px)}.lifex-3d-steps{overflow:auto}.lifex-3d-steps .step{font-size:9px;padding:5px 8px}.lifex-3d-steps>i{min-width:9px}.lifex-3d-title-row{align-items:flex-start}.vehicle-id{display:none}.lifex-3d-workspace{grid-template-columns:1fr}.lifex-3d-vehicle-path{display:grid;grid-template-columns:auto 35px minmax(0,1fr);align-items:center;gap:8px}.path-label{display:none}.path-card{min-width:0}.oem-card{padding:6px 10px}.toyota-mark{height:34px;width:50px}.toyota-mark svg{height:33px;width:46px}.oem-card>b{font-size:13px}.oem-card small{display:none}.path-arrow{height:auto;width:35px}.path-arrow span{height:2px;width:28px}.path-arrow span:after{bottom:-5px;left:auto;right:0;transform:rotate(-45deg)}.model-card img{width:58px;height:46px}.path-note{display:none}.lifex-3d-viewer-panel{min-height:390px}.lifex-3d-canvas-wrap{min-height:290px}.lifex-3d-systems{min-height:300px}.systems-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.selected-system-card{margin-top:10px}.lifex-3d-footer{flex-wrap:wrap}.footer-status{order:3;width:100%;justify-content:center}}
+@media(max-width:500px){.lifex-3d-title-row h1{font-size:20px}.lifex-3d-title-row p{font-size:10px}.viewer-topline{height:auto;align-items:flex-start;flex-direction:column;padding:4px 0 7px}.view-switch{width:100%;justify-content:space-between}.view-switch button{padding:6px}.lifex-3d-viewer-panel{min-height:360px;padding:8px}.lifex-3d-canvas-wrap{min-height:250px}.viewer-controls{flex-wrap:wrap}.viewer-footnote{gap:8px;font-size:6px}.lifex-3d-systems{padding:10px}.systems-list{gap:5px}.systems-list button{padding:5px}.system-copy b{font-size:9px}.lifex-3d-footer button{flex:1;justify-content:center;padding:0 8px}.lifex-3d-footer{gap:8px}}
+@media(prefers-reduced-motion:reduce){.lifex-3d-page *, .lifex-3d-page *:before,.lifex-3d-page *:after{transition:none!important;animation:none!important}}
+
+
+/* Readability pass: bring engineering UI typography to comfortable desktop sizes. */
+.lifex-3d-page { font-size: 14px; }
+.lifex-3d-breadcrumb { font-size: 13px; gap: 10px; }
+.lifex-3d-steps .step { font-size: 13px; padding: 8px 14px; }
+.lifex-3d-steps .step span { width: 28px; height: 28px; font-size: 13px; }
+.lifex-3d-title-row .eyebrow,
+.systems-heading .eyebrow { font-size: 10px; letter-spacing: 1.6px; }
+.lifex-3d-title-row h1 { font-size: clamp(26px, 2vw, 32px); line-height: 1.18; }
+.lifex-3d-title-row p { font-size: 13px; line-height: 1.45; }
+.vehicle-id span { font-size: 10px; }
+.vehicle-id b { font-size: 14px; }
+.vehicle-id small { font-size: 11px; }
+.path-label { font-size: 10px; }
+.oem-card>b { font-size: 21px; }
+.oem-card small { font-size: 9px; line-height: 1.4; }
+.model-card b { font-size: 17px; }
+.model-card small { font-size: 12px; }
+.model-card span { font-size: 10px; }
+.path-note { font-size: 10px; }
+.viewer-topline>div:first-child { font-size: 10px; }
+.view-switch button { font-size: 11px; padding: 7px 11px; }
+.canvas-label span { font-size: 10px; }
+.canvas-label b { font-size: 18px; }
+.canvas-label small { font-size: 9px; }
+.drag-hint { font-size: 11px; padding: 7px 12px; }
+.canvas-corner { font-size: 9px; }
+.viewer-controls button { font-size: 11px; padding: 7px 11px; }
+.viewer-footnote { font-size: 9px; }
+.systems-heading h2 { font-size: 18px; }
+.systems-intro { font-size: 11px; line-height: 1.45; }
+.systems-list button { min-height: 48px; padding: 7px 9px; }
+.system-copy b { font-size: 12px; }
+.system-copy small { font-size: 10px; line-height: 1.35; }
+.selected-system-card small { font-size: 9px; }
+.selected-system-card b { font-size: 12px; }
+.lifex-3d-footer button { font-size: 12px; height: 40px; }
+.lifex-3d-search input { font-size: 14px; }
+.lifex-3d-brand span { font-size: 13px; }
+
+@media (max-width: 1200px) {
+  .lifex-3d-workspace { grid-template-columns: 165px minmax(0,1fr) 245px; gap: 10px; }
+  .lifex-3d-main { padding-left: 18px; padding-right: 18px; }
+  .lifex-3d-title-row h1 { font-size: 25px; }
+}
+@media (max-width: 900px) {
+  .lifex-3d-workspace { grid-template-columns: 1fr; }
+  .lifex-3d-vehicle-path { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; }
+  .path-label { grid-column: 1 / -1; margin: 0; }
+  .path-arrow { height: auto; transform: rotate(-90deg); }
+  .path-note { display: none; }
+  .lifex-3d-viewer-panel { min-height: 520px; }
+  .lifex-3d-systems { max-height: none; }
+}
+
+/* Final Vehicle Overview readability and presentation corrections */
+.lifex-3d-page { font-size: 14px; }
+.lifex-3d-breadcrumb { font-size: 13px; }
+.lifex-3d-steps .step { font-size: 13px; }
+.lifex-3d-title-row h1 { font-size: clamp(28px, 2.05vw, 34px); line-height: 1.16; }
+.lifex-3d-title-row p { font-size: 14px; line-height: 1.45; }
+.lifex-3d-title-row .eyebrow { font-size: 10px; }
+.vehicle-id span { font-size: 10px; }
+.vehicle-id b { font-size: 14px; }
+.vehicle-id small { font-size: 11px; }
+.path-label { font-size: 10px; }
+.oem-card>b { font-size: 21px; }
+.oem-card small { font-size: 9px; }
+.model-card b { font-size: 17px; }
+.model-card small { font-size: 12px; }
+.model-card span { font-size: 10px; }
+.viewer-topline { font-size: 11px; }
+.view-switch button { font-size: 12px; padding: 8px 12px; }
+.canvas-label span { font-size: 11px; }
+.canvas-label b { font-size: 19px; }
+.canvas-label small { font-size: 10px; }
+.drag-hint { font-size: 12px; padding: 8px 13px; }
+.canvas-corner { font-size: 10px; }
+.viewer-controls button { font-size: 12px; padding: 8px 12px; }
+.viewer-footnote { font-size: 9px; }
+.systems-heading h2 { font-size: 19px; }
+.systems-intro { font-size: 12px; line-height: 1.45; }
+.systems-list button { min-height: 49px; padding: 8px 10px; }
+.system-copy b { font-size: 13px; }
+.system-copy small { font-size: 10px; line-height: 1.35; }
+.selected-system-card small { font-size: 9px; }
+.selected-system-card b { font-size: 13px; }
+.lifex-3d-footer button { font-size: 12px; height: 40px; }
+.lifex-3d-brand span { font-size: 13px; }
+
+@media (min-width: 1450px) {
+  .lifex-3d-workspace { grid-template-columns: 210px minmax(0, 1fr) 305px; gap: 14px; }
+  .lifex-3d-vehicle-path, .lifex-3d-systems { padding: 15px; }
+  .systems-list { gap: 7px; }
+  .systems-list button { min-height: 52px; }
+  .lifex-3d-canvas-wrap { min-height: 420px; }
+}
+@media (max-width: 1100px) {
+  .lifex-3d-title-row h1 { font-size: 27px; }
+  .system-copy b { font-size: 12px; }
+  .system-copy small { font-size: 10px; }
+}
+@media (max-width: 800px) {
+  .lifex-3d-title-row h1 { font-size: 24px; }
+  .lifex-3d-title-row p { font-size: 12px; }
+  .systems-list button { min-height: 48px; }
+  .system-copy b { font-size: 12px; }
+  .system-copy small { display: block; font-size: 10px; }
+}
+
+
+/* Focused visual correction: stronger readability, silver MPV presentation and uncluttered markers */
+.lifex-3d-page { font-size: 14px; }
+.lifex-3d-breadcrumb { font-size: 13px; }
+.lifex-3d-steps .step { font-size: 13px; }
+.lifex-3d-steps .step span { font-size: 13px; }
+.lifex-3d-title-row .eyebrow, .systems-heading .eyebrow { font-size: 10px; letter-spacing: 1.6px; }
+.lifex-3d-title-row h1 { font-size: clamp(27px, 2vw, 33px); line-height: 1.16; }
+.lifex-3d-title-row p { font-size: 14px; line-height: 1.5; }
+.vehicle-id span { font-size: 10px; }
+.vehicle-id b { font-size: 15px; }
+.vehicle-id small { font-size: 12px; }
+.path-label { font-size: 10px; }
+.oem-card>b { font-size: 22px; }
+.oem-card small { font-size: 9px; line-height: 1.45; }
+.model-card b { font-size: 18px; }
+.model-card small { font-size: 13px; }
+.model-card span { font-size: 11px; }
+.viewer-topline { font-size: 11px; }
+.view-switch button { font-size: 12px; padding: 8px 12px; }
+.canvas-label span { font-size: 11px; }
+.canvas-label b { font-size: 19px; }
+.canvas-label small { font-size: 10px; }
+.drag-hint { font-size: 12px; padding: 8px 13px; }
+.canvas-corner { font-size: 10px; }
+.viewer-controls button { font-size: 12px; padding: 8px 12px; }
+.viewer-footnote { font-size: 10px; }
+.systems-heading h2 { font-size: 20px; }
+.systems-intro { font-size: 13px; line-height: 1.5; }
+.systems-list button { min-height: 54px; padding: 9px 11px; }
+.system-copy b { font-size: 14px; }
+.system-copy small { font-size: 11px; line-height: 1.4; }
+.selected-system-card small { font-size: 10px; }
+.selected-system-card b { font-size: 14px; }
+.lifex-3d-footer button { font-size: 13px; height: 42px; }
+.lifex-3d-search input { font-size: 14px; }
+.lifex-3d-brand span { font-size: 14px; }
+.lifex-3d-workspace { grid-template-columns: 190px minmax(0,1fr) 286px; }
+.lifex-3d-viewer-panel { background: radial-gradient(ellipse at 50% 57%, #eaf1f8 0%, #f7faff 43%, #ffffff 78%); }
+@media (max-width: 1250px) {
+ .lifex-3d-workspace { grid-template-columns: 170px minmax(0,1fr) 260px; gap: 11px; }
+ .lifex-3d-title-row h1 { font-size: 27px; }
+}
+@media (max-width: 900px) {
+ .lifex-3d-workspace { grid-template-columns: 1fr; }
+ .lifex-3d-vehicle-path { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; }
+ .path-label { grid-column: 1 / -1; margin: 0; }
+ .path-arrow { height: auto; transform: rotate(-90deg); }
+ .lifex-3d-viewer-panel { min-height: 520px; }
+ .lifex-3d-systems { max-height: none; }
+}
+
+/* OEM identity: crisp vector manufacturer logo in the vehicle path card. */
+.lifex-3d-vehicle-path .toyota-mark img { width: 112px; height: 76px; object-fit: contain; display: block; }
+
+
+/* Real Toyota Innova Crysta viewer */
+.lifex-3d-canvas-wrap.mode-real-model { overflow:hidden; background:linear-gradient(145deg,#f7fbff 0%,#eaf2fb 50%,#ffffff 100%); }
+.mode-real-model .canvas-label { z-index:3; pointer-events:none; background:rgba(255,255,255,.82); border:1px solid #d9e7fa; border-radius:10px; padding:9px 12px; backdrop-filter:blur(8px); }
+.mode-real-model .drag-hint { z-index:4; pointer-events:none; }
+.mode-real-model .canvas-corner { z-index:3; }
+.mode-real-model .fullscreen-btn { z-index:4; }
+@media(max-width:800px) { }
+
+
+/* Reference-matched Toyota Innova cutaway stage */
+.innova-reference-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: block;
+  cursor: grab;
+  touch-action: pan-y;
+  perspective: 1500px;
+  background: radial-gradient(ellipse at 50% 57%, #e9f2fc 0%, #f7faff 52%, #ffffff 82%);
+}
+.innova-reference-stage.is-dragging { cursor: grabbing; }
+.innova-reference-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+  pointer-events: none;
+  transform-origin: center 55%;
+  transition: filter .22s ease;
+  will-change: transform;
+}
+.innova-reference-stage.mode-xray .innova-reference-image {
+  filter: saturate(1.18) contrast(1.06) brightness(1.02);
+}
+.innova-reference-stage.mode-exploded .innova-reference-image {
+  filter: saturate(1.12) contrast(1.08) drop-shadow(0 12px 12px rgba(0,95,210,.12));
+}
+.innova-hotspot-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.innova-hotspot-lines line {
+  stroke: #0868ef;
+  stroke-width: 1.65;
+  vector-effect: non-scaling-stroke;
+  opacity: .88;
+}
+.innova-hotspots { position: absolute; inset: 0; pointer-events: none; }
+.innova-hotspot-pin {
+  position: absolute;
+  z-index: 3;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: #086df5;
+  box-shadow: 0 0 0 2px rgba(8,109,245,.22), 0 2px 8px rgba(0,50,130,.25);
+  transform: translate(-50%,-50%);
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.innova-hotspot-pin.selected { width: 19px; height: 19px; background: #00a6e8; box-shadow: 0 0 0 5px rgba(0,145,255,.18), 0 2px 10px rgba(0,50,130,.3); }
+.innova-hotspot-label {
+  position: absolute;
+  z-index: 4;
+  transform: translate(-50%,-50%);
+  max-width: 156px;
+  border: 1.5px solid #0969ed;
+  border-radius: 9px;
+  background: rgba(255,255,255,.97);
+  color: #10264b;
+  box-shadow: 0 3px 10px rgba(16,64,135,.12);
+  padding: 7px 10px;
+  font: 700 11px/1.15 Inter, 'DM Sans', Arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background .16s, box-shadow .16s, transform .16s;
+}
+.innova-hotspot-label:hover,
+.innova-hotspot-label.selected {
+  background: #eaf3ff;
+  box-shadow: 0 0 0 2px rgba(8,105,237,.12), 0 4px 12px rgba(16,64,135,.16);
+}
+.innova-hotspot-label.selected { color: #075bea; }
+.viewer-controls button.control-active { border-color: #8ab8ff; color: #075bea; background: #edf5ff; }
+.mode-real-model .canvas-label { z-index: 5; }
+.mode-real-model .canvas-corner { z-index: 5; }
+.mode-real-model .drag-hint { z-index: 6; }
+.mode-real-model .fullscreen-btn { z-index: 7; }
+@media (max-width: 1150px) {
+  .innova-hotspot-label { font-size: 10px; padding: 6px 8px; max-width: 138px; }
+  .innova-hotspot-pin { width: 13px; height: 13px; }
+}
+@media (max-width: 850px) {
+  .innova-reference-stage { min-height: 440px; }
+  .innova-hotspot-label { font-size: 9px; padding: 5px 6px; max-width: 112px; }
+  .innova-hotspot-lines line { stroke-width: 1.3; }
+}
+
+
+/* User-requested cleanup: remove the right component sidebar and crossed-out view modes. */
+.lifex-3d-workspace { grid-template-columns: 205px minmax(0, 1fr) !important; }
+.lifex-3d-systems { display: none !important; }
+.viewer-mode-label {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 12px; border: 1px solid #dce8f8; border-radius: 8px;
+  background: #f3f7ff; color: #1765e8; font: 800 10px 'DM Sans', Arial, sans-serif;
+  letter-spacing: .55px; white-space: nowrap;
+}
+.viewer-mode-label svg { width: 15px; height: 15px; }
+.innova-reference-stage { cursor: ew-resize; }
+.innova-reference-image {
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  transition: transform .08s linear, filter .22s ease;
+}
+@media (max-width: 900px) {
+  .lifex-3d-workspace { grid-template-columns: 1fr !important; }
+}
+
+
+/* Vehicle Overview: user requested both top header and breadcrumb rows removed. */
+.lifex-3d-header,
+.lifex-3d-breadcrumb { display: none !important; }
+.lifex-3d-main { min-height: 100vh; padding-top: 18px; }
+
+/* Fully interactive Three.js vehicle viewport: full orbit range and stable canvas sizing */
+.lifex-3d-canvas-wrap{min-height:460px;isolation:isolate;}
+.lifex-3d-canvas-wrap canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab;}
+.lifex-3d-canvas-wrap canvas:active{cursor:grabbing;}
+.lifex-3d-viewer-panel{min-height:0;}
+.lifex-3d-canvas-wrap .canvas-label,.lifex-3d-canvas-wrap .canvas-corner,.lifex-3d-canvas-wrap .drag-hint,.lifex-3d-canvas-wrap .fullscreen-btn{z-index:4;}
+.viewer-controls button.control-active{background:#eaf3ff;border-color:#8ab8ff;color:#075fe5;box-shadow:inset 0 0 0 1px rgba(7,95,229,.08);}
+@media(max-width:900px){.lifex-3d-canvas-wrap{min-height:390px;}}
+
+/* Embedded, freely rotatable Innova Crysta model (Sketchfab) */
+.lifex-3d-canvas-wrap.has-sketchfab-model{background:#f4f7fb;min-height:480px;}
+.sketchfab-innova-viewer{position:absolute;inset:0;width:100%;height:100%;border:0;background:#f4f7fb;}
+.has-sketchfab-model .canvas-label,.has-sketchfab-model .canvas-corner{pointer-events:none;}
+.has-sketchfab-model .drag-hint{pointer-events:none;z-index:5;}
+.sketchfab-viewer-help{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:9px 2px 1px;color:#7c8ca5;font-size:9px;font-weight:800;letter-spacing:.65px;}
+.sketchfab-viewer-help span{display:flex;align-items:center;gap:6px;}
+.sketchfab-viewer-help span:first-child i{width:7px;height:7px;border-radius:50%;background:#10b78a;box-shadow:0 0 0 3px #e0f8ef;}
+.sketchfab-viewer-help a{color:#1768ef;text-decoration:none;font-weight:700;letter-spacing:0;}
+.sketchfab-viewer-help a:hover{text-decoration:underline;}
+@media(max-width:900px){.lifex-3d-canvas-wrap.has-sketchfab-model{min-height:390px;}.sketchfab-viewer-help{justify-content:flex-start;}}
+
+/* Animated, image-based Innova system map: every marker appears in sequence. */
+.innova-reference-stage { background:radial-gradient(ellipse at 50% 58%,#eaf3ff 0%,#f7faff 58%,#fff 100%); }
+.innova-reference-image { animation:innovaVehicleReveal .9s cubic-bezier(.2,.75,.25,1) both; }
+.innova-hotspot-lines line { stroke-dasharray:12 12; animation:innovaLineDraw .75s ease-out both; }
+.innova-hotspot-pin,.innova-hotspot-label { opacity:0; animation:innovaMarkerPop .55s cubic-bezier(.16,1.35,.42,1) forwards; }
+.innova-hotspot-pin { width:17px;height:17px; background:#086df5; }
+.innova-hotspot-pin:hover,.innova-hotspot-pin:focus-visible { width:24px;height:24px; box-shadow:0 0 0 8px rgba(8,109,245,.2),0 4px 14px rgba(0,50,130,.3); outline:none; }
+.innova-hotspot-label { display:flex;align-items:center;gap:7px;min-height:30px; padding:8px 10px; font-size:clamp(9px,.68vw,12px); box-shadow:0 5px 18px rgba(20,66,130,.16); }
+.innova-hotspot-label:hover,.innova-hotspot-label:focus-visible { transform:translate(-50%,-50%) scale(1.1); outline:none; box-shadow:0 0 0 3px rgba(8,105,237,.14),0 9px 22px rgba(16,64,135,.22); }
+.innova-hotspot-label.selected { background:#eaf3ff; }
+.innova-hotspot-pin.rear-suspension-target { background:#00a6e8; box-shadow:0 0 0 5px rgba(0,145,255,.2),0 0 18px rgba(0,115,255,.45); animation:innovaMarkerPop .55s cubic-bezier(.16,1.35,.42,1) forwards, rearTargetPulse 1.8s ease-in-out 1.2s infinite; }
+.innova-hotspot-label.rear-suspension-target { background:#075ee8;color:white;border-color:#075ee8; box-shadow:0 0 0 3px rgba(8,105,237,.13),0 8px 22px rgba(8,75,180,.2); }
+.hotspot-open-indicator { font-size:8px;letter-spacing:.6px;background:rgba(255,255,255,.2);border-radius:4px;padding:3px 4px; }
+.innova-image-caption { position:absolute;left:18px;bottom:14px;z-index:5;display:flex;flex-direction:column;gap:4px;padding:9px 12px;border:1px solid rgba(210,226,247,.9);border-radius:9px;background:rgba(255,255,255,.86);backdrop-filter:blur(8px);box-shadow:0 4px 16px rgba(24,65,120,.08);animation:innovaCaptionPop .65s .4s both;pointer-events:none; }
+.innova-image-caption b { color:#15335f;font-size:10px;letter-spacing:1px; }
+.innova-image-caption span { color:#6e83a2;font-size:8px;letter-spacing:.5px; }
+.innova-interaction-note { display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px; }
+.innova-interaction-note span { font-size:9px; }
+.rear-direct-hint { font-size:10px;letter-spacing:.35px;color:#1765e8; }
+.rear-direct-hint svg { width:14px;height:14px; }
+@keyframes innovaVehicleReveal { from { opacity:0; transform:scale(.94) translateY(12px); filter:blur(5px); } to { opacity:1; transform:scale(1) translateY(0); filter:blur(0); } }
+@keyframes innovaMarkerPop { 0% { opacity:0; transform:translate(-50%,-50%) scale(.15); } 72% { opacity:1; transform:translate(-50%,-50%) scale(1.16); } 100% { opacity:1; transform:translate(-50%,-50%) scale(1); } }
+@keyframes innovaLineDraw { from { opacity:0;stroke-dashoffset:35; } to { opacity:.88;stroke-dashoffset:0; } }
+@keyframes innovaCaptionPop { from { opacity:0;transform:translateY(12px) scale(.96); } to { opacity:1;transform:translateY(0) scale(1); } }
+@keyframes rearTargetPulse { 0%,100% { box-shadow:0 0 0 4px rgba(0,145,255,.16),0 0 14px rgba(0,115,255,.35); } 50% { box-shadow:0 0 0 9px rgba(0,145,255,.1),0 0 23px rgba(0,115,255,.52); } }
+@media (prefers-reduced-motion:reduce) { .innova-reference-image,.innova-hotspot-lines line,.innova-hotspot-pin,.innova-hotspot-label,.innova-image-caption { animation:none;opacity:1; } }
+@media(max-width:850px) { .innova-image-caption { left:8px;bottom:8px;max-width:72%; } .innova-image-caption span { font-size:7px; } .innova-hotspot-label { padding:5px 6px; } }
+
+/* A selected vehicle system is made obvious in both the 3D markers and list. */
+.systems-list button.active{position:relative;border-color:#1877f2!important;background:linear-gradient(105deg,#e8f2ff,#fff)!important;box-shadow:0 0 0 4px rgba(24,119,242,.12),0 12px 26px rgba(24,119,242,.13)!important;animation:lifexSystemSelectedLand .65s cubic-bezier(.16,.82,.2,1) both;}
+.systems-list button.active:after{content:'✓';position:absolute;right:38px;top:50%;transform:translateY(-50%);width:23px;height:23px;border-radius:50%;display:grid;place-items:center;background:#0870f4;color:#fff;font-size:13px;font-weight:900;box-shadow:0 4px 12px rgba(8,112,244,.28);}
+.selected-system-card.lifex-selection-target-pulse{border-color:#1677f6!important;box-shadow:0 0 0 5px rgba(22,119,246,.16),0 14px 32px rgba(22,119,246,.18)!important;}
+@keyframes lifexSystemSelectedLand{0%{transform:translateX(0) scale(1)}45%{transform:translateX(6px) scale(1.025)}100%{transform:translateX(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.systems-list button.active{animation:none!important}}
+
+/* Direction cue: the selected Rear Suspension marker leads left to the hierarchy panel. */
+.lifex-3d-viewer-panel{position:relative;}
+.rear-hierarchy-pointer{position:absolute;left:10px;top:50%;z-index:20;display:flex;align-items:center;gap:7px;transform:translateY(-50%);padding:7px 10px;border:1px solid #8bb9ff;border-radius:999px;background:#fff;color:#1765e8;box-shadow:0 5px 18px rgba(23,101,232,.14);font-size:8px;font-weight:900;letter-spacing:.08em;white-space:nowrap;pointer-events:none;}
+.rear-hierarchy-pointer i{display:block;width:28px;height:2px;background:#1765e8;}
+.rear-hierarchy-pointer svg{width:15px;height:15px;}
+@media(max-width:800px){.rear-hierarchy-pointer{left:50%;top:10px;transform:translateX(-50%);}}

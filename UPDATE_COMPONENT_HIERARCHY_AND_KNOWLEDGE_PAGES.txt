@@ -1,0 +1,31 @@
+LIFEX - Component Hierarchy and Knowledge Repository Pages
+
+This update implements the two approved page designs in the existing workflow.
+
+STEP 04 - Component Hierarchy (existing workflow route: page 11)
+- Replaces the previous six-card selection screen with a connected component hierarchy.
+- Shows the Toyota -> Innova -> Rear Suspension selection path on the left.
+- Shows the rear suspension assembly reference image and selectable nodes for Rebound Bumper, Rod, Rodline, Spring Seat, Top Mount and Bumper Cap.
+- Selecting a node and choosing Open component knowledge navigates to Step 05 with that component context.
+- Rodline is linked to the existing Rod Guide engineering knowledge record.
+
+STEP 05 - Knowledge Repository & Extraction (existing workflow route: page 13)
+- Shows the selected Toyota -> Innova -> Rear Suspension -> component path.
+- Provides document search and type filtering, reference templates, and any saved repository PDFs for the selected component.
+- Saved PDFs can be opened/downloaded. Reference templates are labelled as templates and are not represented as uploaded documents.
+- Shows component knowledge tabs: Summary, Key Insights, Parameters and Applications, populated from the existing componentKnowledge records.
+- Generates a component engineering knowledge PDF and saves it to the existing Know-How repository when the server endpoint is available.
+- Opens the existing Engineering Intelligence Extraction workflow from the AI extraction button.
+
+Navigation
+- Vehicle Overview -> Step 04 via the existing Next: Component Selection action.
+- Step 04 -> Step 05 via Open component knowledge.
+- Step 05 -> full repository via the existing repository route.
+
+Run
+1. Extract this ZIP into a new folder.
+2. Open the LIFEX folder in VS Code.
+3. Run npm install
+4. Run npm run dev
+
+Build validation: TypeScript/JSX syntax transpilation passed for both changed page files. A complete Vite build was not run because dependencies were not installed in this environment.

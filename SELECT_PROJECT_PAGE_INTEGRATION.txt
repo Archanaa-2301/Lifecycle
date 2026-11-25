@@ -1,0 +1,23 @@
+LIFEX Select Project page integration
+=====================================
+
+Integrated into the existing LIFEX application.
+
+Navigation:
+- Engineering Repository landing page -> page 30 (Select a Project)
+- Clicking Enter on one of the five projects -> page 33 (existing Project Details Entry page)
+- Project Details Back -> page 30 (Select a Project)
+
+New page files:
+- src/pages/SelectProjectPage.tsx
+- src/pages/SelectProjectPage.css
+
+New page assets:
+- public/assets/project-1.jpg through project-5.jpg
+- public/assets/vehicle-banner.jpg
+- public/assets/lifex-logo.png (copied from the existing LIFEX brand asset)
+
+Existing repository-data PDFs and JSON records, existing docs/assets/pages, and project configuration were retained.
+No existing PDF or repository-data file was replaced.
+
+The five project entries are sample front-end records matching the approved Select a Project reference image.

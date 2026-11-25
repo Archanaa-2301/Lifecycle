@@ -1,0 +1,20 @@
+LIFEX Repository Workflow Integration
+
+Navigation added:
+- Dashboard > Explore vehicle knowledge opens Page 27 (Engineering Repository).
+- Page 27 > Explore Global Repository opens Page 29.
+- Page 29 > select one of four global repository categories > select a component > Page 28 (component Knowledge Repository / PDF records).
+- Page 28 back button returns to Page 29 when entered from Global Repository.
+- Page 27 > choose a recent project > Open Project Repository opens Page 30 (Project Details).
+- Page 30 saves project details in localStorage and continues to the existing Page 5 Vehicle Selection.
+- Existing Pages 5-26 and their vehicle engineering workflow are retained.
+
+Project details are stored in browser localStorage under lifex-active-project. A selected recent project is prefilled from lifex-project-preset.
+
+Setup:
+1. Extract the ZIP.
+2. Open the lifex-app folder in VS Code.
+3. Run npm install.
+4. Run npm run dev.
+
+The ZIP intentionally excludes node_modules; reinstall dependencies on the target machine.

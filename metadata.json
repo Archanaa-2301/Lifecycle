@@ -1,0 +1,6 @@
+{
+  "name": "Clavis - Automotive Teardown & Benchmarking Registry",
+  "description": "Complete 17-part automotive teardown benchmarking registry for Ford Titanium 2026 Engine Cylinder Block Assembly with VAVE scorecards, photograph uploads, and audit history.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

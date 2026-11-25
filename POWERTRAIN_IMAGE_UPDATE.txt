@@ -1,0 +1,16 @@
+POWERTRAIN COMPONENT IMAGE UPDATE
+
+The Global Repository Powertrain component cards now use explicit, stable public image paths.
+All 17 component records have an image asset under public/vehicle-components/.
+The first four assets reuse the original project component photos. The additional representative
+component visuals are generated photorealistic illustrations, not verified OEM/manufacturer photos.
+
+The component card and selected-component detail view both use the same mapped image.
+Image paths have been checked against the files in this package.
+
+To run locally:
+  npm install
+  npm run dev
+
+Note: a Vite production build could not be run in the packaging environment because the ZIP's
+node_modules folder does not contain the Vite executable. Reinstall dependencies locally first.
